@@ -1,0 +1,42 @@
+{
+  "name": "@kaumlaut/pure",
+  "version": "0.5.2",
+  "description": "Types and functions for a state runtime inspired by Elm and functional programming",
+  "author": "Max Kaemmerer",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "module": "dist/index.js",
+  "exports": {
+    "./*": {
+      "import": "./dist/*/index.js",
+      "types": "./dist/*/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "docs": "typedoc",
+    "lint": "eslint -c eslint.config.js --fix",
+    "format": "prettier . --write",
+    "test": "vitest",
+    "release": "npm run docs && npm run build && npm publish --access public"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^24.3.0",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "prettier": "3.6.2",
+    "typedoc": "^0.28.12",
+    "typedoc-plugin-markdown": "^4.8.1",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vitest": "^3.0.8"
+  }
+}
