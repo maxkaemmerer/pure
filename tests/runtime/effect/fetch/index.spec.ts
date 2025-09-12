@@ -5,9 +5,9 @@ import {
   isHttp,
   isNotFound,
   isServer,
-} from "../../../../src/runtime/effect/fetch";
-import { id } from "../../../../src/util";
-import { isErr, isOk } from "../../../../src/result";
+} from "@kaumlaut/pure/runtime/effect/fetch";
+import { id } from "@kaumlaut/pure/util";
+import { isErr, isOk } from "@kaumlaut/pure/result";
 
 beforeEach(() => {
   global.fetch = vi.fn();

@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v1.0.1**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / util
 
@@ -12,7 +12,7 @@
 
 > **id**\<`T`\>(`value`): `T`
 
-Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/util/index.ts#L4)
+Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/util/index.ts#L4)
 
 Returns the given value.
 

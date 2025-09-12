@@ -7,13 +7,14 @@ import {
   just,
   map,
   mapToMaybe,
+  maybeByErrorAwareGuard,
   maybeByGuard,
   nothing,
   toResult,
   tryMap,
   withDefault,
-} from "../../src/maybe";
-import { Guard } from "../../src/guard";
+} from "@kaumlaut/pure/maybe";
+import { ErrorAwareGuard, Guard } from "@kaumlaut/pure/guard";
 
 describe("maybe", () => {
   describe("nothing", () => {
@@ -64,6 +65,18 @@ describe("maybe", () => {
       expect(maybeByGuard(Guard.isNumber)(3).type).toEqual("maybe-just");
       // @ts-expect-error all good
       expect(maybeByGuard(Guard.isNumber)(3).value).toEqual(3);
+    });
+    it("should create maybe by error aware guard", () => {
+      expect(maybeByErrorAwareGuard(ErrorAwareGuard.isString)(3).type).toEqual(
+        "maybe-nothing",
+      );
+      expect(maybeByErrorAwareGuard(ErrorAwareGuard.isNumber)(3).type).toEqual(
+        "maybe-just",
+      );
+      // @ts-expect-error all good
+      expect(maybeByErrorAwareGuard(ErrorAwareGuard.isNumber)(3).value).toEqual(
+        3,
+      );
     });
   });
 

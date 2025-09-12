@@ -2,7 +2,7 @@
  * Provides types and functions to represent fetch request states
  * @module fetch-state
  */
-import { Guard } from "@kaumlaut/pure/guard";
+import { ErrorAwareGuard, Guard } from "@kaumlaut/pure/guard";
 
 /**
  * Represents a failed fetch request
@@ -112,6 +112,36 @@ export function attempt<T>(
     return {
       type: "Failed",
       error,
+    };
+  };
+}
+
+/**
+ * Attempts to create a fetch state of type Success if the given guard passes.
+ * Otherwise creates a fetch state of type Failed with the errors from the ErrorAwareGuard.
+ * @example
+const value = attemptErrorAware(isString)(3);
+if(isSuccess(value)){
+  console.log(value.data)
+} else if (isFailed(value)){
+  console.error(value.error)
+}
+ */
+export function attemptErrorAware<T>(
+  guard: ErrorAwareGuard.ErrorAwareGuard<T>,
+): (data: unknown) => Success<T> | Failed {
+  return (data: unknown) => {
+    const result = guard(data);
+    if (result.success === true) {
+      return {
+        type: "Success",
+        data: result.value,
+      };
+    }
+
+    return {
+      type: "Failed",
+      error: result.errors.join("."),
     };
   };
 }

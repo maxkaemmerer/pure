@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { none } from "../../../../src/runtime/effect/none";
+import { none } from "@kaumlaut/pure/runtime/effect/none";
 
 describe("runtime/effect/none", () => {
   it("should be none effect", () => {

@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { put } from "../../src/pipe/index";
-import { asInt } from "../../src/parse";
-import { toMaybe } from "../../src/result";
-import { withDefault } from "../../src/maybe";
+import { put } from "@kaumlaut/pure/pipe";
+import { asInt } from "@kaumlaut/pure/parse";
+import { toMaybe } from "@kaumlaut/pure/result";
+import { withDefault } from "@kaumlaut/pure/maybe";
 
 describe("pipe", () => {
   it("should chain multiple", () => {

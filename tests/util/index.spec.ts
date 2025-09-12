@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { id } from "../../src/util";
+import { id } from "@kaumlaut/pure/util";
 
 describe("util", () => {
   test.each(

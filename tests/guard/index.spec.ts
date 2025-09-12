@@ -1,6 +1,6 @@
 import { describe, expect, it, beforeEach, vi } from "vitest";
 
-import { Guard, ErrorAwareGuard } from "../../src/guard";
+import { Guard, ErrorAwareGuard } from "@kaumlaut/pure/guard";
 
 beforeEach(() => {
   console.debug = vi.fn();

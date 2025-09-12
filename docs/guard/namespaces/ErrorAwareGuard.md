@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v1.0.1**](../../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../../README.md) / [guard](../README.md) / ErrorAwareGuard
 
@@ -12,7 +12,7 @@
 
 > **ErrorAwareGuard**\<`T`\> = (`value`) => [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [guard/index.ts:288](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L288)
+Defined in: [guard/index.ts:288](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L288)
 
 #### Type Parameters
 
@@ -30,13 +30,13 @@ Defined in: [guard/index.ts:288](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### ErrorResult
 
 > **ErrorResult** = `object`
 
-Defined in: [guard/index.ts:282](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L282)
+Defined in: [guard/index.ts:282](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L282)
 
 #### Properties
 
@@ -44,21 +44,21 @@ Defined in: [guard/index.ts:282](https://github.com/maxkaemmerer/pure/blob/f4751
 
 > `readonly` **errors**: `string`[]
 
-Defined in: [guard/index.ts:284](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L284)
+Defined in: [guard/index.ts:284](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L284)
 
 ##### success
 
 > `readonly` **success**: `false`
 
-Defined in: [guard/index.ts:283](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L283)
+Defined in: [guard/index.ts:283](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L283)
 
-***
+---
 
 ### SuccessResult\<T\>
 
 > **SuccessResult**\<`T`\> = `object`
 
-Defined in: [guard/index.ts:281](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L281)
+Defined in: [guard/index.ts:281](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L281)
 
 #### Type Parameters
 
@@ -72,21 +72,21 @@ Defined in: [guard/index.ts:281](https://github.com/maxkaemmerer/pure/blob/f4751
 
 > `readonly` **success**: `true`
 
-Defined in: [guard/index.ts:281](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L281)
+Defined in: [guard/index.ts:281](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L281)
 
 ##### value
 
 > `readonly` **value**: `T`
 
-Defined in: [guard/index.ts:281](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L281)
+Defined in: [guard/index.ts:281](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L281)
 
-***
+---
 
 ### ValidationResult\<T\>
 
 > **ValidationResult**\<`T`\> = [`SuccessResult`](#successresult)\<`T`\> \| [`ErrorResult`](#errorresult)
 
-Defined in: [guard/index.ts:286](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L286)
+Defined in: [guard/index.ts:286](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L286)
 
 #### Type Parameters
 
@@ -100,79 +100,79 @@ Defined in: [guard/index.ts:286](https://github.com/maxkaemmerer/pure/blob/f4751
 
 > `const` **isAlways**: [`ErrorAwareGuard`](#errorawareguard)\<`unknown`\>
 
-Defined in: [guard/index.ts:529](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L529)
+Defined in: [guard/index.ts:529](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L529)
 
-***
+---
 
 ### isBool
 
 > `const` **isBool**: [`ErrorAwareGuard`](#errorawareguard)\<`boolean`\>
 
-Defined in: [guard/index.ts:519](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L519)
+Defined in: [guard/index.ts:519](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L519)
 
-***
+---
 
 ### isFloat
 
 > `const` **isFloat**: [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [guard/index.ts:520](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L520)
+Defined in: [guard/index.ts:520](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L520)
 
-***
+---
 
 ### isInt
 
 > `const` **isInt**: [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [guard/index.ts:523](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L523)
+Defined in: [guard/index.ts:523](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L523)
 
-***
+---
 
 ### isNever
 
 > `const` **isNever**: [`ErrorAwareGuard`](#errorawareguard)\<`unknown`\>
 
-Defined in: [guard/index.ts:530](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L530)
+Defined in: [guard/index.ts:530](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L530)
 
-***
+---
 
 ### isNonEmptyString
 
 > `const` **isNonEmptyString**: [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-Defined in: [guard/index.ts:531](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L531)
+Defined in: [guard/index.ts:531](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L531)
 
-***
+---
 
 ### isNull
 
 > `const` **isNull**: [`ErrorAwareGuard`](#errorawareguard)\<`null`\>
 
-Defined in: [guard/index.ts:524](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L524)
+Defined in: [guard/index.ts:524](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L524)
 
-***
+---
 
 ### isNumber
 
 > `const` **isNumber**: [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [guard/index.ts:512](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L512)
+Defined in: [guard/index.ts:512](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L512)
 
-***
+---
 
 ### isObject
 
 > `const` **isObject**: [`ErrorAwareGuard`](#errorawareguard)\<`object`\>
 
-Defined in: [guard/index.ts:528](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L528)
+Defined in: [guard/index.ts:528](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L528)
 
-***
+---
 
 ### isUndefined
 
 > `const` **isUndefined**: [`ErrorAwareGuard`](#errorawareguard)\<`undefined`\>
 
-Defined in: [guard/index.ts:525](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L525)
+Defined in: [guard/index.ts:525](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L525)
 
 ## Functions
 
@@ -180,7 +180,7 @@ Defined in: [guard/index.ts:525](https://github.com/maxkaemmerer/pure/blob/f4751
 
 > **combineResultsAll**\<`T`\>(...`results`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [guard/index.ts:317](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L317)
+Defined in: [guard/index.ts:317](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L317)
 
 #### Type Parameters
 
@@ -198,13 +198,13 @@ Defined in: [guard/index.ts:317](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### combineResultsOneOf()
 
 > **combineResultsOneOf**\<`T`\>(...`results`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [guard/index.ts:384](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L384)
+Defined in: [guard/index.ts:384](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L384)
 
 #### Type Parameters
 
@@ -222,13 +222,13 @@ Defined in: [guard/index.ts:384](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### combineTwoResultsAnd()
 
 > **combineTwoResultsAnd**\<`T1`, `T2`\>(`a`, `b`): [`ValidationResult`](#validationresult)\<`T1` & `T2`\>
 
-Defined in: [guard/index.ts:342](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L342)
+Defined in: [guard/index.ts:342](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L342)
 
 #### Type Parameters
 
@@ -254,13 +254,13 @@ Defined in: [guard/index.ts:342](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ValidationResult`](#validationresult)\<`T1` & `T2`\>
 
-***
+---
 
 ### combineTwoResultsOneOf()
 
 > **combineTwoResultsOneOf**\<`T1`, `T2`\>(`a`, `b`): [`ValidationResult`](#validationresult)\<`T1` \| `T2`\>
 
-Defined in: [guard/index.ts:361](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L361)
+Defined in: [guard/index.ts:361](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L361)
 
 #### Type Parameters
 
@@ -286,13 +286,13 @@ Defined in: [guard/index.ts:361](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ValidationResult`](#validationresult)\<`T1` \| `T2`\>
 
-***
+---
 
 ### fail()
 
 > **fail**(...`errors`): [`ErrorResult`](#errorresult)
 
-Defined in: [guard/index.ts:290](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L290)
+Defined in: [guard/index.ts:290](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L290)
 
 #### Parameters
 
@@ -304,13 +304,13 @@ Defined in: [guard/index.ts:290](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorResult`](#errorresult)
 
-***
+---
 
 ### fromGuard()
 
 > **fromGuard**\<`T`\>(`guard`, `createErrors`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:405](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L405)
+Defined in: [guard/index.ts:405](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L405)
 
 #### Type Parameters
 
@@ -332,13 +332,13 @@ Defined in: [guard/index.ts:405](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isAll()
 
 > **isAll**\<`T`\>(`guards`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:452](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L452)
+Defined in: [guard/index.ts:452](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L452)
 
 #### Type Parameters
 
@@ -356,13 +356,13 @@ Defined in: [guard/index.ts:452](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isBoth()
 
 > **isBoth**\<`T1`, `T2`\>(`a`, `b`): [`ErrorAwareGuard`](#errorawareguard)\<`T1` & `T2`\>
 
-Defined in: [guard/index.ts:441](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L441)
+Defined in: [guard/index.ts:441](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L441)
 
 #### Type Parameters
 
@@ -388,19 +388,19 @@ Defined in: [guard/index.ts:441](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T1` & `T2`\>
 
-***
+---
 
 ### isExactString()
 
 > **isExactString**\<`T`\>(`expectedString`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:515](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L515)
+Defined in: [guard/index.ts:515](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L515)
 
 #### Type Parameters
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -412,13 +412,13 @@ Defined in: [guard/index.ts:515](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isListOf()
 
 > **isListOf**\<`I`, `T`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:474](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L474)
+Defined in: [guard/index.ts:474](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L474)
 
 #### Type Parameters
 
@@ -428,7 +428,7 @@ Defined in: [guard/index.ts:474](https://github.com/maxkaemmerer/pure/blob/f4751
 
 ##### T
 
-`T` *extends* `I`[]
+`T` _extends_ `I`[]
 
 #### Parameters
 
@@ -440,13 +440,13 @@ Defined in: [guard/index.ts:474](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isNonEmptyListOf()
 
 > **isNonEmptyListOf**\<`I`, `T`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:550](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L550)
+Defined in: [guard/index.ts:550](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L550)
 
 #### Type Parameters
 
@@ -456,7 +456,7 @@ Defined in: [guard/index.ts:550](https://github.com/maxkaemmerer/pure/blob/f4751
 
 ##### T
 
-`T` *extends* `I`[]
+`T` _extends_ `I`[]
 
 #### Parameters
 
@@ -468,13 +468,13 @@ Defined in: [guard/index.ts:550](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isNullOr()
 
 > **isNullOr**\<`T`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:564](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L564)
+Defined in: [guard/index.ts:564](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L564)
 
 #### Type Parameters
 
@@ -492,13 +492,13 @@ Defined in: [guard/index.ts:564](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isNumberBetweenInclusive()
 
 > **isNumberBetweenInclusive**(`min`, `max`): [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [guard/index.ts:558](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L558)
+Defined in: [guard/index.ts:558](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L558)
 
 #### Parameters
 
@@ -514,13 +514,13 @@ Defined in: [guard/index.ts:558](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-***
+---
 
 ### isObjectWithAllKeysMatchingGuard()
 
 > **isObjectWithAllKeysMatchingGuard**\<`T`, `K`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:632](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L632)
+Defined in: [guard/index.ts:632](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L632)
 
 Confirms the value is an object where every value matches the given guard.
 Calls console.debug with an error message to improve debugging when a large type does not match.
@@ -529,11 +529,11 @@ Calls console.debug with an error message to improve debugging when a large type
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 ##### K
 
-`K` *extends* `string` \| `number` \| `symbol`
+`K` _extends_ `string` \| `number` \| `symbol`
 
 #### Parameters
 
@@ -545,13 +545,13 @@ Calls console.debug with an error message to improve debugging when a large type
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKey()
 
 > **isObjectWithKey**\<`T`, `K`\>(`key`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:576](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L576)
+Defined in: [guard/index.ts:576](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L576)
 
 Confirms that the value is an object containing the specified key.
 
@@ -559,11 +559,11 @@ Confirms that the value is an object containing the specified key.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 ##### K
 
-`K` *extends* `string` \| `number` \| `symbol`
+`K` _extends_ `string` \| `number` \| `symbol`
 
 #### Parameters
 
@@ -575,13 +575,13 @@ Confirms that the value is an object containing the specified key.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKeyMatchingGuard()
 
 > **isObjectWithKeyMatchingGuard**\<`T`, `K`\>(`key`, `guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:589](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L589)
+Defined in: [guard/index.ts:589](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L589)
 
 Confirms that the value is an object containing the specified key the value matching the given guard.
 
@@ -589,11 +589,11 @@ Confirms that the value is an object containing the specified key the value matc
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 ##### K
 
-`K` *extends* `string` \| `number` \| `symbol`
+`K` _extends_ `string` \| `number` \| `symbol`
 
 #### Parameters
 
@@ -609,13 +609,13 @@ Confirms that the value is an object containing the specified key the value matc
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKeys()
 
 > **isObjectWithKeys**\<`T`, `K`\>(`keys`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:608](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L608)
+Defined in: [guard/index.ts:608](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L608)
 
 Confirms that the value is an object containing the specified keys.
 
@@ -623,11 +623,11 @@ Confirms that the value is an object containing the specified keys.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 ##### K
 
-`K` *extends* `string` \| `number` \| `symbol`
+`K` _extends_ `string` \| `number` \| `symbol`
 
 #### Parameters
 
@@ -639,23 +639,23 @@ Confirms that the value is an object containing the specified keys.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKeysMatchingGuard()
 
 > **isObjectWithKeysMatchingGuard**\<`T`, `K`\>(`guards`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:614](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L614)
+Defined in: [guard/index.ts:614](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L614)
 
 #### Type Parameters
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 ##### K
 
-`K` *extends* `string` \| `number` \| `symbol`
+`K` _extends_ `string` \| `number` \| `symbol`
 
 #### Parameters
 
@@ -667,13 +667,13 @@ Defined in: [guard/index.ts:614](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isOneOf()
 
 > **isOneOf**\<`T1`, `T2`\>(`a`, `b`): [`ErrorAwareGuard`](#errorawareguard)\<`T1` \| `T2`\>
 
-Defined in: [guard/index.ts:457](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L457)
+Defined in: [guard/index.ts:457](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L457)
 
 #### Type Parameters
 
@@ -699,19 +699,19 @@ Defined in: [guard/index.ts:457](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T1` \| `T2`\>
 
-***
+---
 
 ### isOneStringOf()
 
 > **isOneStringOf**\<`T`\>(`validValues`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [guard/index.ts:566](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L566)
+Defined in: [guard/index.ts:566](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L566)
 
 #### Type Parameters
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -723,19 +723,19 @@ Defined in: [guard/index.ts:566](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isString()
 
 > **isString**\<`T`\>(`value`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [guard/index.ts:513](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L513)
+Defined in: [guard/index.ts:513](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L513)
 
 #### Type Parameters
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -747,13 +747,13 @@ Defined in: [guard/index.ts:513](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### isStringOfLength()
 
 > **isStringOfLength**(`length`): [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-Defined in: [guard/index.ts:536](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L536)
+Defined in: [guard/index.ts:536](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L536)
 
 #### Parameters
 
@@ -765,13 +765,13 @@ Defined in: [guard/index.ts:536](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-***
+---
 
 ### isStringWithPattern()
 
 > **isStringWithPattern**(`pattern`): [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-Defined in: [guard/index.ts:544](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L544)
+Defined in: [guard/index.ts:544](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L544)
 
 #### Parameters
 
@@ -783,13 +783,13 @@ Defined in: [guard/index.ts:544](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-***
+---
 
 ### pass()
 
 > **pass**\<`T`\>(`value`): [`SuccessResult`](#successresult)\<`T`\>
 
-Defined in: [guard/index.ts:297](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L297)
+Defined in: [guard/index.ts:297](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L297)
 
 #### Type Parameters
 
@@ -807,13 +807,13 @@ Defined in: [guard/index.ts:297](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`SuccessResult`](#successresult)\<`T`\>
 
-***
+---
 
 ### prefixErrors()
 
 > **prefixErrors**\<`T`\>(`value`, `prefix`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [guard/index.ts:303](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L303)
+Defined in: [guard/index.ts:303](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L303)
 
 #### Type Parameters
 
@@ -835,13 +835,13 @@ Defined in: [guard/index.ts:303](https://github.com/maxkaemmerer/pure/blob/f4751
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### tryGuardIf()
 
 > **tryGuardIf**\<`T`, `T2`\>(`predicateGuard`, `check`, `createErrors`): [`ErrorAwareGuard`](#errorawareguard)\<`T2`\>
 
-Defined in: [guard/index.ts:424](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/guard/index.ts#L424)
+Defined in: [guard/index.ts:424](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L424)
 
 #### Type Parameters
 

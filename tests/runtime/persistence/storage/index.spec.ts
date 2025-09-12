@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
-import { storagePersistence } from "../../../../src/runtime/persistence/storage";
-import { none } from "../../../../src/runtime/effect/none";
-import { isErr, isOk } from "../../../../src/result";
-import { isJust, isNothing } from "../../../../src/maybe";
+import { storagePersistence } from "@kaumlaut/pure/runtime/persistence/storage";
+import { none } from "@kaumlaut/pure/runtime/effect/none";
+import { isErr, isOk } from "@kaumlaut/pure/result";
+import { isJust, isNothing } from "@kaumlaut/pure/maybe";
 describe("runtime/persistence/storage", () => {
   it("should return init of ok if item is in storage and passes guard", () => {
     const storage = {
@@ -12,7 +12,7 @@ describe("runtime/persistence/storage", () => {
     const persistence = storagePersistence("my-key", storage);
 
     const result = persistence.read(
-      () => true,
+      (value: unknown): value is string => true,
       (model) => [model, none()],
     );
 
@@ -29,7 +29,7 @@ describe("runtime/persistence/storage", () => {
     } as unknown as Storage);
 
     const result = persistence.read(
-      () => true,
+      (value: unknown): value is string => true,
       (model) => [model, none()],
     );
 
@@ -43,7 +43,7 @@ describe("runtime/persistence/storage", () => {
     } as unknown as Storage);
 
     const result = persistence.read(
-      () => true,
+      (value: unknown): value is string => true,
       (model) => [model, none()],
     );
 
@@ -57,7 +57,7 @@ describe("runtime/persistence/storage", () => {
     } as unknown as Storage);
 
     const result = persistence.read(
-      () => false,
+      (value: unknown): value is string => false,
       (model) => [model, none()],
     );
 

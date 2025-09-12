@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v1.0.1**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / clone
 
@@ -14,7 +14,7 @@ Provides value cloning capabilities
 
 > **Cloneable** = `string` \| `number` \| `boolean` \| `null` \| [`Cloneable`](#cloneable)[] \| \{\[`key`: `string`\]: [`Cloneable`](#cloneable); \}
 
-Defined in: [clone/index.ts:9](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/clone/index.ts#L9)
+Defined in: [clone/index.ts:9](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/clone/index.ts#L9)
 
 Defines the Cloneable type
 
@@ -24,7 +24,7 @@ Defines the Cloneable type
 
 > **clone**\<`T`\>(`value`): `T`
 
-Defined in: [clone/index.ts:20](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/clone/index.ts#L20)
+Defined in: [clone/index.ts:20](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/clone/index.ts#L20)
 
 Recursively clones values to prevent changing of the original value.
 
@@ -32,7 +32,7 @@ Recursively clones values to prevent changing of the original value.
 
 ##### T
 
-`T` *extends* [`Cloneable`](#cloneable)
+`T` _extends_ [`Cloneable`](#cloneable)
 
 #### Parameters
 

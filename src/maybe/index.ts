@@ -3,7 +3,7 @@
  * @module maybe
  */
 import { err, ok, Result } from "@kaumlaut/pure/result";
-import { Guard } from "../guard";
+import { ErrorAwareGuard, Guard } from "@kaumlaut/pure/guard";
 
 /**
  * Represents a Maybe containing a value.
@@ -142,6 +142,23 @@ export function maybeByGuard<T>(
 ): (value: unknown) => Maybe<T> {
   return (value: unknown) => {
     return guard(value) ? just(value) : nothing();
+  };
+}
+
+/**
+ * Creates a Just if the ErrorAwareGuard passes for the given value. Otherwise Creates a Nothing.
+ */
+export function maybeByErrorAwareGuard<T>(
+  guard: ErrorAwareGuard.ErrorAwareGuard<T>,
+): (value: unknown) => Maybe<T> {
+  return (value: unknown) => {
+    const result = guard(value);
+
+    if (result.success === true) {
+      return just(result.value);
+    }
+
+    return nothing();
   };
 }
 

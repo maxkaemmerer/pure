@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v1.0.1**](../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../README.md) / guard
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { is, Message } from "../../src/runtime";
+import { is, Message } from "@kaumlaut/pure/runtime";
 
 describe("runtime", () => {
   it("should be", () => {
