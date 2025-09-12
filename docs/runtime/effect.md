@@ -1,6 +1,6 @@
-[**@kaumlaut/pure v0.5.2**](../README.md)
+[**@kaumlaut/pure v1.0.0**](../README.md)
 
----
+***
 
 [@kaumlaut/pure](../README.md) / runtime/effect
 
@@ -12,43 +12,43 @@
 
 > **AsyncEffect**\<`T`\> = () => `Promise`\<`T`\>
 
-Defined in: [runtime/effect/index.ts:4](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L4)
+Defined in: [runtime/effect/index.ts:4](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L4)
 
 #### Type Parameters
 
 ##### T
 
-`T` _extends_ [`Message`](../runtime.md#message)
+`T` *extends* [`Message`](../runtime.md#message)
 
 #### Returns
 
 `Promise`\<`T`\>
 
----
+***
 
 ### AsyncNullEffect()
 
 > **AsyncNullEffect** = () => `Promise`\<`null`\>
 
-Defined in: [runtime/effect/index.ts:7](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L7)
+Defined in: [runtime/effect/index.ts:7](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L7)
 
 #### Returns
 
 `Promise`\<`null`\>
 
----
+***
 
 ### Effect\<T\>
 
 > **Effect**\<`T`\> = `object`
 
-Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L13)
+Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L13)
 
 #### Type Parameters
 
 ##### T
 
-`T` _extends_ [`Message`](../runtime.md#message)
+`T` *extends* [`Message`](../runtime.md#message)
 
 #### Properties
 
@@ -56,53 +56,53 @@ Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure-vu
 
 > **effectType**: [`EffectType`](#effecttype-1)\<`T`\>
 
-Defined in: [runtime/effect/index.ts:14](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L14)
+Defined in: [runtime/effect/index.ts:14](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L14)
 
 ##### meta
 
 > **meta**: `object` \| `null`
 
-Defined in: [runtime/effect/index.ts:16](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L16)
+Defined in: [runtime/effect/index.ts:16](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L16)
 
 ##### name
 
 > **name**: `string`
 
-Defined in: [runtime/effect/index.ts:15](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L15)
+Defined in: [runtime/effect/index.ts:15](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L15)
 
----
+***
 
 ### EffectType\<T\>
 
 > **EffectType**\<`T`\> = [`AsyncEffect`](#asynceffect)\<`T`\> \| [`SyncEffect`](#synceffect)\<`T`\> \| [`NullEffect`](#nulleffect) \| [`AsyncNullEffect`](#asyncnulleffect)
 
-Defined in: [runtime/effect/index.ts:8](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L8)
+Defined in: [runtime/effect/index.ts:8](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L8)
 
 #### Type Parameters
 
 ##### T
 
-`T` _extends_ [`Message`](../runtime.md#message)
+`T` *extends* [`Message`](../runtime.md#message)
 
----
+***
 
 ### NullEffect()
 
 > **NullEffect** = () => `null`
 
-Defined in: [runtime/effect/index.ts:6](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L6)
+Defined in: [runtime/effect/index.ts:6](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L6)
 
 #### Returns
 
 `null`
 
----
+***
 
 ### ReceiveEffectResult()\<T, E, R\>
 
 > **ReceiveEffectResult**\<`T`, `E`, `R`\> = (`result`) => `R`
 
-Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L31)
+Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L31)
 
 #### Type Parameters
 
@@ -128,19 +128,19 @@ Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure-vu
 
 `R`
 
----
+***
 
 ### SyncEffect()\<T\>
 
 > **SyncEffect**\<`T`\> = () => `T`
 
-Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L5)
+Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L5)
 
 #### Type Parameters
 
 ##### T
 
-`T` _extends_ [`Message`](../runtime.md#message)
+`T` *extends* [`Message`](../runtime.md#message)
 
 #### Returns
 
@@ -152,13 +152,13 @@ Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure-vue
 
 > **withName**\<`T`\>(`name`, `effect`, `meta`): [`Effect`](#effect)\<`T`\>
 
-Defined in: [runtime/effect/index.ts:19](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L19)
+Defined in: [runtime/effect/index.ts:19](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/effect/index.ts#L19)
 
 #### Type Parameters
 
 ##### T
 
-`T` _extends_ [`Message`](../runtime.md#message)
+`T` *extends* [`Message`](../runtime.md#message)
 
 #### Parameters
 

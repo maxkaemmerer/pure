@@ -1,6 +1,6 @@
-[**@kaumlaut/pure v0.5.2**](README.md)
+[**@kaumlaut/pure v1.0.0**](README.md)
 
----
+***
 
 [@kaumlaut/pure](README.md) / parse
 
@@ -12,7 +12,7 @@
 
 > **asFloat**(`value`): [`Result`](result.md#result)\<`number`, `string`\>
 
-Defined in: [parse/index.ts:19](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/parse/index.ts#L19)
+Defined in: [parse/index.ts:19](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/parse/index.ts#L19)
 
 Attempts to parse a string as an float. Returning ok if successful or err if not.
 
@@ -26,13 +26,13 @@ Attempts to parse a string as an float. Returning ok if successful or err if not
 
 [`Result`](result.md#result)\<`number`, `string`\>
 
----
+***
 
 ### asInt()
 
 > **asInt**(`value`): [`Result`](result.md#result)\<`number`, `string`\>
 
-Defined in: [parse/index.ts:6](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/parse/index.ts#L6)
+Defined in: [parse/index.ts:6](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/parse/index.ts#L6)
 
 Attempts to parse a string as an interger. Returning ok if successful or err if not.
 

@@ -1,6 +1,6 @@
-[**@kaumlaut/pure v0.5.2**](../../README.md)
+[**@kaumlaut/pure v1.0.0**](../../README.md)
 
----
+***
 
 [@kaumlaut/pure](../../README.md) / runtime/persistence/storage
 
@@ -12,17 +12,17 @@
 
 > **storagePersistence**\<`Model`, `CustomMessage`\>(`name`, `storage`): [`Persistence`](../persistence.md#persistence)\<`Model`, `CustomMessage`\>
 
-Defined in: [runtime/persistence/storage/index.ts:8](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/persistence/storage/index.ts#L8)
+Defined in: [runtime/persistence/storage/index.ts:8](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/persistence/storage/index.ts#L8)
 
 #### Type Parameters
 
 ##### Model
 
-`Model` _extends_ [`Cloneable`](../../clone.md#cloneable)
+`Model` *extends* [`Cloneable`](../../clone.md#cloneable)
 
 ##### CustomMessage
 
-`CustomMessage` _extends_ [`Message`](../../runtime.md#message)
+`CustomMessage` *extends* [`Message`](../../runtime.md#message)
 
 #### Parameters
 
