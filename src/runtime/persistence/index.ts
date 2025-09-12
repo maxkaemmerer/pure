@@ -9,7 +9,7 @@ export type Persistence<
 > = {
   persist(model: Model): void;
   read(
-    guard: Guard<Model>,
+    guard: Guard.Guard<Model>,
     init: Init<Model, CustomMessage>,
   ): Result<Model, string>;
 };

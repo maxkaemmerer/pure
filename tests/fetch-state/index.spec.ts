@@ -10,7 +10,7 @@ import {
   attempt,
   fail,
 } from "../../src/fetch-state";
-import { isNever, isAlways } from "../../src/guard";
+import { Guard } from "../../src/guard";
 
 describe("fetch-state", () => {
   describe("none", () => {
@@ -47,7 +47,7 @@ describe("fetch-state", () => {
 
   describe("success", () => {
     it("should create success correctly", () => {
-      const value = attempt(isAlways)({ some: "key" });
+      const value = attempt(Guard.isAlways)({ some: "key" });
       expect(value).to.deep.equal({
         type: "Success",
         data: { some: "key" },
@@ -81,7 +81,7 @@ describe("fetch-state", () => {
     });
 
     it("should create failed when guard does not pass", () => {
-      const value = attempt(isNever)({ some: "key" });
+      const value = attempt(Guard.isNever)({ some: "key" });
       expect(value).to.deep.equal({
         type: "Failed",
         error:

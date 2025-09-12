@@ -12,7 +12,7 @@ export const noPersistence = <
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   persist(model: Model) {},
   read(
-    guard: Guard<Model>,
+    guard: Guard.Guard<Model>,
     init: Init<Model, CustomMessage>,
   ): Result<Model, string> {
     return ok(init(nothing())[0]);

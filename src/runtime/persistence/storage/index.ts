@@ -16,7 +16,7 @@ export const storagePersistence = <
     storage.setItem(name, btoa(JSON.stringify(model)));
   },
   read(
-    guard: Guard<Model>,
+    guard: Guard.Guard<Model>,
     init: Init<Model, CustomMessage>,
   ): Result<Model, string> {
     const record = storage.getItem(name);

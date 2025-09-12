@@ -41,7 +41,7 @@ export function fetchJson<T, M extends Message>(
   url: string,
   headers: [string, string][],
   method: string,
-  guard: Guard<T>,
+  guard: Guard.Guard<T>,
   receiver: ReceiveEffectResult<T, FetchError, M>,
 ): Effect<M> {
   return withName(

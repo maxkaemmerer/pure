@@ -1,4 +1,4 @@
-[**@kaumlaut/pure v1.0.0**](../../README.md)
+[**@kaumlaut/pure v1.0.1**](../../README.md)
 
 ***
 
@@ -12,7 +12,7 @@
 
 > **none**(): [`Effect`](../effect.md#effect)\<`any`\>
 
-Defined in: [runtime/effect/none/index.ts:4](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/runtime/effect/none/index.ts#L4)
+Defined in: [runtime/effect/none/index.ts:4](https://github.com/maxkaemmerer/pure/blob/f475113534f30f48594a78af6186d19989fb84f7/src/runtime/effect/none/index.ts#L4)
 
 #### Returns
 

@@ -137,7 +137,9 @@ export function toResult<T, E>(error: E): (maybe: Maybe<T>) => Result<T, E> {
 /**
  * Creates a Just if the Guard passes for the given value. Otherwise Creates a Nothing.
  */
-export function maybeByGuard<T>(guard: Guard<T>): (value: unknown) => Maybe<T> {
+export function maybeByGuard<T>(
+  guard: Guard.Guard<T>,
+): (value: unknown) => Maybe<T> {
   return (value: unknown) => {
     return guard(value) ? just(value) : nothing();
   };

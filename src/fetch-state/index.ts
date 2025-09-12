@@ -2,7 +2,7 @@
  * Provides types and functions to represent fetch request states
  * @module fetch-state
  */
-import { type Guard } from "@kaumlaut/pure/guard";
+import { Guard } from "@kaumlaut/pure/guard";
 
 /**
  * Represents a failed fetch request
@@ -98,7 +98,7 @@ if(isSuccess(value)){
 }
  */
 export function attempt<T>(
-  guard: Guard<T>,
+  guard: Guard.Guard<T>,
   error: string = "Guard did not pass. Ensure the attempted data has the correct type",
 ): (data: unknown) => Success<T> | Failed {
   return (data: unknown) => {
