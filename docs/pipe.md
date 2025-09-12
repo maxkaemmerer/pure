@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v0.5.2**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / pipe
 
@@ -87,9 +87,9 @@ Is meant to make larger functions more readable.
 
 ```ts
 const output = put("3")
-     .into(asInt)
-     .into(toMaybe)
-     .into(withDefault(0))
-     .into((input) => input * 3.14)
-     .into((input) => input.toPrecision());
+  .into(asInt)
+  .into(toMaybe)
+  .into(withDefault(0))
+  .into((input) => input * 3.14)
+  .into((input) => input.toPrecision());
 ```

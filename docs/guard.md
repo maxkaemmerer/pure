@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v0.5.2**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / guard
 
@@ -70,7 +70,7 @@ Confirms that the given value passes all guards.
 
 `value is T`
 
-***
+---
 
 ### isAlways()
 
@@ -96,7 +96,7 @@ Always passes.
 
 `value is T`
 
-***
+---
 
 ### isBool()
 
@@ -116,7 +116,7 @@ Confirms the value is a boolean.
 
 `value is boolean`
 
-***
+---
 
 ### isExactString()
 
@@ -130,7 +130,7 @@ Confirms the value exactly matched the given string.
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -152,7 +152,7 @@ Confirms the value exactly matched the given string.
 
 `value is T`
 
-***
+---
 
 ### isFloat()
 
@@ -172,7 +172,7 @@ Confirms that the value is a floating point number.
 
 `value is number`
 
-***
+---
 
 ### isInt()
 
@@ -192,7 +192,7 @@ Confirms that the value is an integer.
 
 `value is number`
 
-***
+---
 
 ### isListOf()
 
@@ -229,7 +229,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 `value is T[]`
 
-***
+---
 
 ### isNever()
 
@@ -255,7 +255,7 @@ Never passes.
 
 `value is T`
 
-***
+---
 
 ### isNonEmptyListOf()
 
@@ -291,7 +291,7 @@ Confirms the value is a list with atleast one item and all items match the given
 
 `value is T`
 
-***
+---
 
 ### isNull()
 
@@ -311,7 +311,7 @@ Confirms the value is null.
 
 `value is null`
 
-***
+---
 
 ### isNullOr()
 
@@ -347,7 +347,7 @@ Confirms the value is either null or passes the given Guard.
 
 `value is T`
 
-***
+---
 
 ### isNumber()
 
@@ -367,7 +367,7 @@ Confirms that the value is a number.
 
 `value is number`
 
-***
+---
 
 ### isNumberBetweenInclusive()
 
@@ -408,7 +408,7 @@ Meaning if the value equals min or max the guard passes.
 
 `value is T`
 
-***
+---
 
 ### isObjectWithAllKeysMatchingGuard()
 
@@ -427,7 +427,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -449,7 +449,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 `value is T`
 
-***
+---
 
 ### isObjectWithKey()
 
@@ -463,7 +463,7 @@ Confirms that the value is an object containing the specified key.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -485,7 +485,7 @@ keyof `T`
 
 `value is T`
 
-***
+---
 
 ### isObjectWithKeys()
 
@@ -499,7 +499,7 @@ Confirms that the value is an object containing the specified keys.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -521,7 +521,7 @@ keyof `T`[]
 
 `value is T`
 
-***
+---
 
 ### isObjectWithKeysMatchingGuard()
 
@@ -536,7 +536,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -558,7 +558,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 `value is T`
 
-***
+---
 
 ### isOneOf()
 
@@ -602,7 +602,7 @@ Confirms the value passes at least one of the given Guards.
 
 value is T1 \| T2
 
-***
+---
 
 ### isOneStringOf()
 
@@ -616,7 +616,7 @@ Confirms the value is one of the given valid values.
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -638,7 +638,7 @@ Confirms the value is one of the given valid values.
 
 `value is T`
 
-***
+---
 
 ### isString()
 
@@ -658,7 +658,7 @@ Confirms that the value is a string.
 
 `value is string`
 
-***
+---
 
 ### isStringOfLength()
 
@@ -688,7 +688,7 @@ Confirms that the value is a string with specified length.
 
 `value is string`
 
-***
+---
 
 ### isStringWithPattern()
 
@@ -708,7 +708,7 @@ Confirms the value is a string and matches the given regular expression.
 
 [`Guard`](#guard)\<`string`\>
 
-***
+---
 
 ### isUndefined()
 

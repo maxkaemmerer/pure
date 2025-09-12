@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v0.5.2**](../../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../../README.md) / runtime/persistence/storage
 
@@ -18,11 +18,11 @@ Defined in: [runtime/persistence/storage/index.ts:8](https://github.com/maxkaemm
 
 ##### Model
 
-`Model` *extends* [`Cloneable`](../../clone.md#cloneable)
+`Model` _extends_ [`Cloneable`](../../clone.md#cloneable)
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](../../runtime.md#message)
+`CustomMessage` _extends_ [`Message`](../../runtime.md#message)
 
 #### Parameters
 

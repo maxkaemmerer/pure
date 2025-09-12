@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v0.5.2**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / maybe
 
@@ -22,8 +22,8 @@ Represents a Maybe containing a value.
 
 ```ts
 if (isJust(maybe)) {
- // the isJust guard tells typescript that maybe has a value of type number
- console.log("Something here: " + maybe.value)
+  // the isJust guard tells typescript that maybe has a value of type number
+  console.log("Something here: " + maybe.value);
 }
 ```
 
@@ -47,7 +47,7 @@ Defined in: [maybe/index.ts:19](https://github.com/maxkaemmerer/pure-vue-poc/blo
 
 Defined in: [maybe/index.ts:20](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/maybe/index.ts#L20)
 
-***
+---
 
 ### Maybe\<T\>
 
@@ -63,7 +63,7 @@ Represents the Maybe type.
 
 `T`
 
-***
+---
 
 ### Nothing
 
@@ -77,9 +77,9 @@ Represents a Maybe not containing a value.
 
 ```ts
 if (isNothing(maybe)) {
-     // no value property exists on maybe
-     console.log("Nothing here")
- }
+  // no value property exists on maybe
+  console.log("Nothing here");
+}
 ```
 
 #### Properties
@@ -126,7 +126,7 @@ Converts the given Maybe into a Nothing if it is Just but does not pass the give
 
 [`Maybe`](#maybe)\<`T`\>
 
-***
+---
 
 ### isJust()
 
@@ -152,7 +152,7 @@ A Guard confirming that the given maybe value is a Just.
 
 `maybe is Just<T>`
 
-***
+---
 
 ### isMaybe()
 
@@ -178,7 +178,7 @@ A Guard confirming that the given value is a Maybe.
 
 `value is Maybe<T>`
 
-***
+---
 
 ### isNothing()
 
@@ -204,7 +204,7 @@ A Guard confirming that the given maybe value is a Nothing.
 
 `maybe is Nothing`
 
-***
+---
 
 ### just()
 
@@ -230,7 +230,7 @@ Creates a maybe containing a value. (Just)
 
 [`Just`](#just)\<`T`\>
 
-***
+---
 
 ### map()
 
@@ -270,7 +270,7 @@ Applies the func function to the value if the given Maybe is a Just and returns 
 
 [`Maybe`](#maybe)\<`R`\>
 
-***
+---
 
 ### mapToMaybe()
 
@@ -311,7 +311,7 @@ Returns the given Maybe if it is a Nothing.
 
 [`Maybe`](#maybe)\<`R`\>
 
-***
+---
 
 ### maybeByGuard()
 
@@ -347,7 +347,7 @@ Creates a Just if the Guard passes for the given value. Otherwise Creates a Noth
 
 [`Maybe`](#maybe)\<`T`\>
 
-***
+---
 
 ### nothing()
 
@@ -361,7 +361,7 @@ Creates a maybe not containing a value. (Nothing)
 
 [`Nothing`](#nothing)
 
-***
+---
 
 ### toResult()
 
@@ -403,7 +403,7 @@ A Just becomes an Ok with the contained value.
 
 [`Result`](result.md#result)\<`T`, `E`\>
 
-***
+---
 
 ### tryMap()
 
@@ -444,7 +444,7 @@ Returns the given Maybe if it is a Nothing.
 
 [`Maybe`](#maybe)\<`R`\>
 
-***
+---
 
 ### withDefault()
 

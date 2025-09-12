@@ -1,6 +1,6 @@
 **@kaumlaut/pure v0.5.2**
 
-***
+---
 
 # @kaumlaut/pure v0.5.2
 

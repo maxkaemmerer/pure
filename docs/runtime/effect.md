@@ -1,6 +1,6 @@
 [**@kaumlaut/pure v0.5.2**](../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../README.md) / runtime/effect
 
@@ -18,13 +18,13 @@ Defined in: [runtime/effect/index.ts:4](https://github.com/maxkaemmerer/pure-vue
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Returns
 
 `Promise`\<`T`\>
 
-***
+---
 
 ### AsyncNullEffect()
 
@@ -36,7 +36,7 @@ Defined in: [runtime/effect/index.ts:7](https://github.com/maxkaemmerer/pure-vue
 
 `Promise`\<`null`\>
 
-***
+---
 
 ### Effect\<T\>
 
@@ -48,7 +48,7 @@ Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure-vu
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Properties
 
@@ -70,7 +70,7 @@ Defined in: [runtime/effect/index.ts:16](https://github.com/maxkaemmerer/pure-vu
 
 Defined in: [runtime/effect/index.ts:15](https://github.com/maxkaemmerer/pure-vue-poc/blob/1f00f47d2f3c329e3dda9a01eb5ed8ebf93253d3/pure/src/runtime/effect/index.ts#L15)
 
-***
+---
 
 ### EffectType\<T\>
 
@@ -82,9 +82,9 @@ Defined in: [runtime/effect/index.ts:8](https://github.com/maxkaemmerer/pure-vue
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
-***
+---
 
 ### NullEffect()
 
@@ -96,7 +96,7 @@ Defined in: [runtime/effect/index.ts:6](https://github.com/maxkaemmerer/pure-vue
 
 `null`
 
-***
+---
 
 ### ReceiveEffectResult()\<T, E, R\>
 
@@ -128,7 +128,7 @@ Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure-vu
 
 `R`
 
-***
+---
 
 ### SyncEffect()\<T\>
 
@@ -140,7 +140,7 @@ Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure-vue
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Returns
 
@@ -158,7 +158,7 @@ Defined in: [runtime/effect/index.ts:19](https://github.com/maxkaemmerer/pure-vu
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Parameters
 
