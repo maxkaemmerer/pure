@@ -12,7 +12,7 @@
 
 > **storagePersistence**\<`Model`, `CustomMessage`\>(`name`, `storage`): [`Persistence`](../persistence.md#persistence)\<`Model`, `CustomMessage`\>
 
-Defined in: [runtime/persistence/storage/index.ts:8](https://github.com/maxkaemmerer/pure/blob/ea84e6be39f3521fc671fd707ac45be415997345/src/runtime/persistence/storage/index.ts#L8)
+Defined in: [runtime/persistence/storage/index.ts:8](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/runtime/persistence/storage/index.ts#L8)
 
 #### Type Parameters
 
