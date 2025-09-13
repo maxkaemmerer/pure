@@ -272,16 +272,14 @@ export function isOneOf<T1, T2>(
 /**
  * Confirms the value is a list of items that all pass the given guard.
  */
-export function isListOf<I, T extends I[]>(
-  guard: ErrorAwareGuard<I>,
-): ErrorAwareGuard<T> {
+export function isListOf<I>(guard: ErrorAwareGuard<I>): ErrorAwareGuard<I[]> {
   return (value: unknown) => {
     if (!Array.isArray(value)) {
       return fail("Not a list");
     }
 
     if (value.length === 0) {
-      return pass<T>([] as T);
+      return pass<I[]>([] as I[]);
     }
 
     const results = value.map((value, index) =>
@@ -289,7 +287,7 @@ export function isListOf<I, T extends I[]>(
     );
 
     if (results.every((it) => it.success)) {
-      return pass(value as T);
+      return pass(value as I[]);
     }
 
     return combineResultsAll(
@@ -396,10 +394,10 @@ export const isStringWithPattern = (pattern: RegExp) =>
 /**
  * Confirms the value is a list with atleast one item and all items match the given guard.
  */
-export const isNonEmptyListOf = <I, T extends I[]>(guard: ErrorAwareGuard<I>) =>
+export const isNonEmptyListOf = <I>(guard: ErrorAwareGuard<I>) =>
   tryGuardIf(
     isListOf(guard),
-    (value): value is T => value.length > 0,
+    (value): value is I[] => value.length > 0,
     () => ["Not enough items"],
   );
 
