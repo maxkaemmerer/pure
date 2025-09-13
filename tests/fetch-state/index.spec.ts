@@ -88,7 +88,7 @@ describe("fetch-state", () => {
       const value = fail("some-message");
       expect(value).to.deep.equal({
         type: "Failed",
-        error: "some-message",
+        errors: ["some-message"],
       });
       expect(isNone(value)).to.equal(false);
       expect(isSuccess(value)).to.equal(false);
@@ -96,7 +96,7 @@ describe("fetch-state", () => {
       expect(isLoading(value)).to.equal(false);
       expect(mapFailed(() => fail("OHOH!"))(value)).to.deep.equal({
         type: "Failed",
-        error: "OHOH!",
+        errors: ["OHOH!"],
       });
     });
 
@@ -104,8 +104,9 @@ describe("fetch-state", () => {
       const value = attempt(Guard.isNever)({ some: "key" });
       expect(value).to.deep.equal({
         type: "Failed",
-        error:
+        errors: [
           "Guard did not pass. Ensure the attempted data has the correct type",
+        ],
       });
       expect(isSuccess(value)).to.equal(false);
       expect(isFailed(value)).to.equal(true);
@@ -115,7 +116,7 @@ describe("fetch-state", () => {
       const value = attemptErrorAware(ErrorAwareGuard.isNever)({ some: "key" });
       expect(value).to.deep.equal({
         type: "Failed",
-        error: "Never passes",
+        errors: ["Never passes"],
       });
       expect(isSuccess(value)).to.equal(false);
       expect(isFailed(value)).to.equal(true);

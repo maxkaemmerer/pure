@@ -9,7 +9,7 @@ import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
  * Represents a failed fetch request
  */
 export type Failed = {
-  error: Readonly<string>;
+  errors: Readonly<string[]>;
   type: "Failed";
 };
 
@@ -65,10 +65,10 @@ export function isSuccess<T>(state: FetchState<T>): state is Success<T> {
 /**
  * Creates a fetch state of type Failed
  */
-export function fail(error: string): Failed {
+export function fail(first: string, ...errors: string[]): Failed {
   return {
     type: "Failed",
-    error,
+    errors: [first, ...errors],
   };
 }
 /**
@@ -100,7 +100,8 @@ if(isSuccess(value)){
  */
 export function attempt<T>(
   guard: Guard.Guard<T>,
-  error: string = "Guard did not pass. Ensure the attempted data has the correct type",
+  firstError: string = "Guard did not pass. Ensure the attempted data has the correct type",
+  ...errors: string[]
 ): (data: unknown) => Success<T> | Failed {
   return (data: unknown) => {
     if (guard(data)) {
@@ -112,7 +113,7 @@ export function attempt<T>(
 
     return {
       type: "Failed",
-      error,
+      errors: [firstError, ...errors],
     };
   };
 }
@@ -142,7 +143,7 @@ export function attemptErrorAware<T>(
 
     return {
       type: "Failed",
-      error: result.errors.join("."),
+      errors: result.errors,
     };
   };
 }
