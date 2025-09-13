@@ -1,6 +1,6 @@
 import { Init, Message } from "@kaumlaut/pure/runtime";
 import { Persistence } from "@kaumlaut/pure/runtime/persistence";
-import { Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
 import { ok, Result } from "@kaumlaut/pure/result";
 import { Cloneable } from "@kaumlaut/pure/clone";
 import { nothing } from "@kaumlaut/pure/maybe";

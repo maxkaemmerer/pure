@@ -1,4 +1,4 @@
-import { Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
 import { Result, ok, err } from "@kaumlaut/pure/result";
 import { Persistence } from "@kaumlaut/pure/runtime/persistence";
 import { Message, Init } from "@kaumlaut/pure/runtime";

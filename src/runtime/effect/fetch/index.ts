@@ -1,4 +1,4 @@
-import { Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
 import { ok, err } from "@kaumlaut/pure/result";
 import {
   ReceiveEffectResult,

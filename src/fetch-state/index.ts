@@ -2,7 +2,8 @@
  * Provides types and functions to represent fetch request states
  * @module fetch-state
  */
-import { ErrorAwareGuard, Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
+import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
 
 /**
  * Represents a failed fetch request

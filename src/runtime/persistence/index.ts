@@ -1,5 +1,5 @@
 import { Init, Message } from "@kaumlaut/pure/runtime";
-import { Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
 import { Result } from "@kaumlaut/pure/result";
 import { Cloneable } from "@kaumlaut/pure/clone";
 

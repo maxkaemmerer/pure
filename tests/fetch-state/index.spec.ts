@@ -11,7 +11,8 @@ import {
   fail,
   attemptErrorAware,
 } from "@kaumlaut/pure/fetch-state";
-import { ErrorAwareGuard, Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
+import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
 
 describe("fetch-state", () => {
   describe("none", () => {

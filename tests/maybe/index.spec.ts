@@ -14,7 +14,8 @@ import {
   tryMap,
   withDefault,
 } from "@kaumlaut/pure/maybe";
-import { ErrorAwareGuard, Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
+import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
 
 describe("maybe", () => {
   describe("nothing", () => {

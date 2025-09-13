@@ -10,12 +10,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "paths": {
-      "@kaumlaut/pure/*": [
-        "./src/*"
-      ]
+      "@kaumlaut/pure/*": ["./src/*"]
     }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

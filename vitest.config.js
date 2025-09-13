@@ -6,6 +6,6 @@ export default defineConfig({
   //add tsconfigPaths() below
   plugins: [tsconfigPaths({})],
   test: {
-    environment: "node", // or "jsdom" if you're testing browser code
+    environment: "node",
   },
 });

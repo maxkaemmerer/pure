@@ -3,7 +3,8 @@
  * @module maybe
  */
 import { err, ok, Result } from "@kaumlaut/pure/result";
-import { ErrorAwareGuard, Guard } from "@kaumlaut/pure/guard";
+import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
+import * as Guard from "@kaumlaut/pure/guard";
 
 /**
  * Represents a Maybe containing a value.
