@@ -7,8 +7,9 @@
 ## Modules
 
 - [clone](clone.md)
+- [error-aware-guard](error-aware-guard.md)
 - [fetch-state](fetch-state.md)
-- [guard](guard/README.md)
+- [guard](guard.md)
 - [maybe](maybe.md)
 - [parse](parse.md)
 - [pipe](pipe.md)

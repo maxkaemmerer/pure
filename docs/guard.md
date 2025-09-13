@@ -1,10 +1,12 @@
-[**@kaumlaut/pure v1.0.1**](../../README.md)
+[**@kaumlaut/pure v1.0.1**](README.md)
 
 ---
 
-[@kaumlaut/pure](../../README.md) / [guard](../README.md) / Guard
+[@kaumlaut/pure](README.md) / guard
 
-# Guard
+# guard
+
+Provides easily composable generic type guards
 
 ## Type Aliases
 
@@ -12,7 +14,7 @@
 
 > **Guard**\<`T`\> = (`value`) => `value is T`
 
-Defined in: [guard/index.ts:13](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L13)
+Defined in: [guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L11)
 
 Represents a type guard
 
@@ -38,7 +40,7 @@ Represents a type guard
 
 > **isAll**\<`T`\>(`guards`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:18](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L18)
+Defined in: [guard/index.ts:16](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L16)
 
 Confirms that the given value passes all guards.
 
@@ -74,7 +76,7 @@ Confirms that the given value passes all guards.
 
 > **isAlways**\<`T`\>(`value`): `value is T`
 
-Defined in: [guard/index.ts:158](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L158)
+Defined in: [guard/index.ts:155](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L155)
 
 Always passes.
 
@@ -100,7 +102,7 @@ Always passes.
 
 > **isBool**(`value`): `value is boolean`
 
-Defined in: [guard/index.ts:172](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L172)
+Defined in: [guard/index.ts:169](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L169)
 
 Confirms the value is a boolean.
 
@@ -120,7 +122,7 @@ Confirms the value is a boolean.
 
 > **isBoth**\<`T`\>(`a`, `b`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:26](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L26)
+Defined in: [guard/index.ts:23](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L23)
 
 Confirms that the given value passes both guards.
 
@@ -160,7 +162,7 @@ Confirms that the given value passes both guards.
 
 > **isExactString**\<`T`\>(`expectedString`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:138](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L138)
+Defined in: [guard/index.ts:135](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L135)
 
 Confirms the value exactly matched the given string.
 
@@ -196,7 +198,7 @@ Confirms the value exactly matched the given string.
 
 > **isFloat**(`value`): `value is number`
 
-Defined in: [guard/index.ts:83](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L83)
+Defined in: [guard/index.ts:80](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L80)
 
 Confirms that the value is a floating point number.
 
@@ -216,7 +218,7 @@ Confirms that the value is a floating point number.
 
 > **isInt**(`value`): `value is number`
 
-Defined in: [guard/index.ts:72](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L72)
+Defined in: [guard/index.ts:69](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L69)
 
 Confirms that the value is an integer.
 
@@ -236,7 +238,7 @@ Confirms that the value is an integer.
 
 > **isListOf**\<`T`\>(`guard`): (`value`) => `value is T[]`
 
-Defined in: [guard/index.ts:187](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L187)
+Defined in: [guard/index.ts:184](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L184)
 
 Confirms the value is a list of items that all pass the given guard.
 Calls console.debug with an error message to improve debugging when a large type does not match.
@@ -273,7 +275,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 > **isNever**\<`T`\>(`value`): `value is T`
 
-Defined in: [guard/index.ts:165](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L165)
+Defined in: [guard/index.ts:162](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L162)
 
 Never passes.
 
@@ -299,7 +301,7 @@ Never passes.
 
 > **isNonEmptyListOf**\<`T`\>(`guard`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:259](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L259)
+Defined in: [guard/index.ts:254](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L254)
 
 Confirms the value is a list with atleast one item and all items match the given guard.
 
@@ -335,7 +337,7 @@ Confirms the value is a list with atleast one item and all items match the given
 
 > **isNonEmptyString**(`value`): `value is string`
 
-Defined in: [guard/index.ts:42](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L42)
+Defined in: [guard/index.ts:39](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L39)
 
 Confirms that the value is a non-empty string.
 
@@ -355,7 +357,7 @@ Confirms that the value is a non-empty string.
 
 > **isNull**(`value`): `value is null`
 
-Defined in: [guard/index.ts:179](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L179)
+Defined in: [guard/index.ts:176](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L176)
 
 Confirms the value is null.
 
@@ -375,7 +377,7 @@ Confirms the value is null.
 
 > **isNullOr**\<`T`\>(`guard`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:214](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L214)
+Defined in: [guard/index.ts:209](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L209)
 
 Confirms the value is either null or passes the given Guard.
 
@@ -411,7 +413,7 @@ Confirms the value is either null or passes the given Guard.
 
 > **isNumber**(`value`): `value is number`
 
-Defined in: [guard/index.ts:65](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L65)
+Defined in: [guard/index.ts:62](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L62)
 
 Confirms that the value is a number.
 
@@ -431,7 +433,7 @@ Confirms that the value is a number.
 
 > **isNumberBetweenInclusive**\<`T`\>(`min`, `max`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:270](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L270)
+Defined in: [guard/index.ts:265](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L265)
 
 Confirms the value is number between min and max inclusive.
 Meaning if the value equals min or max the guard passes.
@@ -472,7 +474,7 @@ Meaning if the value equals min or max the guard passes.
 
 > **isObject**(`value`): `value is object`
 
-Defined in: [guard/index.ts:59](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L59)
+Defined in: [guard/index.ts:56](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L56)
 
 Confirms that the value is an object.
 
@@ -492,7 +494,7 @@ Confirms that the value is an object.
 
 > **isObjectWithAllKeysMatchingGuard**\<`B`, `T`\>(`guard`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:224](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L224)
+Defined in: [guard/index.ts:219](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L219)
 
 Confirms the value is an object where every value matches the given guard.
 Calls console.debug with an error message to improve debugging when a large type does not match.
@@ -533,7 +535,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 > **isObjectWithKey**\<`T`\>(`key`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:98](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L98)
+Defined in: [guard/index.ts:95](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L95)
 
 Confirms that the value is an object containing the specified key.
 
@@ -569,7 +571,7 @@ keyof `T`
 
 > **isObjectWithKeys**\<`T`\>(`keys`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:108](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L108)
+Defined in: [guard/index.ts:105](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L105)
 
 Confirms that the value is an object containing the specified keys.
 
@@ -605,7 +607,7 @@ keyof `T`[]
 
 > **isObjectWithKeysMatchingGuard**\<`T`\>(`guards`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:119](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L119)
+Defined in: [guard/index.ts:116](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L116)
 
 Confirms that the value is an object whose key value pairs match the corresponding type guards.
 Calls console.debug with an error message to improve debugging when a large type does not match.
@@ -642,7 +644,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 > **isOneOf**\<`T1`, `T2`\>(`a`, `b`): (`value`) => value is T1 \| T2
 
-Defined in: [guard/index.ts:204](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L204)
+Defined in: [guard/index.ts:199](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L199)
 
 Confirms the value passes at least one of the given Guards.
 
@@ -686,7 +688,7 @@ value is T1 \| T2
 
 > **isOneStringOf**\<`T`\>(`validValues`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:148](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L148)
+Defined in: [guard/index.ts:145](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L145)
 
 Confirms the value is one of the given valid values.
 
@@ -722,7 +724,7 @@ Confirms the value is one of the given valid values.
 
 > **isString**\<`T`\>(`value`): `value is T`
 
-Defined in: [guard/index.ts:36](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L36)
+Defined in: [guard/index.ts:33](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L33)
 
 Confirms that the value is a string.
 
@@ -748,7 +750,7 @@ Confirms that the value is a string.
 
 > **isStringOfLength**(`length`): (`value`) => `value is string`
 
-Defined in: [guard/index.ts:49](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L49)
+Defined in: [guard/index.ts:46](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L46)
 
 Confirms that the value is a string with specified length.
 
@@ -778,7 +780,7 @@ Confirms that the value is a string with specified length.
 
 > **isStringWithPattern**(`pattern`): [`Guard`](#guard)\<`string`\>
 
-Defined in: [guard/index.ts:244](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L244)
+Defined in: [guard/index.ts:239](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L239)
 
 Confirms the value is a string and matches the given regular expression.
 
@@ -798,7 +800,7 @@ Confirms the value is a string and matches the given regular expression.
 
 > **isUndefined**(`value`): `value is undefined`
 
-Defined in: [guard/index.ts:252](https://github.com/maxkaemmerer/pure/blob/8cc9e48733272853b34466e69bd17655a52358bb/src/guard/index.ts#L252)
+Defined in: [guard/index.ts:247](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L247)
 
 Confirms the value is undefined.
 

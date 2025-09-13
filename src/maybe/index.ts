@@ -199,3 +199,33 @@ export function tryMap<T, R>(
     return maybe;
   };
 }
+
+/**
+ * Returns true if both values are either Just with matching predicate return values
+ * Or if both values are Nothing
+ */
+export function eqBy<T, T2>(
+  by: (value: T) => T2,
+): (a: Maybe<T>, b: Maybe<T>) => boolean {
+  return (a: Maybe<T>, b: Maybe<T>) => {
+    if (isJust(a) && isJust(b)) {
+      return by(a.value) === by(b.value);
+    }
+
+    return isNothing(a) && isNothing(b);
+  };
+}
+
+/**
+ * Returns true if both values are Nothing
+ */
+export function bothNothing<T>(a: Maybe<T>, b: Maybe<T>): boolean {
+  return isNothing(a) && isNothing(b);
+}
+
+/**
+ * Creates a Maybe<T> from a list and an index. Just if the key exists, Nothing if it doesn't
+ */
+export function fromListAndIndex<T>(index: number, list: T[]): Maybe<T> {
+  return index in list ? just(list[index]) : nothing();
+}

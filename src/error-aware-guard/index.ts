@@ -4,15 +4,32 @@
  */
 import * as Guard from "@kaumlaut/pure/guard";
 
+/**
+ * Represents a successful ErrorAwareGuard, containing the value
+ */
 export type SuccessResult<T> = { readonly success: true; readonly value: T };
+
+/**
+ * Represents a failed ErrorAwareGuard, containing errors
+ */
 export type ErrorResult = {
   readonly success: false;
   readonly errors: string[];
 };
+
+/**
+ * Represents the result of a ErrorAwareGuard
+ */
 export type ValidationResult<T> = SuccessResult<T> | ErrorResult;
 
+/**
+ * Represents a function that returns a wrapped value on success or a wrapped error on failure
+ */
 export type ErrorAwareGuard<T> = (value: unknown) => ValidationResult<T>;
 
+/**
+ * Creates an ErrorResult with the given errors
+ */
 export function fail(...errors: string[]): ErrorResult {
   return {
     success: false,
@@ -20,12 +37,19 @@ export function fail(...errors: string[]): ErrorResult {
   };
 }
 
+/**
+ * Creates an SuccessResult<T> with the given value
+ */
 export function pass<T>(value: T): SuccessResult<T> {
   return {
     success: true,
     value,
   };
 }
+
+/**
+ * Takes a ValidationResult<T> and if it is an ErrorResult, prefixes every error with the given prefix.
+ */
 export function prefixErrors<T>(
   value: ValidationResult<T>,
   prefix: string,
@@ -36,10 +60,31 @@ export function prefixErrors<T>(
 
   return {
     success: false,
-    errors: value.errors.map((it) => `${prefix} (${it})`),
+    errors: value.errors.map((it) => `${prefix}${it}`),
   };
 }
 
+/**
+ * Converts an ErrorAwareGuard<T> to a Guard<T>
+ */
+export function toGuard<T>(guard: ErrorAwareGuard<T>): Guard.Guard<T> {
+  return (value: unknown): value is T => guard(value).success;
+}
+
+/**
+ * Evaluates an ErrorAwareGuard<T> for given value
+ */
+export function check<T>(
+  value: unknown,
+  guard: ErrorAwareGuard<T>,
+): value is T {
+  return guard(value).success;
+}
+
+/**
+ * Combines a list of results. Returning a SuccessResult<T> if all of them are SucessResult<T>
+ * or returns an ErrorResult with combined errors if any of them are ErrorResult.
+ */
 export function combineResultsAll<T>(
   ...results: ValidationResult<T>[]
 ): ValidationResult<T> {
@@ -65,6 +110,10 @@ export function combineResultsAll<T>(
   );
 }
 
+/**
+ * Combines two results. Returning a SuccessResult<T> if both of them are SucessResult<T>
+ * or returns an ErrorResult with combined errors if one is an ErrorResult.
+ */
 export function combineTwoResultsAnd<T1, T2>(
   a: ValidationResult<T1>,
   b: ValidationResult<T2>,
@@ -75,15 +124,16 @@ export function combineTwoResultsAnd<T1, T2>(
 
   return fail(
     ...[a, b].reduce(
-      (all, result) => [
-        ...all,
-        ...(result.success === true ? [] : result.errors),
-      ],
+      (all, result: ErrorResult) => [...all, ...result.errors],
       [],
     ),
   );
 }
 
+/**
+ * Combines two results. Returning a SuccessResult<T> if either of them are SucessResult<T>
+ * or returns an ErrorResult with combined errors if both are an ErrorResult.
+ */
 export function combineTwoResultsOneOf<T1, T2>(
   a: ValidationResult<T1>,
   b: ValidationResult<T2>,
@@ -98,7 +148,7 @@ export function combineTwoResultsOneOf<T1, T2>(
 
   return fail(
     ...[a, b].reduce(
-      (all, result: ValidationResult<T2 | T2>) => [
+      (all, result: ValidationResult<T1 | T2>) => [
         ...all,
         ...(result.success === true ? [] : result.errors),
       ],
@@ -107,6 +157,10 @@ export function combineTwoResultsOneOf<T1, T2>(
   );
 }
 
+/**
+ * Combines a list of results. Returning a SuccessResult<T> if either of them are SucessResult<T>
+ * or returns an ErrorResult with combined errors if all are an ErrorResult.
+ */
 export function combineResultsOneOf<T>(
   ...results: ValidationResult<T>[]
 ): ValidationResult<T> {
@@ -128,6 +182,9 @@ export function combineResultsOneOf<T>(
   );
 }
 
+/**
+ * Converts a Guard<T> to an ErrorAwareGuard<T> with provided error factory function
+ */
 export function fromGuard<T>(
   guard: Guard.Guard<T>,
   createErrors: (value: unknown) => string[],
@@ -147,6 +204,11 @@ export function fromGuard<T>(
   };
 }
 
+/**
+ * First applies the predicateGuard and if it is a SuccessResult<T> passes the value to check.
+ * If check returns true it creates SuccessResult<T>.
+ * Otherwise an ErrorResult is created, containing the errors created by the error factory function.
+ */
 export function tryGuardIf<T, T2 extends T = T>(
   predicateGuard: ErrorAwareGuard<T>,
   check: (value: T) => value is T2,
@@ -164,6 +226,9 @@ export function tryGuardIf<T, T2 extends T = T>(
   };
 }
 
+/**
+ * Confirms that the given value passes both guards.
+ */
 export function isBoth<T1, T2>(
   a: ErrorAwareGuard<T1>,
   b: ErrorAwareGuard<T2>,
@@ -175,18 +240,25 @@ export function isBoth<T1, T2>(
   };
 }
 
+/**
+ * Confirms that the given value passes all guards.
+ */
 export function isAll<T>(guards: ErrorAwareGuard<T>[]): ErrorAwareGuard<T> {
   return (value: unknown) => {
     return combineResultsAll(...guards.map((it) => it(value)));
   };
 }
+
+/**
+ * Confirms the value passes at least one of the given Guards.
+ */
 export function isOneOf<T1, T2>(
   a: ErrorAwareGuard<T1>,
   b: ErrorAwareGuard<T2>,
 ): ErrorAwareGuard<T1 | T2> {
   return (value: unknown) => {
-    const resultA = prefixErrors(a(value), "A");
-    const resultB = prefixErrors(b(value), "B");
+    const resultA = prefixErrors(a(value), "(A) ");
+    const resultB = prefixErrors(b(value), "(B) ");
     const combinedResult = combineTwoResultsOneOf(resultA, resultB);
 
     if (combinedResult.success === true) {
@@ -197,6 +269,9 @@ export function isOneOf<T1, T2>(
   };
 }
 
+/**
+ * Confirms the value is a list of items that all pass the given guard.
+ */
 export function isListOf<I, T extends I[]>(
   guard: ErrorAwareGuard<I>,
 ): ErrorAwareGuard<T> {
@@ -210,20 +285,11 @@ export function isListOf<I, T extends I[]>(
     }
 
     const results = value.map((value, index) =>
-      prefixErrors(guard(value), `Item with index ${index} failed with`),
+      prefixErrors(guard(value), `[${index}] `),
     );
 
-    const successResult = results.find<SuccessResult<I>>(
-      (it: ValidationResult<I>): it is SuccessResult<I> => it.success,
-    );
-
-    if (successResult) {
-      return pass<T>(
-        // @ts-expect-error no issue
-        results
-          .filter<SuccessResult<I>>((it): it is SuccessResult<I> => it.success)
-          .map((it) => it.value),
-      );
+    if (results.every((it) => it.success)) {
+      return pass(value as T);
     }
 
     return combineResultsAll(
@@ -233,30 +299,81 @@ export function isListOf<I, T extends I[]>(
   };
 }
 
+/**
+ * Confirms that the value is a number.
+ */
 export const isNumber = fromGuard(Guard.isNumber, () => ["Not a number"]);
+
+/**
+ * Confirms that the value is a string.
+ */
 export const isString = <T extends string>(value: unknown) =>
   fromGuard(Guard.isString<T>, () => ["Not a string"])(value);
+
+/**
+ * Confirms that the value is an exact string.
+ */
 export const isExactString = <T extends string>(expectedString: T) =>
   tryGuardIf(isString<T>, Guard.isExactString<T>(expectedString), () => [
     `Not the exact string "${expectedString}"`,
   ]);
+
+/**
+ * Confirms that the value is a boolean.
+ */
 export const isBool = fromGuard(Guard.isBool, () => ["Not a boolean"]);
+
+/**
+ * Confirms that the value is a float.
+ */
 export const isFloat = fromGuard(Guard.isFloat, () => [
   "Not a floating point number",
 ]);
+
+/**
+ * Confirms that the value is an interger.
+ */
 export const isInt = fromGuard(Guard.isInt, () => ["Not an integer"]);
+
+/**
+ * Confirms that the value is null.
+ */
 export const isNull = fromGuard(Guard.isNull, () => ["Not null"]);
+
+/**
+ * Confirms that the value is undefined.
+ */
 export const isUndefined = fromGuard(Guard.isUndefined, () => [
   "Not undefined",
 ]);
+
+/**
+ * Confirms that the value is an object.
+ */
 export const isObject = fromGuard(Guard.isObject, () => ["Not an object"]);
+
+/**
+ * Always passes.
+ */
 export const isAlways = fromGuard(Guard.isAlways, () => []);
+
+/**
+ * Never passes.
+ */
 export const isNever = fromGuard(Guard.isNever, () => ["Never passes"]);
+
+/**
+ * Confirms that the value is a non-empty string.
+ */
 export const isNonEmptyString = tryGuardIf(
   isString,
   (value): value is string => value.length > 0,
   () => ["Is empty"],
 );
+
+/**
+ * Confirms that the value is a string with specified length.
+ */
 export const isStringOfLength = (length: number) =>
   tryGuardIf(
     isString,
@@ -265,24 +382,41 @@ export const isStringOfLength = (length: number) =>
       `String length was ${value.length} instead of expected ${length}`,
     ],
   );
+
+/**
+ * Confirms the value is a string and matches the given regular expression.
+ */
 export const isStringWithPattern = (pattern: RegExp) =>
   tryGuardIf(
     isString,
     (value): value is string => pattern.test(value),
     (value) => [`String ${value} did not match pattern ${pattern.source}`],
   );
+
+/**
+ * Confirms the value is a list with atleast one item and all items match the given guard.
+ */
 export const isNonEmptyListOf = <I, T extends I[]>(guard: ErrorAwareGuard<I>) =>
   tryGuardIf(
     isListOf(guard),
     (value): value is T => value.length > 0,
     () => ["Not enough items"],
   );
+
+/**
+ * Confirms the value is number between min and max inclusive.
+ * Meaning if the value equals min or max the guard passes.
+ */
 export const isNumberBetweenInclusive = (min: number, max: number) =>
   tryGuardIf(
     isNumber,
     (value): value is number => value >= min && value <= max,
     (value) => [`${value} is not between ${min} and ${max} (inclusively)`],
   );
+
+/**
+ * Confirms the value is either null or passes the given Guard.
+ */
 export const isNullOr = <T>(guard: ErrorAwareGuard<T>) =>
   isOneOf(isNull, guard);
 export const isOneStringOf = <T extends string>(validValues: T[]) =>
@@ -312,16 +446,20 @@ export function isObjectWithKeyMatchingGuard<
   T extends object,
   K extends keyof T,
 >(key: K, guard: ErrorAwareGuard<T[K]>): ErrorAwareGuard<T> {
-  return tryGuardIf(
-    isObjectWithKey<T, K>(key),
-    (value: T): value is T => guard(value[key]).success,
-    (value) =>
-      prefixErrors(
-        guard(value),
-        `Key ${key.toString()} of object did not pass guard`,
-        // @ts-expect-error no issue
-      ).errors || [],
-  );
+  return (value: unknown): ValidationResult<T> => {
+    const isObjectWithKeyResult = isObjectWithKey<T, K>(key)(value);
+    if (isObjectWithKeyResult.success === false) {
+      return isObjectWithKeyResult;
+    }
+
+    const keyValueResult = guard(value[key]);
+
+    if (keyValueResult.success === true) {
+      return pass(isObjectWithKeyResult.value);
+    }
+
+    return prefixErrors(keyValueResult, `[${key.toString()}] `);
+  };
 }
 
 /**
@@ -333,6 +471,9 @@ export function isObjectWithKeys<T extends object, K extends keyof T>(
   return isAll(keys.map(isObjectWithKey<T, K>));
 }
 
+/**
+ * Confirms that the value is an object whose key value pairs match the corresponding type guards.
+ */
 export function isObjectWithKeysMatchingGuard<
   T extends object,
   K extends keyof T,
@@ -349,7 +490,6 @@ export function isObjectWithKeysMatchingGuard<
 
 /**
  * Confirms the value is an object where every value matches the given guard.
- * Calls console.debug with an error message to improve debugging when a large type does not match.
  */
 export function isObjectWithAllKeysMatchingGuard<
   T extends object,

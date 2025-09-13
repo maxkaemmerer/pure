@@ -218,6 +218,78 @@ describe("error-aware-guard", () => {
         expect(result.value).toEqual({ a: 3, b: 5 });
         expect(result.errors).toEqual(undefined);
       });
+
+      it("should pass for object that has all keys matching for complex nested object", () => {
+        const result = ErrorAwareGuard.isObjectWithKeysMatchingGuard({
+          a: ErrorAwareGuard.isInt,
+          b: ErrorAwareGuard.isInt,
+          c: ErrorAwareGuard.isObjectWithKeysMatchingGuard({
+            d: ErrorAwareGuard.isString,
+            e: ErrorAwareGuard.isListOf(ErrorAwareGuard.isNumber),
+          }),
+        })({
+          a: 3,
+          b: 5,
+          c: {
+            d: "string",
+            e: [1, 2, 3],
+          },
+        });
+        expect(result.success).toEqual(true);
+        expect(result.value).toEqual({
+          a: 3,
+          b: 5,
+          c: {
+            d: "string",
+            e: [1, 2, 3],
+          },
+        });
+        expect(result.errors).toEqual(undefined);
+      });
+
+      it("should not pass for object that has no keys for complex nested object", () => {
+        const result = ErrorAwareGuard.isObjectWithKeysMatchingGuard({
+          a: ErrorAwareGuard.isInt,
+          b: ErrorAwareGuard.isInt,
+          c: ErrorAwareGuard.isObjectWithKeysMatchingGuard({
+            d: ErrorAwareGuard.isString,
+            e: ErrorAwareGuard.isListOf(ErrorAwareGuard.isNumber),
+          }),
+        })({});
+        expect(result.success).toEqual(false);
+        expect(result.value).toEqual(undefined);
+        expect(result.errors).toEqual([
+          "Object does not have key a",
+          "Object does not have key b",
+          "Object does not have key c",
+        ]);
+      });
+      it("should not pass for object that has wrong types for complex nested object", () => {
+        const result = ErrorAwareGuard.isObjectWithKeysMatchingGuard({
+          a: ErrorAwareGuard.isInt,
+          b: ErrorAwareGuard.isInt,
+          c: ErrorAwareGuard.isObjectWithKeysMatchingGuard({
+            d: ErrorAwareGuard.isString,
+            e: ErrorAwareGuard.isListOf(ErrorAwareGuard.isNumber),
+          }),
+        })({
+          a: null,
+          b: null,
+          c: {
+            d: null,
+            e: [1, 2, null],
+          },
+        });
+        expect(result.success).toEqual(false);
+        expect(result.value).toEqual(undefined);
+        expect(result.errors).toEqual([
+          "[a] Not an integer",
+          "[b] Not an integer",
+          "[c] [d] Not a string",
+          "[c] [e] Not all items passed the Guard",
+          "[c] [e] [2] Not a number",
+        ]);
+      });
       it("should not pass for object with some of the keys matching", () => {
         const result = ErrorAwareGuard.isObjectWithKeysMatchingGuard({
           a: ErrorAwareGuard.isInt,
@@ -225,9 +297,7 @@ describe("error-aware-guard", () => {
         })({ a: 3, b: "5" });
         expect(result.success).toEqual(false);
         expect(result.value).toEqual(undefined);
-        expect(result.errors).toEqual([
-          "Key b of object did not pass guard (Not an integer)",
-        ]);
+        expect(result.errors).toEqual(["[b] Not an integer"]);
       });
       it("should not pass for object with not all keys present", () => {
         const result = ErrorAwareGuard.isObjectWithKeysMatchingGuard({
@@ -371,8 +441,8 @@ describe("error-aware-guard", () => {
         expect(resultC.value).toEqual(undefined);
         expect(resultC.errors).toEqual([
           "Neither A nor B passed",
-          "A (Not null)",
-          "B (Not a string)",
+          "(A) Not null",
+          "(B) Not a string",
         ]);
       });
     });
@@ -393,8 +463,8 @@ describe("error-aware-guard", () => {
         expect(resultB.value).toEqual(undefined);
         expect(resultB.errors).toEqual([
           "Not all items passed the Guard",
-          "Item with index 0 failed with (Not a string)",
-          "Item with index 1 failed with (Not a string)",
+          "[0] Not a string",
+          "[1] Not a string",
         ]);
 
         const resultC = ErrorAwareGuard.isListOf(ErrorAwareGuard.isString)([]);
@@ -429,8 +499,8 @@ describe("error-aware-guard", () => {
         expect(resultC.value).toEqual(undefined);
         expect(resultC.errors).toEqual([
           "Neither A nor B passed",
-          "A (Not a string)",
-          "B (Not an integer)",
+          "(A) Not a string",
+          "(B) Not an integer",
         ]);
       });
     });
@@ -462,9 +532,7 @@ describe("error-aware-guard", () => {
         });
         expect(resultA.success).toEqual(false);
         expect(resultA.value).toEqual(undefined);
-        expect(resultA.errors).toEqual([
-          "Key a of object did not pass guard (Not a string)",
-        ]);
+        expect(resultA.errors).toEqual(["[a] Not a string"]);
 
         const resultB = ErrorAwareGuard.isObjectWithAllKeysMatchingGuard(
           ErrorAwareGuard.isString,
@@ -475,8 +543,8 @@ describe("error-aware-guard", () => {
         expect(resultB.success).toEqual(false);
         expect(resultB.value).toEqual(undefined);
         expect(resultB.errors).toEqual([
-          "Key a of object did not pass guard (Not a string)",
-          "Key b of object did not pass guard (Not a string)",
+          "[a] Not a string",
+          "[b] Not a string",
         ]);
 
         const resultC = ErrorAwareGuard.isObjectWithAllKeysMatchingGuard(
@@ -509,7 +577,7 @@ describe("error-aware-guard", () => {
         expect(resultB.value).toEqual(undefined);
         expect(resultB.errors).toEqual([
           "Not all items passed the Guard",
-          "Item with index 0 failed with (Not a string)",
+          "[0] Not a string",
         ]);
 
         const resultC = ErrorAwareGuard.isNonEmptyListOf(
