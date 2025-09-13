@@ -27,7 +27,7 @@
     "docs": "typedoc",
     "lint": "eslint -c eslint.config.js --fix",
     "format": "prettier . --write",
-    "test": "vitest",
+    "test": "npm run build && vitest",
     "release-minor": "npm run docs && npm run build && git add ./docs && git commit -m 'update docs' && npm version minor && git push --tags && npm publish --access public",
     "release-patch": "npm run docs && npm run build && git add ./docs && git commit -m 'update docs' && npm version patch && git push --tags && npm publish --access public",
     "release-major": "npm run docs && npm run build && git add ./docs && git commit -m 'update docs' && npm version major && git push --tags && npm publish --access public"
@@ -42,9 +42,7 @@
     "typedoc-plugin-markdown": "^4.8.1",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1",
-    "vitest": "^3.0.8"
-  },
-  "dependencies": {
+    "vitest": "^3.0.8",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }

@@ -18,10 +18,26 @@ export function isAll<T>(guards: Guard<T>[]): (value: unknown) => value is T {
 }
 
 /**
+ * Confirms that the given value passes both guards.
+ */
+export function isBoth<T>(
+  a: Guard<T>,
+  b: Guard<T>,
+): (value: unknown) => value is T {
+  return (value: unknown): value is T => a(value) && b(value);
+}
+
+/**
  * Confirms that the value is a string.
  */
-export function isString(value: unknown): value is string {
+export function isString<T extends string>(value: unknown): value is T {
   return typeof value === "string";
+}
+/**
+ * Confirms that the value is a non-empty string.
+ */
+export function isNonEmptyString(value: unknown): value is string {
+  return typeof value === "string" && value.length > 0;
 }
 
 /**
@@ -34,6 +50,12 @@ export function isStringOfLength(
     isString(value) && value.length === length;
 }
 
+/**
+ * Confirms that the value is an object.
+ */
+export function isObject(value: unknown): value is object {
+  return typeof value === "object";
+}
 /**
  * Confirms that the value is a number.
  */
@@ -114,7 +136,7 @@ export function isExactString<T extends string>(
   expectedString: string,
 ): (value: unknown) => value is T {
   return (value: unknown): value is T =>
-    isString(value) && value === expectedString;
+    isString<T>(value) && value === expectedString;
 }
 
 /**

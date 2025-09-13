@@ -1,5 +1,5 @@
 import { describe, expect, it, test } from "vitest";
-import { clone } from "../../src/clone";
+import { clone } from "@kaumlaut/pure/clone";
 
 describe("clone", () => {
   it("should clone recursively", () => {

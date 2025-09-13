@@ -1,6 +1,6 @@
 import { Effect } from "@kaumlaut/pure/runtime/effect";
-import { Cloneable } from "../clone";
-import { Maybe } from "../maybe";
+import { Cloneable } from "@kaumlaut/pure/clone";
+import { Maybe } from "@kaumlaut/pure/maybe";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Message<N extends string = string, T = any> = {

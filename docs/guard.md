@@ -1,6 +1,6 @@
-[**@kaumlaut/pure v1.0.0**](README.md)
+[**@kaumlaut/pure v1.0.1**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / guard
 
@@ -14,7 +14,7 @@ Provides easily composable generic type guards
 
 > **Guard**\<`T`\> = (`value`) => `value is T`
 
-Defined in: [guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L11)
+Defined in: [guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L11)
 
 Represents a type guard
 
@@ -40,7 +40,7 @@ Represents a type guard
 
 > **isAll**\<`T`\>(`guards`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:16](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L16)
+Defined in: [guard/index.ts:16](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L16)
 
 Confirms that the given value passes all guards.
 
@@ -70,13 +70,13 @@ Confirms that the given value passes all guards.
 
 `value is T`
 
-***
+---
 
 ### isAlways()
 
 > **isAlways**\<`T`\>(`value`): `value is T`
 
-Defined in: [guard/index.ts:133](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L133)
+Defined in: [guard/index.ts:155](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L155)
 
 Always passes.
 
@@ -96,13 +96,13 @@ Always passes.
 
 `value is T`
 
-***
+---
 
 ### isBool()
 
 > **isBool**(`value`): `value is boolean`
 
-Defined in: [guard/index.ts:147](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L147)
+Defined in: [guard/index.ts:169](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L169)
 
 Confirms the value is a boolean.
 
@@ -116,13 +116,53 @@ Confirms the value is a boolean.
 
 `value is boolean`
 
-***
+---
+
+### isBoth()
+
+> **isBoth**\<`T`\>(`a`, `b`): (`value`) => `value is T`
+
+Defined in: [guard/index.ts:23](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L23)
+
+Confirms that the given value passes both guards.
+
+#### Type Parameters
+
+##### T
+
+`T`
+
+#### Parameters
+
+##### a
+
+[`Guard`](#guard)\<`T`\>
+
+##### b
+
+[`Guard`](#guard)\<`T`\>
+
+#### Returns
+
+> (`value`): `value is T`
+
+##### Parameters
+
+###### value
+
+`unknown`
+
+##### Returns
+
+`value is T`
+
+---
 
 ### isExactString()
 
 > **isExactString**\<`T`\>(`expectedString`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:113](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L113)
+Defined in: [guard/index.ts:135](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L135)
 
 Confirms the value exactly matched the given string.
 
@@ -130,7 +170,7 @@ Confirms the value exactly matched the given string.
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -152,13 +192,13 @@ Confirms the value exactly matched the given string.
 
 `value is T`
 
-***
+---
 
 ### isFloat()
 
 > **isFloat**(`value`): `value is number`
 
-Defined in: [guard/index.ts:58](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L58)
+Defined in: [guard/index.ts:80](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L80)
 
 Confirms that the value is a floating point number.
 
@@ -172,13 +212,13 @@ Confirms that the value is a floating point number.
 
 `value is number`
 
-***
+---
 
 ### isInt()
 
 > **isInt**(`value`): `value is number`
 
-Defined in: [guard/index.ts:47](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L47)
+Defined in: [guard/index.ts:69](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L69)
 
 Confirms that the value is an integer.
 
@@ -192,13 +232,13 @@ Confirms that the value is an integer.
 
 `value is number`
 
-***
+---
 
 ### isListOf()
 
 > **isListOf**\<`T`\>(`guard`): (`value`) => `value is T[]`
 
-Defined in: [guard/index.ts:162](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L162)
+Defined in: [guard/index.ts:184](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L184)
 
 Confirms the value is a list of items that all pass the given guard.
 Calls console.debug with an error message to improve debugging when a large type does not match.
@@ -229,13 +269,13 @@ Calls console.debug with an error message to improve debugging when a large type
 
 `value is T[]`
 
-***
+---
 
 ### isNever()
 
 > **isNever**\<`T`\>(`value`): `value is T`
 
-Defined in: [guard/index.ts:140](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L140)
+Defined in: [guard/index.ts:162](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L162)
 
 Never passes.
 
@@ -255,13 +295,13 @@ Never passes.
 
 `value is T`
 
-***
+---
 
 ### isNonEmptyListOf()
 
 > **isNonEmptyListOf**\<`T`\>(`guard`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:232](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L232)
+Defined in: [guard/index.ts:254](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L254)
 
 Confirms the value is a list with atleast one item and all items match the given guard.
 
@@ -291,13 +331,33 @@ Confirms the value is a list with atleast one item and all items match the given
 
 `value is T`
 
-***
+---
+
+### isNonEmptyString()
+
+> **isNonEmptyString**(`value`): `value is string`
+
+Defined in: [guard/index.ts:39](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L39)
+
+Confirms that the value is a non-empty string.
+
+#### Parameters
+
+##### value
+
+`unknown`
+
+#### Returns
+
+`value is string`
+
+---
 
 ### isNull()
 
 > **isNull**(`value`): `value is null`
 
-Defined in: [guard/index.ts:154](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L154)
+Defined in: [guard/index.ts:176](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L176)
 
 Confirms the value is null.
 
@@ -311,13 +371,13 @@ Confirms the value is null.
 
 `value is null`
 
-***
+---
 
 ### isNullOr()
 
 > **isNullOr**\<`T`\>(`guard`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:187](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L187)
+Defined in: [guard/index.ts:209](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L209)
 
 Confirms the value is either null or passes the given Guard.
 
@@ -347,13 +407,13 @@ Confirms the value is either null or passes the given Guard.
 
 `value is T`
 
-***
+---
 
 ### isNumber()
 
 > **isNumber**(`value`): `value is number`
 
-Defined in: [guard/index.ts:40](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L40)
+Defined in: [guard/index.ts:62](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L62)
 
 Confirms that the value is a number.
 
@@ -367,13 +427,13 @@ Confirms that the value is a number.
 
 `value is number`
 
-***
+---
 
 ### isNumberBetweenInclusive()
 
 > **isNumberBetweenInclusive**\<`T`\>(`min`, `max`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:243](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L243)
+Defined in: [guard/index.ts:265](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L265)
 
 Confirms the value is number between min and max inclusive.
 Meaning if the value equals min or max the guard passes.
@@ -408,13 +468,33 @@ Meaning if the value equals min or max the guard passes.
 
 `value is T`
 
-***
+---
+
+### isObject()
+
+> **isObject**(`value`): `value is object`
+
+Defined in: [guard/index.ts:56](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L56)
+
+Confirms that the value is an object.
+
+#### Parameters
+
+##### value
+
+`unknown`
+
+#### Returns
+
+`value is object`
+
+---
 
 ### isObjectWithAllKeysMatchingGuard()
 
 > **isObjectWithAllKeysMatchingGuard**\<`B`, `T`\>(`guard`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:197](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L197)
+Defined in: [guard/index.ts:219](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L219)
 
 Confirms the value is an object where every value matches the given guard.
 Calls console.debug with an error message to improve debugging when a large type does not match.
@@ -427,7 +507,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -449,13 +529,13 @@ Calls console.debug with an error message to improve debugging when a large type
 
 `value is T`
 
-***
+---
 
 ### isObjectWithKey()
 
 > **isObjectWithKey**\<`T`\>(`key`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:73](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L73)
+Defined in: [guard/index.ts:95](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L95)
 
 Confirms that the value is an object containing the specified key.
 
@@ -463,7 +543,7 @@ Confirms that the value is an object containing the specified key.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -485,13 +565,13 @@ keyof `T`
 
 `value is T`
 
-***
+---
 
 ### isObjectWithKeys()
 
 > **isObjectWithKeys**\<`T`\>(`keys`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:83](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L83)
+Defined in: [guard/index.ts:105](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L105)
 
 Confirms that the value is an object containing the specified keys.
 
@@ -499,7 +579,7 @@ Confirms that the value is an object containing the specified keys.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -521,13 +601,13 @@ keyof `T`[]
 
 `value is T`
 
-***
+---
 
 ### isObjectWithKeysMatchingGuard()
 
 > **isObjectWithKeysMatchingGuard**\<`T`\>(`guards`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:94](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L94)
+Defined in: [guard/index.ts:116](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L116)
 
 Confirms that the value is an object whose key value pairs match the corresponding type guards.
 Calls console.debug with an error message to improve debugging when a large type does not match.
@@ -536,7 +616,7 @@ Calls console.debug with an error message to improve debugging when a large type
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -558,13 +638,13 @@ Calls console.debug with an error message to improve debugging when a large type
 
 `value is T`
 
-***
+---
 
 ### isOneOf()
 
 > **isOneOf**\<`T1`, `T2`\>(`a`, `b`): (`value`) => value is T1 \| T2
 
-Defined in: [guard/index.ts:177](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L177)
+Defined in: [guard/index.ts:199](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L199)
 
 Confirms the value passes at least one of the given Guards.
 
@@ -602,13 +682,13 @@ Confirms the value passes at least one of the given Guards.
 
 value is T1 \| T2
 
-***
+---
 
 ### isOneStringOf()
 
 > **isOneStringOf**\<`T`\>(`validValues`): (`value`) => `value is T`
 
-Defined in: [guard/index.ts:123](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L123)
+Defined in: [guard/index.ts:145](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L145)
 
 Confirms the value is one of the given valid values.
 
@@ -616,7 +696,7 @@ Confirms the value is one of the given valid values.
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -638,15 +718,21 @@ Confirms the value is one of the given valid values.
 
 `value is T`
 
-***
+---
 
 ### isString()
 
-> **isString**(`value`): `value is string`
+> **isString**\<`T`\>(`value`): `value is T`
 
-Defined in: [guard/index.ts:23](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L23)
+Defined in: [guard/index.ts:33](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L33)
 
 Confirms that the value is a string.
+
+#### Type Parameters
+
+##### T
+
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -656,15 +742,15 @@ Confirms that the value is a string.
 
 #### Returns
 
-`value is string`
+`value is T`
 
-***
+---
 
 ### isStringOfLength()
 
 > **isStringOfLength**(`length`): (`value`) => `value is string`
 
-Defined in: [guard/index.ts:30](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L30)
+Defined in: [guard/index.ts:46](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L46)
 
 Confirms that the value is a string with specified length.
 
@@ -688,13 +774,13 @@ Confirms that the value is a string with specified length.
 
 `value is string`
 
-***
+---
 
 ### isStringWithPattern()
 
 > **isStringWithPattern**(`pattern`): [`Guard`](#guard)\<`string`\>
 
-Defined in: [guard/index.ts:217](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L217)
+Defined in: [guard/index.ts:239](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L239)
 
 Confirms the value is a string and matches the given regular expression.
 
@@ -708,13 +794,13 @@ Confirms the value is a string and matches the given regular expression.
 
 [`Guard`](#guard)\<`string`\>
 
-***
+---
 
 ### isUndefined()
 
 > **isUndefined**(`value`): `value is undefined`
 
-Defined in: [guard/index.ts:225](https://github.com/maxkaemmerer/pure/blob/e24bfcf623e3d0036c8f97e38bf7ea0a05f6c156/src/guard/index.ts#L225)
+Defined in: [guard/index.ts:247](https://github.com/maxkaemmerer/pure/blob/7e3356f18f266999ec105a0046d52cd83d0e4202/src/guard/index.ts#L247)
 
 Confirms the value is undefined.
 

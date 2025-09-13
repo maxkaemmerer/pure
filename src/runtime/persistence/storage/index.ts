@@ -1,4 +1,4 @@
-import { Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
 import { Result, ok, err } from "@kaumlaut/pure/result";
 import { Persistence } from "@kaumlaut/pure/runtime/persistence";
 import { Message, Init } from "@kaumlaut/pure/runtime";
@@ -16,7 +16,7 @@ export const storagePersistence = <
     storage.setItem(name, btoa(JSON.stringify(model)));
   },
   read(
-    guard: Guard<Model>,
+    guard: Guard.Guard<Model>,
     init: Init<Model, CustomMessage>,
   ): Result<Model, string> {
     const record = storage.getItem(name);

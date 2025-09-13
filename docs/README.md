@@ -1,12 +1,13 @@
-**@kaumlaut/pure v1.0.0**
+**@kaumlaut/pure v1.0.1**
 
-***
+---
 
-# @kaumlaut/pure v1.0.0
+# @kaumlaut/pure v1.0.1
 
 ## Modules
 
 - [clone](clone.md)
+- [error-aware-guard](error-aware-guard.md)
 - [fetch-state](fetch-state.md)
 - [guard](guard.md)
 - [maybe](maybe.md)

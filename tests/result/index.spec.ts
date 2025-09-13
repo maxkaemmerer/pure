@@ -8,7 +8,7 @@ import {
   ok,
   toMaybe,
   withDefault,
-} from "../../src/result";
+} from "@kaumlaut/pure/result";
 
 describe("result", () => {
   it("ok", () => {

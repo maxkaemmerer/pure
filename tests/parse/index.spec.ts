@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { asFloat, asInt } from "../../src/parse";
+import { asFloat, asInt } from "@kaumlaut/pure/parse";
 
 describe("parse", () => {
   describe("asInt", () => {

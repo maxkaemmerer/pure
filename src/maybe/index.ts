@@ -3,7 +3,8 @@
  * @module maybe
  */
 import { err, ok, Result } from "@kaumlaut/pure/result";
-import { Guard } from "../guard";
+import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
+import * as Guard from "@kaumlaut/pure/guard";
 
 /**
  * Represents a Maybe containing a value.
@@ -137,9 +138,28 @@ export function toResult<T, E>(error: E): (maybe: Maybe<T>) => Result<T, E> {
 /**
  * Creates a Just if the Guard passes for the given value. Otherwise Creates a Nothing.
  */
-export function maybeByGuard<T>(guard: Guard<T>): (value: unknown) => Maybe<T> {
+export function maybeByGuard<T>(
+  guard: Guard.Guard<T>,
+): (value: unknown) => Maybe<T> {
   return (value: unknown) => {
     return guard(value) ? just(value) : nothing();
+  };
+}
+
+/**
+ * Creates a Just if the ErrorAwareGuard passes for the given value. Otherwise Creates a Nothing.
+ */
+export function maybeByErrorAwareGuard<T>(
+  guard: ErrorAwareGuard.ErrorAwareGuard<T>,
+): (value: unknown) => Maybe<T> {
+  return (value: unknown) => {
+    const result = guard(value);
+
+    if (result.success === true) {
+      return just(result.value);
+    }
+
+    return nothing();
   };
 }
 
@@ -178,4 +198,34 @@ export function tryMap<T, R>(
 
     return maybe;
   };
+}
+
+/**
+ * Returns true if both values are either Just with matching predicate return values
+ * Or if both values are Nothing
+ */
+export function eqBy<T, T2>(
+  by: (value: T) => T2,
+): (a: Maybe<T>, b: Maybe<T>) => boolean {
+  return (a: Maybe<T>, b: Maybe<T>) => {
+    if (isJust(a) && isJust(b)) {
+      return by(a.value) === by(b.value);
+    }
+
+    return isNothing(a) && isNothing(b);
+  };
+}
+
+/**
+ * Returns true if both values are Nothing
+ */
+export function bothNothing<T>(a: Maybe<T>, b: Maybe<T>): boolean {
+  return isNothing(a) && isNothing(b);
+}
+
+/**
+ * Creates a Maybe<T> from a list and an index. Just if the key exists, Nothing if it doesn't
+ */
+export function fromListAndIndex<T>(index: number, list: T[]): Maybe<T> {
+  return index in list ? just(list[index]) : nothing();
 }

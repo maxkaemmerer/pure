@@ -1,4 +1,4 @@
-import { Guard } from "@kaumlaut/pure/guard";
+import * as Guard from "@kaumlaut/pure/guard";
 import { ok, err } from "@kaumlaut/pure/result";
 import {
   ReceiveEffectResult,
@@ -41,7 +41,7 @@ export function fetchJson<T, M extends Message>(
   url: string,
   headers: [string, string][],
   method: string,
-  guard: Guard<T>,
+  guard: Guard.Guard<T>,
   receiver: ReceiveEffectResult<T, FetchError, M>,
 ): Effect<M> {
   return withName(

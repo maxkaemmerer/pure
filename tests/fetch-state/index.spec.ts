@@ -9,8 +9,10 @@ import {
   load,
   attempt,
   fail,
-} from "../../src/fetch-state";
-import { isNever, isAlways } from "../../src/guard";
+  attemptErrorAware,
+} from "@kaumlaut/pure/fetch-state";
+import * as Guard from "@kaumlaut/pure/guard";
+import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
 
 describe("fetch-state", () => {
   describe("none", () => {
@@ -47,7 +49,25 @@ describe("fetch-state", () => {
 
   describe("success", () => {
     it("should create success correctly", () => {
-      const value = attempt(isAlways)({ some: "key" });
+      const value = attempt(Guard.isAlways)({ some: "key" });
+      expect(value).to.deep.equal({
+        type: "Success",
+        data: { some: "key" },
+      });
+      expect(isNone(value)).to.equal(false);
+      expect(isSuccess(value)).to.equal(true);
+      expect(isFailed(value)).to.equal(false);
+      expect(isLoading(value)).to.equal(false);
+      expect(mapFailed(() => fail("OHOH!"))(value)).to.deep.equal({
+        type: "Success",
+        data: { some: "key" },
+      });
+    });
+
+    it("should create success correctly with attemptErrorAware", () => {
+      const value = attemptErrorAware(ErrorAwareGuard.isAlways)({
+        some: "key",
+      });
       expect(value).to.deep.equal({
         type: "Success",
         data: { some: "key" },
@@ -81,11 +101,21 @@ describe("fetch-state", () => {
     });
 
     it("should create failed when guard does not pass", () => {
-      const value = attempt(isNever)({ some: "key" });
+      const value = attempt(Guard.isNever)({ some: "key" });
       expect(value).to.deep.equal({
         type: "Failed",
         error:
           "Guard did not pass. Ensure the attempted data has the correct type",
+      });
+      expect(isSuccess(value)).to.equal(false);
+      expect(isFailed(value)).to.equal(true);
+    });
+
+    it("should create failed when guard does not pass", () => {
+      const value = attemptErrorAware(ErrorAwareGuard.isNever)({ some: "key" });
+      expect(value).to.deep.equal({
+        type: "Failed",
+        error: "Never passes",
       });
       expect(isSuccess(value)).to.equal(false);
       expect(isFailed(value)).to.equal(true);
