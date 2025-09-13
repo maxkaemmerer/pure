@@ -491,11 +491,16 @@ export function isObjectWithKeysMatchingGuard<T extends object>(guards: {
 export function isObjectWithAllKeysMatchingGuard<T extends object>(
   guard: ErrorAwareGuard<T[keyof T]>,
 ): ErrorAwareGuard<T> {
-  return (value) =>
-    isAll(
+  return (value) => {
+    const isObjectResult = isObject(value);
+    if (isObjectResult.success === false) {
+      return isObjectResult;
+    }
+    return isAll(
       // @ts-expect-error not error just a bad type system
       Object.keys(value).map((key: K) => {
         return isObjectWithKeyMatchingGuard<T>(key, guard);
       }),
     )(value);
+  };
 }

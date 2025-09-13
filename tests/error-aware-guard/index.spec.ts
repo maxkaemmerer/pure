@@ -272,6 +272,9 @@ describe("error-aware-guard", () => {
             d: ErrorAwareGuard.isString,
             e: ErrorAwareGuard.isListOf(ErrorAwareGuard.isNumber),
           }),
+          f: ErrorAwareGuard.isObjectWithAllKeysMatchingGuard(
+            ErrorAwareGuard.isString,
+          ),
         })({
           a: null,
           b: null,
@@ -279,6 +282,7 @@ describe("error-aware-guard", () => {
             d: null,
             e: [1, 2, null],
           },
+          f: "",
         });
         expect(result.success).toEqual(false);
         expect(result.value).toEqual(undefined);
@@ -288,6 +292,7 @@ describe("error-aware-guard", () => {
           "[c] [d] Not a string",
           "[c] [e] Not all items passed the Guard",
           "[c] [e] [2] Not a number",
+          "[f] Not an object",
         ]);
       });
       it("should not pass for object with some of the keys matching", () => {
