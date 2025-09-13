@@ -429,8 +429,8 @@ export const isOneStringOf = <T extends string>(validValues: T[]) =>
 /**
  * Confirms that the value is an object containing the specified key.
  */
-export function isObjectWithKey<T extends object, K extends keyof T>(
-  key: K,
+export function isObjectWithKey<T extends object>(
+  key: keyof T,
 ): ErrorAwareGuard<T> {
   return tryGuardIf(
     isObject,
@@ -442,12 +442,12 @@ export function isObjectWithKey<T extends object, K extends keyof T>(
 /**
  * Confirms that the value is an object containing the specified key the value matching the given guard.
  */
-export function isObjectWithKeyMatchingGuard<
-  T extends object,
-  K extends keyof T,
->(key: K, guard: ErrorAwareGuard<T[K]>): ErrorAwareGuard<T> {
+export function isObjectWithKeyMatchingGuard<T extends object>(
+  key: keyof T,
+  guard: ErrorAwareGuard<T[keyof T]>,
+): ErrorAwareGuard<T> {
   return (value: unknown): ValidationResult<T> => {
-    const isObjectWithKeyResult = isObjectWithKey<T, K>(key)(value);
+    const isObjectWithKeyResult = isObjectWithKey<T>(key)(value);
     if (isObjectWithKeyResult.success === false) {
       return isObjectWithKeyResult;
     }
@@ -465,25 +465,24 @@ export function isObjectWithKeyMatchingGuard<
 /**
  * Confirms that the value is an object containing the specified keys.
  */
-export function isObjectWithKeys<T extends object, K extends keyof T>(
-  keys: K[],
+export function isObjectWithKeys<T extends object>(
+  keys: (keyof T)[],
 ): ErrorAwareGuard<T> {
-  return isAll(keys.map(isObjectWithKey<T, K>));
+  return isAll(keys.map(isObjectWithKey<T>));
 }
 
 /**
  * Confirms that the value is an object whose key value pairs match the corresponding type guards.
  */
-export function isObjectWithKeysMatchingGuard<
-  T extends object,
-  K extends keyof T,
->(guards: {
+export function isObjectWithKeysMatchingGuard<T extends object>(guards: {
   [K in keyof T]: ErrorAwareGuard<T[K]>;
 }): ErrorAwareGuard<T> {
   return isAll(
-    // @ts-expect-error not error just a bad type system
-    Object.entries(guards).map(([key, guard]: [K, ErrorAwareGuard<T[K]>]) => {
-      return isObjectWithKeyMatchingGuard<T, K>(key, guard);
+    Object.entries(guards).map(([key, guard]) => {
+      return isObjectWithKeyMatchingGuard<T>(
+        key as keyof T,
+        guard as ErrorAwareGuard<T[keyof T]>,
+      );
     }),
   );
 }
@@ -491,15 +490,14 @@ export function isObjectWithKeysMatchingGuard<
 /**
  * Confirms the value is an object where every value matches the given guard.
  */
-export function isObjectWithAllKeysMatchingGuard<
-  T extends object,
-  K extends keyof T,
->(guard: ErrorAwareGuard<T[K]>): ErrorAwareGuard<T> {
+export function isObjectWithAllKeysMatchingGuard<T extends object>(
+  guard: ErrorAwareGuard<T[keyof T]>,
+): ErrorAwareGuard<T> {
   return (value) =>
     isAll(
       // @ts-expect-error not error just a bad type system
       Object.keys(value).map((key: K) => {
-        return isObjectWithKeyMatchingGuard<T, K>(key, guard);
+        return isObjectWithKeyMatchingGuard<T>(key, guard);
       }),
     )(value);
 }
