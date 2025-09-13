@@ -1,8 +1,12 @@
 {
-  "entryPoints": ["src/**/*.ts"],
+  "entryPoints": [
+    "src/**/*.ts"
+  ],
   "out": "docs",
-  "includeVersion": true,
-  "plugin": ["typedoc-plugin-markdown"],
+  "includeVersion": false,
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
   "readme": "none",
   "router": "module",
   "maxTypeConversionDepth": 100
