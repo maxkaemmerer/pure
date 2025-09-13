@@ -1,4 +1,4 @@
-[**@kaumlaut/pure v1.0.1**](../README.md)
+[**@kaumlaut/pure**](../README.md)
 
 ***
 
@@ -12,7 +12,7 @@
 
 > **AsyncEffect**\<`T`\> = () => `Promise`\<`T`\>
 
-Defined in: [runtime/effect/index.ts:4](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L4)
+Defined in: [runtime/effect/index.ts:4](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L4)
 
 #### Type Parameters
 
@@ -30,7 +30,7 @@ Defined in: [runtime/effect/index.ts:4](https://github.com/maxkaemmerer/pure/blo
 
 > **AsyncNullEffect** = () => `Promise`\<`null`\>
 
-Defined in: [runtime/effect/index.ts:7](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L7)
+Defined in: [runtime/effect/index.ts:7](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L7)
 
 #### Returns
 
@@ -42,7 +42,7 @@ Defined in: [runtime/effect/index.ts:7](https://github.com/maxkaemmerer/pure/blo
 
 > **Effect**\<`T`\> = `object`
 
-Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L13)
+Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L13)
 
 #### Type Parameters
 
@@ -56,19 +56,19 @@ Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure/bl
 
 > **effectType**: [`EffectType`](#effecttype-1)\<`T`\>
 
-Defined in: [runtime/effect/index.ts:14](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L14)
+Defined in: [runtime/effect/index.ts:14](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L14)
 
 ##### meta
 
 > **meta**: `object` \| `null`
 
-Defined in: [runtime/effect/index.ts:16](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L16)
+Defined in: [runtime/effect/index.ts:16](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L16)
 
 ##### name
 
 > **name**: `string`
 
-Defined in: [runtime/effect/index.ts:15](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L15)
+Defined in: [runtime/effect/index.ts:15](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L15)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: [runtime/effect/index.ts:15](https://github.com/maxkaemmerer/pure/bl
 
 > **EffectType**\<`T`\> = [`AsyncEffect`](#asynceffect)\<`T`\> \| [`SyncEffect`](#synceffect)\<`T`\> \| [`NullEffect`](#nulleffect) \| [`AsyncNullEffect`](#asyncnulleffect)
 
-Defined in: [runtime/effect/index.ts:8](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L8)
+Defined in: [runtime/effect/index.ts:8](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L8)
 
 #### Type Parameters
 
@@ -90,7 +90,7 @@ Defined in: [runtime/effect/index.ts:8](https://github.com/maxkaemmerer/pure/blo
 
 > **NullEffect** = () => `null`
 
-Defined in: [runtime/effect/index.ts:6](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L6)
+Defined in: [runtime/effect/index.ts:6](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L6)
 
 #### Returns
 
@@ -102,7 +102,7 @@ Defined in: [runtime/effect/index.ts:6](https://github.com/maxkaemmerer/pure/blo
 
 > **ReceiveEffectResult**\<`T`, `E`, `R`\> = (`result`) => `R`
 
-Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L31)
+Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L31)
 
 #### Type Parameters
 
@@ -134,7 +134,7 @@ Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure/bl
 
 > **SyncEffect**\<`T`\> = () => `T`
 
-Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L5)
+Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L5)
 
 #### Type Parameters
 
@@ -152,7 +152,7 @@ Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure/blo
 
 > **withName**\<`T`\>(`name`, `effect`, `meta`): [`Effect`](#effect)\<`T`\>
 
-Defined in: [runtime/effect/index.ts:19](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/index.ts#L19)
+Defined in: [runtime/effect/index.ts:19](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/index.ts#L19)
 
 #### Type Parameters
 

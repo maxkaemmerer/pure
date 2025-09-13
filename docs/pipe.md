@@ -1,4 +1,4 @@
-[**@kaumlaut/pure v1.0.1**](README.md)
+[**@kaumlaut/pure**](README.md)
 
 ***
 
@@ -12,7 +12,7 @@
 
 > **Pipe**\<`IT`\> = `object`
 
-Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/pipe/index.ts#L4)
+Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/pipe/index.ts#L4)
 
 Represents a function pipeline
 
@@ -28,7 +28,7 @@ Represents a function pipeline
 
 > **into**: \<`RT`\>(`func`) => [`Pipe`](#pipe)\<`RT`\>
 
-Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/pipe/index.ts#L5)
+Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/pipe/index.ts#L5)
 
 ###### Type Parameters
 
@@ -50,7 +50,7 @@ Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/a9d35cde
 
 > **out**: () => `IT`
 
-Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/pipe/index.ts#L6)
+Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/pipe/index.ts#L6)
 
 ###### Returns
 
@@ -62,7 +62,7 @@ Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/a9d35cde
 
 > **put**\<`IT`\>(`data`): [`Pipe`](#pipe)\<`IT`\>
 
-Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/pipe/index.ts#L20)
+Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/pipe/index.ts#L20)
 
 Creates a Pipe that allows you to chain multiple functions using into.
 Is meant to make larger functions more readable.

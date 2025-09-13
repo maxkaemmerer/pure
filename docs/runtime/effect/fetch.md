@@ -1,4 +1,4 @@
-[**@kaumlaut/pure v1.0.1**](../../README.md)
+[**@kaumlaut/pure**](../../README.md)
 
 ***
 
@@ -12,7 +12,7 @@
 
 > **FetchError** = [`HttpError`](#httperror) \| [`MalformedPayloadError`](#malformedpayloaderror)
 
-Defined in: [runtime/effect/fetch/index.ts:19](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L19)
+Defined in: [runtime/effect/fetch/index.ts:19](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L19)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [runtime/effect/fetch/index.ts:19](https://github.com/maxkaemmerer/p
 
 > **HttpError** = `object`
 
-Defined in: [runtime/effect/fetch/index.ts:10](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L10)
+Defined in: [runtime/effect/fetch/index.ts:10](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L10)
 
 #### Properties
 
@@ -28,13 +28,13 @@ Defined in: [runtime/effect/fetch/index.ts:10](https://github.com/maxkaemmerer/p
 
 > **code**: `number`
 
-Defined in: [runtime/effect/fetch/index.ts:11](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L11)
+Defined in: [runtime/effect/fetch/index.ts:11](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L11)
 
 ##### message
 
 > **message**: `string`
 
-Defined in: [runtime/effect/fetch/index.ts:12](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L12)
+Defined in: [runtime/effect/fetch/index.ts:12](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L12)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [runtime/effect/fetch/index.ts:12](https://github.com/maxkaemmerer/p
 
 > **MalformedPayloadError** = `object`
 
-Defined in: [runtime/effect/fetch/index.ts:15](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L15)
+Defined in: [runtime/effect/fetch/index.ts:15](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L15)
 
 #### Properties
 
@@ -50,7 +50,7 @@ Defined in: [runtime/effect/fetch/index.ts:15](https://github.com/maxkaemmerer/p
 
 > **message**: `string`
 
-Defined in: [runtime/effect/fetch/index.ts:16](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L16)
+Defined in: [runtime/effect/fetch/index.ts:16](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L16)
 
 ## Functions
 
@@ -58,7 +58,7 @@ Defined in: [runtime/effect/fetch/index.ts:16](https://github.com/maxkaemmerer/p
 
 > **fetchJson**\<`T`, `M`\>(`url`, `headers`, `method`, `guard`, `receiver`): [`Effect`](../effect.md#effect)\<`M`\>
 
-Defined in: [runtime/effect/fetch/index.ts:40](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L40)
+Defined in: [runtime/effect/fetch/index.ts:40](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L40)
 
 #### Type Parameters
 
@@ -102,7 +102,7 @@ Defined in: [runtime/effect/fetch/index.ts:40](https://github.com/maxkaemmerer/p
 
 > **isClient**(`error`): `boolean`
 
-Defined in: [runtime/effect/fetch/index.ts:32](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L32)
+Defined in: [runtime/effect/fetch/index.ts:32](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L32)
 
 #### Parameters
 
@@ -120,7 +120,7 @@ Defined in: [runtime/effect/fetch/index.ts:32](https://github.com/maxkaemmerer/p
 
 > **isHttp**(`error`): `error is HttpError`
 
-Defined in: [runtime/effect/fetch/index.ts:25](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L25)
+Defined in: [runtime/effect/fetch/index.ts:25](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L25)
 
 #### Parameters
 
@@ -138,7 +138,7 @@ Defined in: [runtime/effect/fetch/index.ts:25](https://github.com/maxkaemmerer/p
 
 > **isNotFound**(`error`): `boolean`
 
-Defined in: [runtime/effect/fetch/index.ts:21](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L21)
+Defined in: [runtime/effect/fetch/index.ts:21](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L21)
 
 #### Parameters
 
@@ -156,7 +156,7 @@ Defined in: [runtime/effect/fetch/index.ts:21](https://github.com/maxkaemmerer/p
 
 > **isServer**(`error`): `boolean`
 
-Defined in: [runtime/effect/fetch/index.ts:36](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/effect/fetch/index.ts#L36)
+Defined in: [runtime/effect/fetch/index.ts:36](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/effect/fetch/index.ts#L36)
 
 #### Parameters
 

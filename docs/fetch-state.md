@@ -1,4 +1,4 @@
-[**@kaumlaut/pure v1.0.1**](README.md)
+[**@kaumlaut/pure**](README.md)
 
 ***
 
@@ -14,7 +14,7 @@ Provides types and functions to represent fetch request states
 
 > **Failed** = `object`
 
-Defined in: [fetch-state/index.ts:11](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L11)
+Defined in: [fetch-state/index.ts:11](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L11)
 
 Represents a failed fetch request
 
@@ -24,13 +24,13 @@ Represents a failed fetch request
 
 > **errors**: `Readonly`\<`string`[]\>
 
-Defined in: [fetch-state/index.ts:12](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L12)
+Defined in: [fetch-state/index.ts:12](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L12)
 
 ##### type
 
 > **type**: `"Failed"`
 
-Defined in: [fetch-state/index.ts:13](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L13)
+Defined in: [fetch-state/index.ts:13](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L13)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [fetch-state/index.ts:13](https://github.com/maxkaemmerer/pure/blob/
 
 > **FetchState**\<`T`\> = [`Failed`](#failed) \| [`None`](#none) \| [`Loading`](#loading) \| [`Success`](#success)\<`T`\>
 
-Defined in: [fetch-state/index.ts:40](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L40)
+Defined in: [fetch-state/index.ts:40](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L40)
 
 Represents all possible states of a fetch request
 
@@ -54,7 +54,7 @@ Represents all possible states of a fetch request
 
 > **Loading** = `object`
 
-Defined in: [fetch-state/index.ts:26](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L26)
+Defined in: [fetch-state/index.ts:26](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L26)
 
 Represents a fetch request that is currently still running
 
@@ -64,7 +64,7 @@ Represents a fetch request that is currently still running
 
 > **type**: `"Loading"`
 
-Defined in: [fetch-state/index.ts:27](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L27)
+Defined in: [fetch-state/index.ts:27](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L27)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [fetch-state/index.ts:27](https://github.com/maxkaemmerer/pure/blob/
 
 > **None** = `object`
 
-Defined in: [fetch-state/index.ts:19](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L19)
+Defined in: [fetch-state/index.ts:19](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L19)
 
 Represents a fetch request that has not been executed
 
@@ -82,7 +82,7 @@ Represents a fetch request that has not been executed
 
 > **type**: `"None"`
 
-Defined in: [fetch-state/index.ts:20](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L20)
+Defined in: [fetch-state/index.ts:20](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L20)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [fetch-state/index.ts:20](https://github.com/maxkaemmerer/pure/blob/
 
 > **Success**\<`T`\> = `object`
 
-Defined in: [fetch-state/index.ts:33](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L33)
+Defined in: [fetch-state/index.ts:33](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L33)
 
 Represents a fetch request that succeeded
 
@@ -106,13 +106,13 @@ Represents a fetch request that succeeded
 
 > **data**: `Readonly`\<`T`\>
 
-Defined in: [fetch-state/index.ts:34](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L34)
+Defined in: [fetch-state/index.ts:34](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L34)
 
 ##### type
 
 > **type**: `"Success"`
 
-Defined in: [fetch-state/index.ts:35](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L35)
+Defined in: [fetch-state/index.ts:35](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L35)
 
 ## Functions
 
@@ -120,7 +120,7 @@ Defined in: [fetch-state/index.ts:35](https://github.com/maxkaemmerer/pure/blob/
 
 > **attempt**\<`T`\>(`guard`, `firstError`, ...`errors`): (`data`) => [`Failed`](#failed) \| [`Success`](#success)\<`T`\>
 
-Defined in: [fetch-state/index.ts:101](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L101)
+Defined in: [fetch-state/index.ts:101](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L101)
 
 Attempts to create a fetch state of type Success if the given guard passes.
 Otherwise creates a fetch state of type Failed with the provided error.
@@ -176,7 +176,7 @@ if(isSuccess(value)){
 
 > **attemptErrorAware**\<`T`\>(`guard`): (`data`) => [`Failed`](#failed) \| [`Success`](#success)\<`T`\>
 
-Defined in: [fetch-state/index.ts:132](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L132)
+Defined in: [fetch-state/index.ts:132](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L132)
 
 Attempts to create a fetch state of type Success if the given guard passes.
 Otherwise creates a fetch state of type Failed with the errors from the ErrorAwareGuard.
@@ -224,7 +224,7 @@ if(isSuccess(value)){
 
 > **fail**(`first`, ...`errors`): [`Failed`](#failed)
 
-Defined in: [fetch-state/index.ts:68](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L68)
+Defined in: [fetch-state/index.ts:68](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L68)
 
 Creates a fetch state of type Failed
 
@@ -248,7 +248,7 @@ Creates a fetch state of type Failed
 
 > **isFailed**\<`T`\>(`state`): `state is Failed`
 
-Defined in: [fetch-state/index.ts:50](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L50)
+Defined in: [fetch-state/index.ts:50](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L50)
 
 Checks whether or not the fetch state is Failed via a type guard
 
@@ -274,7 +274,7 @@ Checks whether or not the fetch state is Failed via a type guard
 
 > **isLoading**\<`T`\>(`state`): `state is Loading`
 
-Defined in: [fetch-state/index.ts:44](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L44)
+Defined in: [fetch-state/index.ts:44](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L44)
 
 Checks whether or not the fetch state is Loading via a type guard
 
@@ -300,7 +300,7 @@ Checks whether or not the fetch state is Loading via a type guard
 
 > **isNone**\<`T`\>(`state`): `state is None`
 
-Defined in: [fetch-state/index.ts:56](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L56)
+Defined in: [fetch-state/index.ts:56](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L56)
 
 Checks whether or not the fetch state is None via a type guard
 
@@ -326,7 +326,7 @@ Checks whether or not the fetch state is None via a type guard
 
 > **isSuccess**\<`T`\>(`state`): `state is Success<T>`
 
-Defined in: [fetch-state/index.ts:62](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L62)
+Defined in: [fetch-state/index.ts:62](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L62)
 
 Checks whether or not the fetch state is Success via a type guard
 
@@ -352,7 +352,7 @@ Checks whether or not the fetch state is Success via a type guard
 
 > **load**(): [`Loading`](#loading)
 
-Defined in: [fetch-state/index.ts:77](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L77)
+Defined in: [fetch-state/index.ts:77](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L77)
 
 Creates a fetch state of type Loading
 
@@ -366,7 +366,7 @@ Creates a fetch state of type Loading
 
 > **mapFailed**\<`T`\>(`mapper`): (`state`) => [`FetchState`](#fetchstate)\<`T`\>
 
-Defined in: [fetch-state/index.ts:163](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L163)
+Defined in: [fetch-state/index.ts:163](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L163)
 
 A Utility function that allows to map the Failed fetch state to any other fetch state.
 The mapper function is only called if the given fetch state is Failed.
@@ -415,7 +415,7 @@ if(isSuccess(mappedValue)){
 
 > **none**(): [`None`](#none)
 
-Defined in: [fetch-state/index.ts:85](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/fetch-state/index.ts#L85)
+Defined in: [fetch-state/index.ts:85](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/fetch-state/index.ts#L85)
 
 Creates a fetch state of type None
 

@@ -1,4 +1,4 @@
-[**@kaumlaut/pure v1.0.1**](../../README.md)
+[**@kaumlaut/pure**](../../README.md)
 
 ***
 
@@ -12,7 +12,7 @@
 
 > **storagePersistence**\<`Model`, `CustomMessage`\>(`name`, `storage`): [`Persistence`](../persistence.md#persistence)\<`Model`, `CustomMessage`\>
 
-Defined in: [runtime/persistence/storage/index.ts:8](https://github.com/maxkaemmerer/pure/blob/a9d35cde0f6afffc8f713217b8ba652e52e4f632/src/runtime/persistence/storage/index.ts#L8)
+Defined in: [runtime/persistence/storage/index.ts:8](https://github.com/maxkaemmerer/pure/blob/80f7f9ef5ae15d6e8066c875eee482a03fe063de/src/runtime/persistence/storage/index.ts#L8)
 
 #### Type Parameters
 

@@ -1,8 +1,8 @@
-**@kaumlaut/pure v1.0.1**
+**@kaumlaut/pure**
 
 ***
 
-# @kaumlaut/pure v1.0.1
+# @kaumlaut/pure
 
 ## Modules
 
