@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / pipe
 
@@ -12,7 +12,7 @@
 
 > **Pipe**\<`IT`\> = `object`
 
-Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/pipe/index.ts#L4)
+Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/pipe/index.ts#L4)
 
 Represents a function pipeline
 
@@ -28,7 +28,7 @@ Represents a function pipeline
 
 > **into**: \<`RT`\>(`func`) => [`Pipe`](#pipe)\<`RT`\>
 
-Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/pipe/index.ts#L5)
+Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/pipe/index.ts#L5)
 
 ###### Type Parameters
 
@@ -50,7 +50,7 @@ Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/ca7bfe23
 
 > **out**: () => `IT`
 
-Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/pipe/index.ts#L6)
+Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/pipe/index.ts#L6)
 
 ###### Returns
 
@@ -62,7 +62,7 @@ Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/ca7bfe23
 
 > **put**\<`IT`\>(`data`): [`Pipe`](#pipe)\<`IT`\>
 
-Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/pipe/index.ts#L20)
+Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/pipe/index.ts#L20)
 
 Creates a Pipe that allows you to chain multiple functions using into.
 Is meant to make larger functions more readable.
@@ -87,9 +87,9 @@ Is meant to make larger functions more readable.
 
 ```ts
 const output = put("3")
-     .into(asInt)
-     .into(toMaybe)
-     .into(withDefault(0))
-     .into((input) => input * 3.14)
-     .into((input) => input.toPrecision());
+  .into(asInt)
+  .into(toMaybe)
+  .into(withDefault(0))
+  .into((input) => input * 3.14)
+  .into((input) => input.toPrecision());
 ```

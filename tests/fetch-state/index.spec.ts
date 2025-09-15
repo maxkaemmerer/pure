@@ -6,13 +6,18 @@ import {
   isFailed,
   isLoading,
   mapFailed,
+  mapSuccessData,
   load,
   attempt,
   fail,
   attemptErrorAware,
+  succeed,
+  containsError,
 } from "@kaumlaut/pure/fetch-state";
 import * as Guard from "@kaumlaut/pure/guard";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
+import { just } from "@kaumlaut/pure/maybe";
+import { includes } from "../../dist/util";
 
 describe("fetch-state", () => {
   describe("none", () => {
@@ -54,6 +59,11 @@ describe("fetch-state", () => {
         type: "Success",
         data: { some: "key" },
       });
+      const otherValue = succeed({ some: "key" });
+      expect(otherValue).to.deep.equal({
+        type: "Success",
+        data: { some: "key" },
+      });
       expect(isNone(value)).to.equal(false);
       expect(isSuccess(value)).to.equal(true);
       expect(isFailed(value)).to.equal(false);
@@ -62,6 +72,11 @@ describe("fetch-state", () => {
         type: "Success",
         data: { some: "key" },
       });
+      expect(mapSuccessData(just)(value)).to.deep.equal({
+        type: "Success",
+        data: { type: "maybe-just", value: { some: "key" } },
+      });
+      expect(containsError(() => true)(value)).to.deep.equal(false);
     });
 
     it("should create success correctly with attemptErrorAware", () => {
@@ -98,6 +113,14 @@ describe("fetch-state", () => {
         type: "Failed",
         errors: ["OHOH!"],
       });
+      expect(mapSuccessData(just)(value)).to.deep.equal({
+        type: "Failed",
+        errors: ["some-message"],
+      });
+      expect(containsError(includes("some-message"))(value)).to.deep.equal(
+        true,
+      );
+      expect(containsError(includes("OHOH!"))(value)).to.deep.equal(false);
     });
 
     it("should create failed when guard does not pass", () => {

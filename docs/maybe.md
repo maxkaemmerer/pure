@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / maybe
 
@@ -14,7 +14,7 @@ Provides types representing the Maybe concept as well as functions to work with 
 
 > **Just**\<`T`\> = `object`
 
-Defined in: [maybe/index.ts:19](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L19)
+Defined in: [maybe/index.ts:19](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L19)
 
 Represents a Maybe containing a value.
 
@@ -22,8 +22,8 @@ Represents a Maybe containing a value.
 
 ```ts
 if (isJust(maybe)) {
- // the isJust guard tells typescript that maybe has a value of type number
- console.log("Something here: " + maybe.value)
+  // the isJust guard tells typescript that maybe has a value of type number
+  console.log("Something here: " + maybe.value);
 }
 ```
 
@@ -39,21 +39,21 @@ if (isJust(maybe)) {
 
 > **type**: `"maybe-just"`
 
-Defined in: [maybe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L20)
+Defined in: [maybe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L20)
 
 ##### value
 
 > **value**: `T`
 
-Defined in: [maybe/index.ts:21](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L21)
+Defined in: [maybe/index.ts:21](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L21)
 
-***
+---
 
 ### Maybe\<T\>
 
 > **Maybe**\<`T`\> = [`Just`](#just)\<`T`\> \| [`Nothing`](#nothing)
 
-Defined in: [maybe/index.ts:39](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L39)
+Defined in: [maybe/index.ts:39](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L39)
 
 Represents the Maybe type.
 
@@ -63,13 +63,13 @@ Represents the Maybe type.
 
 `T`
 
-***
+---
 
 ### Nothing
 
 > **Nothing** = `object`
 
-Defined in: [maybe/index.ts:32](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L32)
+Defined in: [maybe/index.ts:32](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L32)
 
 Represents a Maybe not containing a value.
 
@@ -77,9 +77,9 @@ Represents a Maybe not containing a value.
 
 ```ts
 if (isNothing(maybe)) {
-     // no value property exists on maybe
-     console.log("Nothing here")
- }
+  // no value property exists on maybe
+  console.log("Nothing here");
+}
 ```
 
 #### Properties
@@ -88,7 +88,7 @@ if (isNothing(maybe)) {
 
 > **type**: `"maybe-nothing"`
 
-Defined in: [maybe/index.ts:33](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L33)
+Defined in: [maybe/index.ts:33](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L33)
 
 ## Functions
 
@@ -96,7 +96,7 @@ Defined in: [maybe/index.ts:33](https://github.com/maxkaemmerer/pure/blob/ca7bfe
 
 > **bothNothing**\<`T`\>(`a`, `b`): `boolean`
 
-Defined in: [maybe/index.ts:222](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L222)
+Defined in: [maybe/index.ts:222](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L222)
 
 Returns true if both values are Nothing
 
@@ -120,13 +120,13 @@ Returns true if both values are Nothing
 
 `boolean`
 
-***
+---
 
 ### eqBy()
 
 > **eqBy**\<`T`, `T2`\>(`by`): (`a`, `b`) => `boolean`
 
-Defined in: [maybe/index.ts:207](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L207)
+Defined in: [maybe/index.ts:207](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L207)
 
 Returns true if both values are either Just with matching predicate return values
 Or if both values are Nothing
@@ -165,13 +165,13 @@ Or if both values are Nothing
 
 `boolean`
 
-***
+---
 
 ### filter()
 
 > **filter**\<`T`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:100](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L100)
+Defined in: [maybe/index.ts:100](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L100)
 
 Converts the given Maybe into a Nothing if it is Just but does not pass the given function.
 
@@ -201,13 +201,13 @@ Converts the given Maybe into a Nothing if it is Just but does not pass the give
 
 [`Maybe`](#maybe)\<`T`\>
 
-***
+---
 
 ### fromListAndIndex()
 
 > **fromListAndIndex**\<`T`\>(`index`, `list`): [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:229](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L229)
+Defined in: [maybe/index.ts:229](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L229)
 
 Creates a Maybe<T> from a list and an index. Just if the key exists, Nothing if it doesn't
 
@@ -231,13 +231,13 @@ Creates a Maybe<T> from a list and an index. Just if the key exists, Nothing if 
 
 [`Maybe`](#maybe)\<`T`\>
 
-***
+---
 
 ### isJust()
 
 > **isJust**\<`T`\>(`maybe`): `maybe is Just<T>`
 
-Defined in: [maybe/index.ts:70](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L70)
+Defined in: [maybe/index.ts:70](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L70)
 
 A Guard confirming that the given maybe value is a Just.
 
@@ -257,13 +257,13 @@ A Guard confirming that the given maybe value is a Just.
 
 `maybe is Just<T>`
 
-***
+---
 
 ### isMaybe()
 
 > **isMaybe**\<`T`\>(`value`): `value is Maybe<T>`
 
-Defined in: [maybe/index.ts:77](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L77)
+Defined in: [maybe/index.ts:77](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L77)
 
 A Guard confirming that the given value is a Maybe.
 
@@ -283,13 +283,13 @@ A Guard confirming that the given value is a Maybe.
 
 `value is Maybe<T>`
 
-***
+---
 
 ### isNothing()
 
 > **isNothing**\<`T`\>(`maybe`): `maybe is Nothing`
 
-Defined in: [maybe/index.ts:63](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L63)
+Defined in: [maybe/index.ts:63](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L63)
 
 A Guard confirming that the given maybe value is a Nothing.
 
@@ -309,13 +309,13 @@ A Guard confirming that the given maybe value is a Nothing.
 
 `maybe is Nothing`
 
-***
+---
 
 ### just()
 
 > **just**\<`T`\>(`value`): [`Just`](#just)\<`T`\>
 
-Defined in: [maybe/index.ts:53](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L53)
+Defined in: [maybe/index.ts:53](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L53)
 
 Creates a maybe containing a value. (Just)
 
@@ -335,13 +335,13 @@ Creates a maybe containing a value. (Just)
 
 [`Just`](#just)\<`T`\>
 
-***
+---
 
 ### map()
 
 > **map**\<`T`, `R`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`R`\>
 
-Defined in: [maybe/index.ts:85](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L85)
+Defined in: [maybe/index.ts:85](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L85)
 
 Applies the func function to the value if the given Maybe is a Just and returns it wrapped in a Just. Otherwise returns the given Maybe.
 
@@ -375,13 +375,13 @@ Applies the func function to the value if the given Maybe is a Just and returns 
 
 [`Maybe`](#maybe)\<`R`\>
 
-***
+---
 
 ### mapToMaybe()
 
 > **mapToMaybe**\<`T`, `R`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`R`\>
 
-Defined in: [maybe/index.ts:170](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L170)
+Defined in: [maybe/index.ts:170](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L170)
 
 Maps the a value contained within a Just using the given function without wrapping it in another Just.
 Returns the given Maybe if it is a Nothing.
@@ -416,13 +416,13 @@ Returns the given Maybe if it is a Nothing.
 
 [`Maybe`](#maybe)\<`R`\>
 
-***
+---
 
 ### maybeByErrorAwareGuard()
 
 > **maybeByErrorAwareGuard**\<`T`\>(`guard`): (`value`) => [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:152](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L152)
+Defined in: [maybe/index.ts:152](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L152)
 
 Creates a Just if the ErrorAwareGuard passes for the given value. Otherwise Creates a Nothing.
 
@@ -452,13 +452,13 @@ Creates a Just if the ErrorAwareGuard passes for the given value. Otherwise Crea
 
 [`Maybe`](#maybe)\<`T`\>
 
-***
+---
 
 ### maybeByGuard()
 
 > **maybeByGuard**\<`T`\>(`guard`): (`value`) => [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:141](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L141)
+Defined in: [maybe/index.ts:141](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L141)
 
 Creates a Just if the Guard passes for the given value. Otherwise Creates a Nothing.
 
@@ -488,13 +488,13 @@ Creates a Just if the Guard passes for the given value. Otherwise Creates a Noth
 
 [`Maybe`](#maybe)\<`T`\>
 
-***
+---
 
 ### nothing()
 
 > **nothing**(): [`Nothing`](#nothing)
 
-Defined in: [maybe/index.ts:44](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L44)
+Defined in: [maybe/index.ts:44](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L44)
 
 Creates a maybe not containing a value. (Nothing)
 
@@ -502,13 +502,13 @@ Creates a maybe not containing a value. (Nothing)
 
 [`Nothing`](#nothing)
 
-***
+---
 
 ### toResult()
 
 > **toResult**\<`T`, `E`\>(`error`): (`maybe`) => [`Result`](result.md#result)\<`T`, `E`\>
 
-Defined in: [maybe/index.ts:134](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L134)
+Defined in: [maybe/index.ts:134](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L134)
 
 Converts the given Maybe to a Result.
 A Nothing becomes an Err with the given error.
@@ -544,13 +544,13 @@ A Just becomes an Ok with the contained value.
 
 [`Result`](result.md#result)\<`T`, `E`\>
 
-***
+---
 
 ### tryMap()
 
 > **tryMap**\<`T`, `R`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`R`\>
 
-Defined in: [maybe/index.ts:186](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L186)
+Defined in: [maybe/index.ts:186](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L186)
 
 Maps the a value contained within a Just using the given function without wrapping it in another Just.
 Returns the given Maybe if it is a Nothing.
@@ -585,13 +585,13 @@ Returns the given Maybe if it is a Nothing.
 
 [`Maybe`](#maybe)\<`R`\>
 
-***
+---
 
 ### withDefault()
 
 > **withDefault**\<`T`\>(`defaultValue`): (`maybe`) => `T`
 
-Defined in: [maybe/index.ts:119](https://github.com/maxkaemmerer/pure/blob/ca7bfe23ff25588c07f62c0e812dd8f58d29f518/src/maybe/index.ts#L119)
+Defined in: [maybe/index.ts:119](https://github.com/maxkaemmerer/pure/blob/71cc1d73c1a096a1d398321a0b488240723d1229/src/maybe/index.ts#L119)
 
 Unwraps a Maybe, returning the value if it is a Just or the default value if it is a Nothing.
 

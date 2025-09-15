@@ -88,6 +88,16 @@ export function none(): None {
   };
 }
 /**
+ * Creates a fetch state of type Success<T>.
+ * Generally attempt or attemptErrorAware should be used instead.
+ */
+export function succeed<T>(data: T): Success<T> {
+  return {
+    type: "Success",
+    data,
+  };
+}
+/**
  * Attempts to create a fetch state of type Success if the given guard passes.
  * Otherwise creates a fetch state of type Failed with the provided error.
  * @example
@@ -160,14 +170,44 @@ if(isSuccess(mappedValue)){
   console.error(mappedValue.error)
 }
  */
-export function mapFailed<T>(
-  mapper: (state: Failed) => FetchState<T>,
-): (state: FetchState<T>) => FetchState<T> {
+export function mapFailed<T, T2 = T>(
+  mapper: (state: Failed) => FetchState<T2>,
+): (state: FetchState<T>) => FetchState<T | T2> {
   return (state: FetchState<T>) => {
     if (isFailed(state)) {
       return mapper(state);
     }
 
     return state;
+  };
+}
+
+/**
+ * Converts a Success<T> into a Success<T2> using the given mapping function.
+ * Does nothing if the FetchState is not Success.
+ */
+export function mapSuccessData<T, T2 = T>(
+  map: (state: T) => T2,
+): (state: FetchState<T>) => FetchState<T2> {
+  return (state) => {
+    if (isSuccess(state)) {
+      return succeed(map(state.data));
+    }
+
+    return state;
+  };
+}
+/**
+ * Checks whether or not the fetch state is Failed and contains an errors that passes the matcher.
+ */
+export function containsError<T>(
+  matcher: (error: string) => boolean,
+): (state: FetchState<T>) => boolean {
+  return (state) => {
+    if (isFailed(state)) {
+      return state.errors.some(matcher);
+    }
+
+    return false;
   };
 }
