@@ -54,7 +54,7 @@ export function isStringOfLength(
  * Confirms that the value is an object.
  */
 export function isObject(value: unknown): value is object {
-  return typeof value === "object";
+  return value !== null && typeof value === "object";
 }
 /**
  * Confirms that the value is a number.
@@ -95,8 +95,7 @@ function numberIncludesCommaSeparator(value: number) {
 export function isObjectWithKey<T extends object>(
   key: keyof T,
 ): (value: unknown) => value is T {
-  return (value: unknown): value is T =>
-    typeof value === "object" && key in value;
+  return (value: unknown): value is T => isObject(value) && key in value;
 }
 
 /**
@@ -106,7 +105,7 @@ export function isObjectWithKeys<T extends object>(
   keys: (keyof T)[],
 ): (value: unknown) => value is T {
   return (value: unknown): value is T =>
-    typeof value === "object" && keys.every((key) => key in value);
+    isObject(value) && keys.every((key) => key in value);
 }
 
 /**
@@ -117,7 +116,7 @@ export function isObjectWithKeysMatchingGuard<T extends object>(guards: {
   [K in keyof T]: Guard<T[K]>;
 }): (value: unknown) => value is T {
   return (value: unknown): value is T =>
-    typeof value === "object" &&
+    isObject(value) &&
     Object.keys(guards).filter((key) => {
       const result = key in value && guards[key](value[key]);
       if (!result) {
@@ -221,7 +220,7 @@ export function isObjectWithAllKeysMatchingGuard<
   T extends { [key: string]: B },
 >(guard: Guard<B>): (value: unknown) => value is T {
   return (value: unknown): value is T =>
-    typeof value === "object" &&
+    isObject(value) &&
     Object.keys(value).filter((key) => {
       const result = key in value && guard(value[key]);
       if (!result) {
