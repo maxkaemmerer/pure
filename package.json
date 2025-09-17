@@ -1,6 +1,6 @@
 {
   "name": "@kaumlaut/pure",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Types and functions for a state runtime inspired by Elm and functional programming",
   "author": "Max Kaemmerer",
   "license": "MIT",
