@@ -13,6 +13,7 @@ import {
   toResult,
   tryMap,
   withDefault,
+  concat,
 } from "@kaumlaut/pure/maybe";
 import * as Guard from "@kaumlaut/pure/guard";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
@@ -113,6 +114,32 @@ describe("maybe", () => {
         })(just(3)).type,
       ).toEqual("maybe-nothing");
       expect(console.error).toHaveBeenNthCalledWith(1, error);
+    });
+  });
+
+  describe("concat", () => {
+    it("should combine two Just", () => {
+      expect(concat<number>((a, b) => a + b)(just(3))(just(2))).toEqual({
+        type: "maybe-just",
+        value: 5,
+      });
+    });
+    it("should combine one Just one Nothing", () => {
+      expect(concat<number>((a, b) => a + b)(just(3))(nothing())).toEqual({
+        type: "maybe-just",
+        value: 3,
+      });
+    });
+    it("should combine one Nothing one Just", () => {
+      expect(concat<number>((a, b) => a + b)(nothing())(just(2))).toEqual({
+        type: "maybe-just",
+        value: 2,
+      });
+    });
+    it("should combine two Nothing", () => {
+      expect(concat<number>((a, b) => a + b)(nothing())(nothing())).toEqual({
+        type: "maybe-nothing",
+      });
     });
   });
 });

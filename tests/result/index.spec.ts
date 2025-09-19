@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import {
+  concat,
   err,
   isErr,
   isOk,
@@ -40,5 +41,52 @@ describe("result", () => {
       "another-error",
     );
     expect(toMaybe(result).type).toEqual("maybe-nothing");
+  });
+
+  describe("concat", () => {
+    it("should combine two Ok", () => {
+      expect(
+        concat<number, string>(
+          (a, b) => a + b,
+          (a, b) => a + b,
+        )(ok(3))(ok(2)),
+      ).toEqual({
+        type: "ok-result",
+        value: 5,
+      });
+    });
+    it("should combine one Ok one Err", () => {
+      expect(
+        concat<number, string>(
+          (a, b) => a + b,
+          (a, b) => a + b,
+        )(ok(3))(err("Ohoh!")),
+      ).toEqual({
+        type: "ok-result",
+        value: 3,
+      });
+    });
+    it("should combine one Err one Ok", () => {
+      expect(
+        concat<number, string>(
+          (a, b) => a + b,
+          (a, b) => a + b,
+        )(err("Ohoh!"))(ok(2)),
+      ).toEqual({
+        type: "ok-result",
+        value: 2,
+      });
+    });
+    it("should combine two Err", () => {
+      expect(
+        concat<number, string>(
+          (a, b) => a + b,
+          (a, b) => a + b,
+        )(err("Ohoh!"))(err("Ohoh!")),
+      ).toEqual({
+        type: "error-result",
+        error: "Ohoh!Ohoh!",
+      });
+    });
   });
 });

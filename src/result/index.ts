@@ -112,3 +112,25 @@ export function withDefault<T, E>(
 export function toMaybe<T, E>(result: Result<T, E>): Maybe<T> {
   return isOk(result) ? just(result.value) : nothing();
 }
+
+/**
+ * Combines two Result<T, E>.
+ * If both are Err<E> the combineError function is used
+ * Otherwise a single Result<T> is returned directly
+ */
+export function concat<T, E>(
+  combineValue: (aValue: T, bValue: T) => T,
+  combineError: (aError: E, bError: E) => E,
+) {
+  return (a: Result<T, E>) => (b: Result<T, E>) => {
+    if (isOk(a) && isOk(b)) {
+      return ok(combineValue(a.value, b.value));
+    }
+
+    if (isErr(a) && isErr(b)) {
+      return err(combineError(a.error, b.error));
+    }
+
+    return isOk(a) ? a : b;
+  };
+}

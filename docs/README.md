@@ -1,6 +1,6 @@
 **@kaumlaut/pure**
 
-***
+---
 
 # @kaumlaut/pure
 

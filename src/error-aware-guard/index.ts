@@ -504,3 +504,66 @@ export function isObjectWithAllKeysMatchingGuard<T extends object>(
     )(value);
   };
 }
+
+/**
+ * Given an object of error to Guard pairs, maps the given value to a key if the matching Guard passes.
+ * If no guard passes the default error is returned.
+ * If multiple guards pass, the first error will be returned.
+ * @example
+ * errorByGuard(
+    {
+        "Some validation error": isSomeValidationError,
+        "Some Io Error": isIoError,
+    },
+    "Default Error",
+    // returns "Some validation error" if the given error passes the isSomeValidationError Guard
+    // returns "Some Io Error" if the given error passes the isIoError Guard
+    // returns "Default Error" if none of the Guards pass
+)(error)
+ */
+export function errorByGuard<T extends object>(
+  guards: {
+    [K in keyof T]: ErrorAwareGuard<T[K]>;
+  },
+  defaultError: string,
+): (value: unknown) => keyof T | string {
+  return (value: unknown) => {
+    for (const [key, guard] of Object.entries(guards)) {
+      const result = (guard as ErrorAwareGuard<T[keyof T]>)(value);
+
+      if (result.success) {
+        return key as keyof T;
+      }
+    }
+
+    return defaultError;
+  };
+}
+
+/**
+ * Will execute the function if ValidationResult is successful
+ */
+export function peek<T>(
+  result: ValidationResult<T>,
+  applyFunction: (value: T) => void,
+) {
+  if (result.success) {
+    applyFunction(result.value);
+  }
+}
+
+/**
+ * Will return the result of the function if ValidationResult is success
+ * Otherwise will return defaultValue
+ */
+export function mapWithDefault<T, T2>(
+  result: ValidationResult<T>,
+  mapFunction: (value: T) => T2,
+  defaultValue: T2,
+): T2 {
+  if (result.success) {
+    return mapFunction(result.value);
+  }
+
+  return defaultValue;
+}

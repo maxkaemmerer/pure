@@ -1,5 +1,5 @@
-import { describe, expect, test } from "vitest";
-import { id } from "@kaumlaut/pure/util";
+import { describe, expect, test, it } from "vitest";
+import { field, id } from "@kaumlaut/pure/util";
 
 describe("util", () => {
   test.each(
@@ -11,5 +11,31 @@ describe("util", () => {
   )("should return passed value", (value: unknown) => {
     expect(id(value)).toEqual(value);
     expect(id(value)).toBe(value);
+  });
+
+  it("should return field value", () => {
+    type Test = {
+      a: number;
+      b: string;
+      c: null;
+      d: {
+        e: number;
+      };
+    };
+    const object: Test = {
+      a: 3,
+      b: "bla",
+      c: null,
+      d: {
+        e: 4,
+      },
+    };
+
+    expect(field<Test>("a")(object)).toEqual(3);
+    expect(field<Test>("b")(object)).toEqual("bla");
+    expect(field<Test>("c")(object)).toEqual(null);
+    expect(field<Test>("d")(object)).toEqual({
+      e: 4,
+    });
   });
 });

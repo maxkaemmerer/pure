@@ -229,3 +229,18 @@ export function bothNothing<T>(a: Maybe<T>, b: Maybe<T>): boolean {
 export function fromListAndIndex<T>(index: number, list: T[]): Maybe<T> {
   return index in list ? just(list[index]) : nothing();
 }
+
+/**
+ * Combines two Maybe<T>. If both are Just<T> the combine function is used
+ * Otherwise Either a single Just is returned directly
+ * Or Nothing is retured if both are Nothing
+ */
+export function concat<T>(combine: (aValue: T, bValue: T) => T) {
+  return (a: Maybe<T>) => (b: Maybe<T>) => {
+    if (isJust(a) && isJust(b)) {
+      return just(combine(a.value, b.value));
+    }
+
+    return isJust(a) ? a : b;
+  };
+}

@@ -54,7 +54,7 @@ export function isStringOfLength(
  * Confirms that the value is an object.
  */
 export function isObject(value: unknown): value is object {
-  return value !== null && typeof value === "object";
+  return !Array.isArray(value) && value !== null && typeof value === "object";
 }
 /**
  * Confirms that the value is a number.

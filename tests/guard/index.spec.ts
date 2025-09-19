@@ -79,6 +79,20 @@ describe("guard", () => {
         expect(Guard.isFloat(123)).toEqual(false);
       });
     });
+    describe("isObject", () => {
+      it("should pass for object", () => {
+        expect(Guard.isObject({ a: 3 })).toEqual(true);
+      });
+      it("should not pass for null", () => {
+        expect(Guard.isObject(null)).toEqual(false);
+      });
+      it("should not pass for function", () => {
+        expect(Guard.isObject(() => {})).toEqual(false);
+      });
+      it("should not pass for array", () => {
+        expect(Guard.isObject([])).toEqual(false);
+      });
+    });
     describe("isObjectWithKey", () => {
       it("should pass for object that has key", () => {
         expect(Guard.isObjectWithKey("a")({ a: 3 })).toEqual(true);

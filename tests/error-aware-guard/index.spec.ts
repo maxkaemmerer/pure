@@ -651,5 +651,47 @@ describe("error-aware-guard", () => {
         expect(resultB.errors).toEqual(undefined);
       });
     });
+    describe("errorByGuard", () => {
+      it("should return correct error", () => {
+        const errorMapper = ErrorAwareGuard.errorByGuard(
+          {
+            isString: ErrorAwareGuard.isString,
+            isNumber: ErrorAwareGuard.isNumber,
+            isNumberToo: ErrorAwareGuard.isNumber,
+          },
+          "Default Error",
+        );
+        expect(errorMapper("a-string")).toEqual("isString");
+        expect(errorMapper(3)).toEqual("isNumber");
+        expect(errorMapper(null)).toEqual("Default Error");
+      });
+    });
+    describe("peek", () => {
+      it("should run provided function when success", () => {
+        let value = null;
+        ErrorAwareGuard.peek(ErrorAwareGuard.fail(), () => {
+          value = 3;
+        });
+        expect(value).toEqual(null);
+        ErrorAwareGuard.peek(ErrorAwareGuard.pass(5), (number) => {
+          value = number;
+        });
+        expect(value).toEqual(5);
+      });
+    });
+    describe("mapWithDefault", () => {
+      it("should return correct error", () => {
+        expect(
+          ErrorAwareGuard.mapWithDefault(ErrorAwareGuard.fail(), () => 3, 6),
+        ).toEqual(6);
+        expect(
+          ErrorAwareGuard.mapWithDefault(
+            ErrorAwareGuard.pass(2),
+            (number) => number,
+            6,
+          ),
+        ).toEqual(2);
+      });
+    });
   });
 });
