@@ -68,15 +68,14 @@ export function isNothing<T>(maybe: Maybe<T>): maybe is Nothing {
  * A Guard confirming that the given maybe value is a Just.
  */
 export function isJust<T>(maybe: Maybe<T>): maybe is Just<T> {
-  return maybe.type === "maybe-just";
+  return maybe.type === "maybe-just" && "value" in maybe;
 }
 
 /**
  * A Guard confirming that the given value is a Maybe.
  */
 export function isMaybe<T>(value: unknown): value is Maybe<T> {
-  //@ts-expect-error is validated
-  return value.type === "maybe-just" || value.type === "maybe-nothing";
+  return Guard.isObjectWithKey("type")(value) && (value.type === "maybe-just" || value.type === "maybe-nothing");
 }
 
 /**
@@ -180,8 +179,9 @@ export function mapToMaybe<T, R>(
 }
 
 /**
- * Maps the a value contained within a Just using the given function without wrapping it in another Just.
- * Returns the given Maybe if it is a Nothing.
+ * Runs the given function with the contained value if maybe is Just<T>
+ * If an error occurs it returns Nothing.
+ * Otherwise it returns the mapped value inside a Just<R>.
  */
 export function tryMap<T, R>(
   func: (value: T) => R,
@@ -190,8 +190,8 @@ export function tryMap<T, R>(
     if (isJust(maybe)) {
       try {
         return just(func(maybe.value));
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (e) {
-        console.error(e);
         return nothing();
       }
     }

@@ -106,14 +106,12 @@ describe("maybe", () => {
       expect(tryMap(() => 3)(just(3)).value).toEqual(3);
     });
     it("should create nothing when error occurs in func", () => {
-      console.error = vi.fn();
       const error = new Error("OHOH!");
       expect(
         tryMap(() => {
           throw error;
         })(just(3)).type,
       ).toEqual("maybe-nothing");
-      expect(console.error).toHaveBeenNthCalledWith(1, error);
     });
   });
 
