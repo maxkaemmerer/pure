@@ -75,7 +75,10 @@ export function isJust<T>(maybe: Maybe<T>): maybe is Just<T> {
  * A Guard confirming that the given value is a Maybe.
  */
 export function isMaybe<T>(value: unknown): value is Maybe<T> {
-  return Guard.isObjectWithKey("type")(value) && (value.type === "maybe-just" || value.type === "maybe-nothing");
+  return (
+    Guard.isObjectWithKey("type")(value) &&
+    (value.type === "maybe-just" || value.type === "maybe-nothing")
+  );
 }
 
 /**

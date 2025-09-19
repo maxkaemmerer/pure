@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../README.md) / runtime/persistence
 
@@ -12,17 +12,17 @@
 
 > **Persistence**\<`Model`, `CustomMessage`\> = `object`
 
-Defined in: [runtime/persistence/index.ts:6](https://github.com/maxkaemmerer/pure/blob/d30a4bc91e164edceedaf0820bc185ec52d2032f/src/runtime/persistence/index.ts#L6)
+Defined in: [runtime/persistence/index.ts:6](https://github.com/maxkaemmerer/pure/blob/28876cbbb3f79b9c918040e9d4c41a8cccf1752a/src/runtime/persistence/index.ts#L6)
 
 #### Type Parameters
 
 ##### Model
 
-`Model` *extends* [`Cloneable`](../clone.md#cloneable)
+`Model` _extends_ [`Cloneable`](../clone.md#cloneable)
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](../runtime.md#message)
+`CustomMessage` _extends_ [`Message`](../runtime.md#message)
 
 #### Methods
 
@@ -30,7 +30,7 @@ Defined in: [runtime/persistence/index.ts:6](https://github.com/maxkaemmerer/pur
 
 > **persist**(`model`): `void`
 
-Defined in: [runtime/persistence/index.ts:10](https://github.com/maxkaemmerer/pure/blob/d30a4bc91e164edceedaf0820bc185ec52d2032f/src/runtime/persistence/index.ts#L10)
+Defined in: [runtime/persistence/index.ts:10](https://github.com/maxkaemmerer/pure/blob/28876cbbb3f79b9c918040e9d4c41a8cccf1752a/src/runtime/persistence/index.ts#L10)
 
 ###### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [runtime/persistence/index.ts:10](https://github.com/maxkaemmerer/pu
 
 > **read**(`guard`, `init`): [`Result`](../result.md#result)\<`Model`, `string`\>
 
-Defined in: [runtime/persistence/index.ts:11](https://github.com/maxkaemmerer/pure/blob/d30a4bc91e164edceedaf0820bc185ec52d2032f/src/runtime/persistence/index.ts#L11)
+Defined in: [runtime/persistence/index.ts:11](https://github.com/maxkaemmerer/pure/blob/28876cbbb3f79b9c918040e9d4c41a8cccf1752a/src/runtime/persistence/index.ts#L11)
 
 ###### Parameters
 
