@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
----
+***
 
 [@kaumlaut/pure](README.md) / util
 
@@ -12,7 +12,7 @@
 
 > **field**\<`T`\>(`key`): (`value`) => `T`\[keyof `T`\]
 
-Defined in: [util/index.ts:22](https://github.com/maxkaemmerer/pure/blob/28876cbbb3f79b9c918040e9d4c41a8cccf1752a/src/util/index.ts#L22)
+Defined in: [util/index.ts:22](https://github.com/maxkaemmerer/pure/blob/309e4f1dd4ac9f96b6bb9152765ae1dbd95bd346/src/util/index.ts#L22)
 
 Utility function that returns the value for the matching objects key
 
@@ -20,7 +20,7 @@ Utility function that returns the value for the matching objects key
 
 ##### T
 
-`T` _extends_ `object`
+`T` *extends* `object`
 
 #### Parameters
 
@@ -45,17 +45,17 @@ keyof `T`
 #### Example
 
 ```ts
-field("name")({ name: "Peter" });
+field("name")({name: "Peter"})
 // returns the string "Peter"
 ```
 
----
+***
 
 ### id()
 
 > **id**\<`T`\>(`value`): `T`
 
-Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/28876cbbb3f79b9c918040e9d4c41a8cccf1752a/src/util/index.ts#L4)
+Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/309e4f1dd4ac9f96b6bb9152765ae1dbd95bd346/src/util/index.ts#L4)
 
 Returns the given value.
 
@@ -75,13 +75,13 @@ Returns the given value.
 
 `T`
 
----
+***
 
 ### includes()
 
 > **includes**(`searchString`): (`value`) => `boolean`
 
-Defined in: [util/index.ts:12](https://github.com/maxkaemmerer/pure/blob/28876cbbb3f79b9c918040e9d4c41a8cccf1752a/src/util/index.ts#L12)
+Defined in: [util/index.ts:12](https://github.com/maxkaemmerer/pure/blob/309e4f1dd4ac9f96b6bb9152765ae1dbd95bd346/src/util/index.ts#L12)
 
 Checks if the given searchString is included in the value.
 Easier to use for composition purposes than value.includes(x).
