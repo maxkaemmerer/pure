@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](../../README.md)
 
----
+***
 
 [@kaumlaut/pure](../../README.md) / runtime/persistence/none
 
@@ -12,17 +12,17 @@
 
 > **noPersistence**\<`Model`, `CustomMessage`\>(): [`Persistence`](../persistence.md#persistence)\<`Model`, `CustomMessage`\>
 
-Defined in: [runtime/persistence/none/index.ts:8](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/runtime/persistence/none/index.ts#L8)
+Defined in: [runtime/persistence/none/index.ts:8](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/runtime/persistence/none/index.ts#L8)
 
 #### Type Parameters
 
 ##### Model
 
-`Model` _extends_ [`Cloneable`](../../clone.md#cloneable)
+`Model` *extends* [`Cloneable`](../../clone.md#cloneable)
 
 ##### CustomMessage
 
-`CustomMessage` _extends_ [`Message`](../../runtime.md#message)
+`CustomMessage` *extends* [`Message`](../../runtime.md#message)
 
 #### Returns
 

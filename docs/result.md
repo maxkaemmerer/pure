@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
----
+***
 
 [@kaumlaut/pure](README.md) / result
 
@@ -12,7 +12,7 @@
 
 > **Err**\<`T`\> = `object`
 
-Defined in: [result/index.ts:14](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L14)
+Defined in: [result/index.ts:14](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L14)
 
 Represents the Result of an action that failed and contains a corresponding error.
 
@@ -28,21 +28,21 @@ Represents the Result of an action that failed and contains a corresponding erro
 
 > **error**: `T`
 
-Defined in: [result/index.ts:16](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L16)
+Defined in: [result/index.ts:16](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L16)
 
 ##### type
 
 > **type**: `"error-result"`
 
-Defined in: [result/index.ts:15](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L15)
+Defined in: [result/index.ts:15](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L15)
 
----
+***
 
 ### Ok\<T\>
 
 > **Ok**\<`T`\> = `object`
 
-Defined in: [result/index.ts:6](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L6)
+Defined in: [result/index.ts:6](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L6)
 
 Represents the Result of an action that succeeded and contains a corresponding value.
 
@@ -58,21 +58,21 @@ Represents the Result of an action that succeeded and contains a corresponding v
 
 > **type**: `"ok-result"`
 
-Defined in: [result/index.ts:7](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L7)
+Defined in: [result/index.ts:7](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L7)
 
 ##### value
 
 > **value**: `T`
 
-Defined in: [result/index.ts:8](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L8)
+Defined in: [result/index.ts:8](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L8)
 
----
+***
 
 ### Result\<T, E\>
 
 > **Result**\<`T`, `E`\> = [`Ok`](#ok)\<`T`\> \| [`Err`](#err)\<`E`\>
 
-Defined in: [result/index.ts:22](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L22)
+Defined in: [result/index.ts:22](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L22)
 
 Represents the Result of an action that can fail.
 
@@ -92,7 +92,7 @@ Represents the Result of an action that can fail.
 
 > **concat**\<`T`, `E`\>(`combineValue`, `combineError`): (`a`) => (`b`) => [`Result`](#result)\<`T`, `E`\>
 
-Defined in: [result/index.ts:121](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L121)
+Defined in: [result/index.ts:121](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L121)
 
 Combines two Result<T, E>.
 If both are Err<E> the combineError function is used
@@ -142,13 +142,13 @@ Otherwise a single Result<T> is returned directly
 
 [`Result`](#result)\<`T`, `E`\>
 
----
+***
 
 ### err()
 
 > **err**\<`E`\>(`error`): [`Err`](#err)\<`E`\>
 
-Defined in: [result/index.ts:51](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L51)
+Defined in: [result/index.ts:51](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L51)
 
 Creates a Result of type Err containg the given error.
 
@@ -168,13 +168,13 @@ Creates a Result of type Err containg the given error.
 
 [`Err`](#err)\<`E`\>
 
----
+***
 
 ### isErr()
 
 > **isErr**\<`T`, `E`\>(`result`): `result is Err<E>`
 
-Defined in: [result/index.ts:34](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L34)
+Defined in: [result/index.ts:34](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L34)
 
 A Guard conforming that the given Result is of type Err.
 
@@ -198,13 +198,13 @@ A Guard conforming that the given Result is of type Err.
 
 `result is Err<E>`
 
----
+***
 
 ### isOk()
 
 > **isOk**\<`T`, `E`\>(`result`): `result is Ok<T>`
 
-Defined in: [result/index.ts:27](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L27)
+Defined in: [result/index.ts:27](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L27)
 
 A Guard conforming that the given Result is of type Ok.
 
@@ -228,13 +228,13 @@ A Guard conforming that the given Result is of type Ok.
 
 `result is Ok<T>`
 
----
+***
 
 ### map()
 
 > **map**\<`T`, `E`, `R`\>(`func`): (`result`) => [`Result`](#result)\<`R`, `E`\>
 
-Defined in: [result/index.ts:62](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L62)
+Defined in: [result/index.ts:62](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L62)
 
 When Result is Ok: Applies the func function to the contained value and wraps it in Ok again.
 When Result is Err: Returns the given Result.
@@ -273,13 +273,13 @@ When Result is Err: Returns the given Result.
 
 [`Result`](#result)\<`R`, `E`\>
 
----
+***
 
 ### mapErr()
 
 > **mapErr**\<`T`, `E`, `R`\>(`func`): (`result`) => [`Result`](#result)\<`T`, `R`\>
 
-Defined in: [result/index.ts:78](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L78)
+Defined in: [result/index.ts:78](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L78)
 
 When Result is Ok: Returns the given Result.
 When Result is Err: Applies the func function to the contained error and wraps it in Err again.
@@ -318,13 +318,13 @@ When Result is Err: Applies the func function to the contained error and wraps i
 
 [`Result`](#result)\<`T`, `R`\>
 
----
+***
 
 ### ok()
 
 > **ok**\<`T`\>(`value`): [`Ok`](#ok)\<`T`\>
 
-Defined in: [result/index.ts:41](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L41)
+Defined in: [result/index.ts:41](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L41)
 
 Creates a Result of type Ok containg the given value.
 
@@ -344,13 +344,13 @@ Creates a Result of type Ok containg the given value.
 
 [`Ok`](#ok)\<`T`\>
 
----
+***
 
 ### toMaybe()
 
 > **toMaybe**\<`T`, `E`\>(`result`): [`Maybe`](maybe.md#maybe)\<`T`\>
 
-Defined in: [result/index.ts:112](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L112)
+Defined in: [result/index.ts:112](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L112)
 
 Converts the given Result to a Maybe
 When Result is Ok: Returns a Just containing the value.
@@ -376,13 +376,13 @@ When Result is Err: Returns a Nothing.
 
 [`Maybe`](maybe.md#maybe)\<`T`\>
 
----
+***
 
 ### withDefault()
 
 > **withDefault**\<`T`, `E`\>(`defaultValue`): (`result`) => `T`
 
-Defined in: [result/index.ts:95](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/result/index.ts#L95)
+Defined in: [result/index.ts:95](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/result/index.ts#L95)
 
 Unwrap a result to either its contained value or the default value.
 When Result is Ok: Returns the nested value.

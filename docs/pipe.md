@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
----
+***
 
 [@kaumlaut/pure](README.md) / pipe
 
@@ -12,7 +12,7 @@
 
 > **Pipe**\<`IT`\> = `object`
 
-Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/pipe/index.ts#L4)
+Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/pipe/index.ts#L4)
 
 Represents a function pipeline
 
@@ -28,7 +28,7 @@ Represents a function pipeline
 
 > **into**: \<`RT`\>(`func`) => [`Pipe`](#pipe)\<`RT`\>
 
-Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/pipe/index.ts#L5)
+Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/pipe/index.ts#L5)
 
 ###### Type Parameters
 
@@ -50,7 +50,7 @@ Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/4051ddd2
 
 > **out**: () => `IT`
 
-Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/pipe/index.ts#L6)
+Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/pipe/index.ts#L6)
 
 ###### Returns
 
@@ -62,7 +62,7 @@ Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/4051ddd2
 
 > **compose**\<`T1`, `T2`, `R`\>(`f1`, `f2`): (`value`) => `R`
 
-Defined in: [pipe/index.ts:32](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/pipe/index.ts#L32)
+Defined in: [pipe/index.ts:32](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/pipe/index.ts#L32)
 
 Combines two single argument functions to create a new one. Passing the output of f1 to f2 as input.
 
@@ -104,13 +104,13 @@ Combines two single argument functions to create a new one. Passing the output o
 
 `R`
 
----
+***
 
 ### put()
 
 > **put**\<`IT`\>(`data`): [`Pipe`](#pipe)\<`IT`\>
 
-Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/4051ddd2fd3395b5787c1eaa7bf5cd9e24750c36/src/pipe/index.ts#L20)
+Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/pipe/index.ts#L20)
 
 Creates a Pipe that allows you to chain multiple functions using into.
 Is meant to make larger functions more readable.
@@ -135,9 +135,9 @@ Is meant to make larger functions more readable.
 
 ```ts
 const output = put("3")
-  .into(asInt)
-  .into(toMaybe)
-  .into(withDefault(0))
-  .into((input) => input * 3.14)
-  .into((input) => input.toPrecision());
+     .into(asInt)
+     .into(toMaybe)
+     .into(withDefault(0))
+     .into((input) => input * 3.14)
+     .into((input) => input.toPrecision());
 ```
