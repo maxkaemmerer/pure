@@ -12,7 +12,7 @@
 
 > **field**\<`T`\>(`key`): (`value`) => `T`\[keyof `T`\]
 
-Defined in: [util/index.ts:22](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/util/index.ts#L22)
+Defined in: [util/index.ts:22](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/util/index.ts#L22)
 
 Utility function that returns the value for the matching objects key
 
@@ -55,7 +55,7 @@ field("name")({name: "Peter"})
 
 > **id**\<`T`\>(`value`): `T`
 
-Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/util/index.ts#L4)
+Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/util/index.ts#L4)
 
 Returns the given value.
 
@@ -81,7 +81,7 @@ Returns the given value.
 
 > **includes**(`searchString`): (`value`) => `boolean`
 
-Defined in: [util/index.ts:12](https://github.com/maxkaemmerer/pure/blob/60aade3a40eafb2d5726e8fc9329155e0f7ebcc3/src/util/index.ts#L12)
+Defined in: [util/index.ts:12](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/util/index.ts#L12)
 
 Checks if the given searchString is included in the value.
 Easier to use for composition purposes than value.includes(x).
