@@ -4,6 +4,7 @@
  */
 import * as Guard from "@kaumlaut/pure/guard";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
+import { just, Maybe, nothing } from "../maybe";
 
 /**
  * Represents a failed fetch request
@@ -181,6 +182,21 @@ export function mapFailed<T, T2 = T>(
     return state;
   };
 }
+/**
+ * A Utility function that allows to map the Success fetch state to any other fetch state.
+ * The mapper function is only called if the given fetch state is Success.
+ */
+export function mapSuccess<T, T2 = T>(
+  mapper: (state: Success<T>) => FetchState<T2>,
+): (state: FetchState<T>) => FetchState<T | T2> {
+  return (state: FetchState<T>) => {
+    if (isSuccess(state)) {
+      return mapper(state);
+    }
+
+    return state;
+  };
+}
 
 /**
  * Converts a Success<T> into a Success<T2> using the given mapping function.
@@ -210,4 +226,15 @@ export function containsError<T>(
 
     return false;
   };
+}
+
+/**
+ * Converts a Success<T> Fetch State to Just<T> and any other Fetch State to Nothing.
+ */
+export function fetchStateToMaybe<T>(fetchState: FetchState<T>): Maybe<T> {
+  if (isSuccess(fetchState)) {
+    return just(fetchState.data);
+  }
+
+  return nothing();
 }

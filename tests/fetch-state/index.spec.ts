@@ -13,10 +13,12 @@ import {
   attemptErrorAware,
   succeed,
   containsError,
+  mapSuccess,
+  fetchStateToMaybe,
 } from "@kaumlaut/pure/fetch-state";
 import * as Guard from "@kaumlaut/pure/guard";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
-import { just } from "@kaumlaut/pure/maybe";
+import { just, nothing } from "@kaumlaut/pure/maybe";
 import { includes } from "../../dist/util";
 
 describe("fetch-state", () => {
@@ -144,5 +146,23 @@ describe("fetch-state", () => {
       expect(isSuccess(value)).to.equal(false);
       expect(isFailed(value)).to.equal(true);
     });
+  });
+
+  it("should mapSuccess", () => {
+    expect(
+      mapSuccess<number, number>((it) => succeed(3 + it.data))(succeed(2)),
+    ).to.deep.equal(succeed(5));
+    expect(
+      mapSuccess<number, number>(() => fail("Error"))(succeed(2)),
+    ).to.deep.equal(fail("Error"));
+    expect(
+      mapSuccess<number, number>(() => fail("Error2"))(fail("Error")),
+    ).to.deep.equal(fail("Error"));
+  });
+  it("should fetchStateToMaybe", () => {
+    expect(fetchStateToMaybe(succeed(2))).to.deep.equal(just(2));
+    expect(fetchStateToMaybe(fail("Error"))).to.deep.equal(nothing());
+    expect(fetchStateToMaybe(load())).to.deep.equal(nothing());
+    expect(fetchStateToMaybe(none())).to.deep.equal(nothing());
   });
 });

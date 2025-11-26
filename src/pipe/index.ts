@@ -25,3 +25,13 @@ export function put<IT>(data: IT): Pipe<IT> {
     out: () => data,
   };
 }
+
+/**
+ * Combines two single argument functions to create a new one. Passing the output of f1 to f2 as input.
+ */
+export function compose<T1, T2, R>(
+  f1: (value: T1) => T2,
+  f2: (value: T2) => R,
+): (value: T1) => R {
+  return (value) => f2(f1(value));
+}

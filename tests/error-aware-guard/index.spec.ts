@@ -693,5 +693,23 @@ describe("error-aware-guard", () => {
         ).toEqual(2);
       });
     });
+    describe("isTrue isFalse", () => {
+      it("should return correct result", () => {
+        expect(ErrorAwareGuard.isTrue(true).success).to.equal(true);
+        expect(ErrorAwareGuard.isTrue(false).success).to.equal(false);
+        expect(ErrorAwareGuard.isFalse(true).success).to.equal(false);
+        expect(ErrorAwareGuard.isFalse(false).success).to.equal(true);
+      });
+    });
+    describe("toMaybe", () => {
+      it("should return correct result", () => {
+        expect(
+          ErrorAwareGuard.toMaybe(ErrorAwareGuard.isTrue(true)).type,
+        ).to.equal("maybe-just");
+        expect(
+          ErrorAwareGuard.toMaybe(ErrorAwareGuard.isTrue(false)).type,
+        ).to.equal("maybe-nothing");
+      });
+    });
   });
 });

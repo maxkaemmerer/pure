@@ -3,6 +3,7 @@
  * @module error-aware-guard
  */
 import * as Guard from "@kaumlaut/pure/guard";
+import { just, Maybe, nothing } from "../maybe";
 
 /**
  * Represents a successful ErrorAwareGuard, containing the value
@@ -567,3 +568,24 @@ export function mapWithDefault<T, T2>(
 
   return defaultValue;
 }
+
+/**
+ * Converts a successful ValidationResult<T> to Just<T> and failed ones to Nothing.
+ */
+export function toMaybe<T>(result: ValidationResult<T>): Maybe<T> {
+  return result.success ? just(result.value) : nothing();
+}
+
+/**
+ * Confirms a value is true
+ */
+export const isTrue: ErrorAwareGuard<true> = (value: unknown) => {
+  return value === true ? pass(value) : fail("Value is not true");
+};
+
+/**
+ * Confirms a value is false
+ */
+export const isFalse: ErrorAwareGuard<false> = (value: unknown) => {
+  return value === false ? pass(value) : fail("Value is not false");
+};
