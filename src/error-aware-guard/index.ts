@@ -3,7 +3,7 @@
  * @module error-aware-guard
  */
 import * as Guard from "@kaumlaut/pure/guard";
-import { just, Maybe, nothing } from "../maybe";
+import { just, Maybe, nothing } from "@kaumlaut/pure/maybe";
 
 /**
  * Represents a successful ErrorAwareGuard, containing the value

@@ -4,7 +4,7 @@
  */
 import * as Guard from "@kaumlaut/pure/guard";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
-import { just, Maybe, nothing } from "../maybe";
+import { just, Maybe, nothing } from "@kaumlaut/pure/maybe";
 
 /**
  * Represents a failed fetch request
