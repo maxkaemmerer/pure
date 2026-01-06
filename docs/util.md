@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
----
+***
 
 [@kaumlaut/pure](README.md) / util
 
@@ -12,7 +12,7 @@
 
 > **field**\<`T`\>(`key`): (`value`) => `T`\[keyof `T`\]
 
-Defined in: [util/index.ts:22](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/util/index.ts#L22)
+Defined in: [util/index.ts:40](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/util/index.ts#L40)
 
 Utility function that returns the value for the matching objects key
 
@@ -20,7 +20,7 @@ Utility function that returns the value for the matching objects key
 
 ##### T
 
-`T` _extends_ `object`
+`T` *extends* `object`
 
 #### Parameters
 
@@ -45,17 +45,17 @@ keyof `T`
 #### Example
 
 ```ts
-field("name")({ name: "Peter" });
+field("name")({name: "Peter"})
 // returns the string "Peter"
 ```
 
----
+***
 
 ### id()
 
 > **id**\<`T`\>(`value`): `T`
 
-Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/util/index.ts#L4)
+Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/util/index.ts#L4)
 
 Returns the given value.
 
@@ -75,13 +75,13 @@ Returns the given value.
 
 `T`
 
----
+***
 
 ### includes()
 
 > **includes**(`searchString`): (`value`) => `boolean`
 
-Defined in: [util/index.ts:12](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/util/index.ts#L12)
+Defined in: [util/index.ts:30](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/util/index.ts#L30)
 
 Checks if the given searchString is included in the value.
 Easier to use for composition purposes than value.includes(x).
@@ -105,3 +105,83 @@ Easier to use for composition purposes than value.includes(x).
 ##### Returns
 
 `boolean`
+
+***
+
+### left()
+
+> **left**\<`L`, `R`\>(`left`): (`right`) => `L` \| `R`
+
+Defined in: [util/index.ts:11](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/util/index.ts#L11)
+
+Returns the first (left) value passed
+
+#### Type Parameters
+
+##### L
+
+`L`
+
+##### R
+
+`R`
+
+#### Parameters
+
+##### left
+
+`L`
+
+#### Returns
+
+> (`right`): `L` \| `R`
+
+##### Parameters
+
+###### right
+
+`R`
+
+##### Returns
+
+`L` \| `R`
+
+***
+
+### right()
+
+> **right**\<`L`, `R`\>(`left`): (`right`) => `L` \| `R`
+
+Defined in: [util/index.ts:19](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/util/index.ts#L19)
+
+Returns the second (right) value passed
+
+#### Type Parameters
+
+##### L
+
+`L`
+
+##### R
+
+`R`
+
+#### Parameters
+
+##### left
+
+`L`
+
+#### Returns
+
+> (`right`): `L` \| `R`
+
+##### Parameters
+
+###### right
+
+`R`
+
+##### Returns
+
+`L` \| `R`

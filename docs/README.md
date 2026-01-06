@@ -1,6 +1,6 @@
 **@kaumlaut/pure**
 
----
+***
 
 # @kaumlaut/pure
 
@@ -21,4 +21,5 @@
 - [runtime/persistence](runtime/persistence.md)
 - [runtime/persistence/none](runtime/persistence/none.md)
 - [runtime/persistence/storage](runtime/persistence/storage.md)
+- [tuple](tuple.md)
 - [util](util.md)
