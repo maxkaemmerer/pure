@@ -403,6 +403,12 @@ export const isNonEmptyListOf = <I>(guard: ErrorAwareGuard<I>) =>
   );
 
 /**
+ * Confirms the value is a list with zero items.
+ */
+export const isEmptyList = <I>(value: unknown) =>
+  fromGuard<I[]>(Guard.isEmptyList, () => ["Is not an empty list."])(value);
+
+/**
  * Confirms the value is number between min and max inclusive.
  * Meaning if the value equals min or max the guard passes.
  */

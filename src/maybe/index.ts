@@ -247,3 +247,17 @@ export function concat<T>(combine: (aValue: T, bValue: T) => T) {
     return isJust(a) ? a : b;
   };
 }
+
+/**
+ * Returns the first (left) value if it is Just or otherwise returns the second (right) value.
+ */
+export function preferLeft<T>(left: Maybe<T>): (right: Maybe<T>) => Maybe<T> {
+  return (right: Maybe<T>) => (isJust(left) ? left : right);
+}
+
+/**
+ * Returns the second (right) value if it is Just or otherwise returns the first (left) value.
+ */
+export function preferRight<T>(left: Maybe<T>): (right: Maybe<T>) => Maybe<T> {
+  return (right: Maybe<T>) => (isJust(right) ? right : left);
+}

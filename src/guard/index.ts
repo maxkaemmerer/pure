@@ -258,6 +258,13 @@ export function isNonEmptyListOf<T>(
 }
 
 /**
+ * Confirms the value is a list with zero items.
+ */
+export function isEmptyList<T = never>(value: unknown): value is T[] {
+  return Array.isArray(value) && value.length === 0;
+}
+
+/**
  * Confirms the value is number between min and max inclusive.
  * Meaning if the value equals min or max the guard passes.
  */

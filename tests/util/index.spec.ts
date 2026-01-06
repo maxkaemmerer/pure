@@ -1,5 +1,5 @@
 import { describe, expect, test, it } from "vitest";
-import { field, id } from "@kaumlaut/pure/util";
+import { field, id, left, right } from "@kaumlaut/pure/util";
 
 describe("util", () => {
   test.each(
@@ -37,5 +37,15 @@ describe("util", () => {
     expect(field<Test>("d")(object)).toEqual({
       e: 4,
     });
+  });
+
+  it("should return left", () => {
+    expect(left(1)(2)).toEqual(1);
+    expect(left(2)(1)).toEqual(2);
+  });
+
+  it("should return right", () => {
+    expect(right(1)(2)).toEqual(2);
+    expect(right(2)(1)).toEqual(1);
   });
 });

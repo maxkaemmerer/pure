@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](../../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../../README.md) / runtime/effect/fetch
 
@@ -14,7 +14,7 @@
 
 Defined in: [runtime/effect/fetch/index.ts:19](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/runtime/effect/fetch/index.ts#L19)
 
-***
+---
 
 ### HttpError
 
@@ -36,7 +36,7 @@ Defined in: [runtime/effect/fetch/index.ts:11](https://github.com/maxkaemmerer/p
 
 Defined in: [runtime/effect/fetch/index.ts:12](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/runtime/effect/fetch/index.ts#L12)
 
-***
+---
 
 ### MalformedPayloadError
 
@@ -68,7 +68,7 @@ Defined in: [runtime/effect/fetch/index.ts:40](https://github.com/maxkaemmerer/p
 
 ##### M
 
-`M` *extends* [`Message`](../../runtime.md#message)
+`M` _extends_ [`Message`](../../runtime.md#message)
 
 #### Parameters
 
@@ -96,7 +96,7 @@ Defined in: [runtime/effect/fetch/index.ts:40](https://github.com/maxkaemmerer/p
 
 [`Effect`](../effect.md#effect)\<`M`\>
 
-***
+---
 
 ### isClient()
 
@@ -114,7 +114,7 @@ Defined in: [runtime/effect/fetch/index.ts:32](https://github.com/maxkaemmerer/p
 
 `boolean`
 
-***
+---
 
 ### isHttp()
 
@@ -132,7 +132,7 @@ Defined in: [runtime/effect/fetch/index.ts:25](https://github.com/maxkaemmerer/p
 
 `error is HttpError`
 
-***
+---
 
 ### isNotFound()
 
@@ -150,7 +150,7 @@ Defined in: [runtime/effect/fetch/index.ts:21](https://github.com/maxkaemmerer/p
 
 `boolean`
 
-***
+---
 
 ### isServer()
 

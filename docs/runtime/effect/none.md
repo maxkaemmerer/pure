@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](../../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../../README.md) / runtime/effect/none
 

@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / runtime
 
@@ -18,13 +18,13 @@ Defined in: [runtime/index.ts:20](https://github.com/maxkaemmerer/pure/blob/f752
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](#message)
+`CustomMessage` _extends_ [`Message`](#message)
 
 ##### Model
 
 `Model`
 
-***
+---
 
 ### Changes\<CustomMessage, Model\>
 
@@ -36,13 +36,13 @@ Defined in: [runtime/index.ts:29](https://github.com/maxkaemmerer/pure/blob/f752
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](#message)
+`CustomMessage` _extends_ [`Message`](#message)
 
 ##### Model
 
-`Model` *extends* [`Cloneable`](clone.md#cloneable)
+`Model` _extends_ [`Cloneable`](clone.md#cloneable)
 
-***
+---
 
 ### Init()\<Model, CustomMessage\>
 
@@ -54,11 +54,11 @@ Defined in: [runtime/index.ts:16](https://github.com/maxkaemmerer/pure/blob/f752
 
 ##### Model
 
-`Model` *extends* [`Cloneable`](clone.md#cloneable)
+`Model` _extends_ [`Cloneable`](clone.md#cloneable)
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](#message)
+`CustomMessage` _extends_ [`Message`](#message)
 
 #### Parameters
 
@@ -70,7 +70,7 @@ Defined in: [runtime/index.ts:16](https://github.com/maxkaemmerer/pure/blob/f752
 
 \[`Model`, [`Effect`](runtime/effect.md#effect)\<`CustomMessage`\>\]
 
-***
+---
 
 ### Message\<N, T\>
 
@@ -82,7 +82,7 @@ Defined in: [runtime/index.ts:6](https://github.com/maxkaemmerer/pure/blob/f7529
 
 ##### N
 
-`N` *extends* `string` = `string`
+`N` _extends_ `string` = `string`
 
 ##### T
 
@@ -102,7 +102,7 @@ Defined in: [runtime/index.ts:8](https://github.com/maxkaemmerer/pure/blob/f7529
 
 Defined in: [runtime/index.ts:7](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/runtime/index.ts#L7)
 
-***
+---
 
 ### Update()\<Model, CustomMessage\>
 
@@ -114,11 +114,11 @@ Defined in: [runtime/index.ts:11](https://github.com/maxkaemmerer/pure/blob/f752
 
 ##### Model
 
-`Model` *extends* [`Cloneable`](clone.md#cloneable)
+`Model` _extends_ [`Cloneable`](clone.md#cloneable)
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](#message)
+`CustomMessage` _extends_ [`Message`](#message)
 
 #### Parameters
 
@@ -146,11 +146,11 @@ Defined in: [runtime/index.ts:34](https://github.com/maxkaemmerer/pure/blob/f752
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](#message)\<`A`, `any`\>
+`CustomMessage` _extends_ [`Message`](#message)\<`A`, `any`\>
 
 ##### A
 
-`A` *extends* `string`
+`A` _extends_ `string`
 
 #### Parameters
 

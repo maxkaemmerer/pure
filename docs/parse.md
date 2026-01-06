@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / parse
 
@@ -26,7 +26,7 @@ Attempts to parse a string as an float. Returning ok if successful or err if not
 
 [`Result`](result.md#result)\<`number`, `string`\>
 
-***
+---
 
 ### asInt()
 

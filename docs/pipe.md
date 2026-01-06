@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / pipe
 
@@ -104,7 +104,7 @@ Combines two single argument functions to create a new one. Passing the output o
 
 `R`
 
-***
+---
 
 ### put()
 
@@ -135,9 +135,9 @@ Is meant to make larger functions more readable.
 
 ```ts
 const output = put("3")
-     .into(asInt)
-     .into(toMaybe)
-     .into(withDefault(0))
-     .into((input) => input * 3.14)
-     .into((input) => input.toPrecision());
+  .into(asInt)
+  .into(toMaybe)
+  .into(withDefault(0))
+  .into((input) => input * 3.14)
+  .into((input) => input.toPrecision());
 ```

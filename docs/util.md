@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / util
 
@@ -20,7 +20,7 @@ Utility function that returns the value for the matching objects key
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -45,11 +45,11 @@ keyof `T`
 #### Example
 
 ```ts
-field("name")({name: "Peter"})
+field("name")({ name: "Peter" });
 // returns the string "Peter"
 ```
 
-***
+---
 
 ### id()
 
@@ -75,7 +75,7 @@ Returns the given value.
 
 `T`
 
-***
+---
 
 ### includes()
 

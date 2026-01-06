@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](../../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../../README.md) / runtime/persistence/none
 
@@ -18,11 +18,11 @@ Defined in: [runtime/persistence/none/index.ts:8](https://github.com/maxkaemmere
 
 ##### Model
 
-`Model` *extends* [`Cloneable`](../../clone.md#cloneable)
+`Model` _extends_ [`Cloneable`](../../clone.md#cloneable)
 
 ##### CustomMessage
 
-`CustomMessage` *extends* [`Message`](../../runtime.md#message)
+`CustomMessage` _extends_ [`Message`](../../runtime.md#message)
 
 #### Returns
 

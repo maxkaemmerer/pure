@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / fetch-state
 
@@ -32,7 +32,7 @@ Defined in: [fetch-state/index.ts:13](https://github.com/maxkaemmerer/pure/blob/
 
 Defined in: [fetch-state/index.ts:14](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/fetch-state/index.ts#L14)
 
-***
+---
 
 ### FetchState\<T\>
 
@@ -48,7 +48,7 @@ Represents all possible states of a fetch request
 
 `T`
 
-***
+---
 
 ### Loading
 
@@ -66,7 +66,7 @@ Represents a fetch request that is currently still running
 
 Defined in: [fetch-state/index.ts:28](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/fetch-state/index.ts#L28)
 
-***
+---
 
 ### None
 
@@ -84,7 +84,7 @@ Represents a fetch request that has not been executed
 
 Defined in: [fetch-state/index.ts:21](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/fetch-state/index.ts#L21)
 
-***
+---
 
 ### Success\<T\>
 
@@ -163,14 +163,14 @@ Otherwise creates a fetch state of type Failed with the provided error.
 
 ```ts
 const value = attempt(isString, "Not a String")(3);
-if(isSuccess(value)){
- console.log(value.data)
-} else if (isFailed(value)){
- console.error(value.error)
+if (isSuccess(value)) {
+  console.log(value.data);
+} else if (isFailed(value)) {
+  console.error(value.error);
 }
 ```
 
-***
+---
 
 ### attemptErrorAware()
 
@@ -211,14 +211,14 @@ Otherwise creates a fetch state of type Failed with the errors from the ErrorAwa
 
 ```ts
 const value = attemptErrorAware(isString)(3);
-if(isSuccess(value)){
- console.log(value.data)
-} else if (isFailed(value)){
- console.error(value.error)
+if (isSuccess(value)) {
+  console.log(value.data);
+} else if (isFailed(value)) {
+  console.error(value.error);
 }
 ```
 
-***
+---
 
 ### containsError()
 
@@ -254,7 +254,7 @@ Checks whether or not the fetch state is Failed and contains an errors that pass
 
 `boolean`
 
-***
+---
 
 ### fail()
 
@@ -278,7 +278,7 @@ Creates a fetch state of type Failed
 
 [`Failed`](#failed)
 
-***
+---
 
 ### fetchStateToMaybe()
 
@@ -304,7 +304,7 @@ Converts a Success<T> Fetch State to Just<T> and any other Fetch State to Nothin
 
 [`Maybe`](maybe.md#maybe)\<`T`\>
 
-***
+---
 
 ### isFailed()
 
@@ -330,7 +330,7 @@ Checks whether or not the fetch state is Failed via a type guard
 
 `state is Failed`
 
-***
+---
 
 ### isLoading()
 
@@ -356,7 +356,7 @@ Checks whether or not the fetch state is Loading via a type guard
 
 `state is Loading`
 
-***
+---
 
 ### isNone()
 
@@ -382,7 +382,7 @@ Checks whether or not the fetch state is None via a type guard
 
 `state is None`
 
-***
+---
 
 ### isSuccess()
 
@@ -408,7 +408,7 @@ Checks whether or not the fetch state is Success via a type guard
 
 `state is Success<T>`
 
-***
+---
 
 ### load()
 
@@ -422,7 +422,7 @@ Creates a fetch state of type Loading
 
 [`Loading`](#loading)
 
-***
+---
 
 ### mapFailed()
 
@@ -467,15 +467,17 @@ The mapper function is only called if the given fetch state is Failed.
 
 ```ts
 const value = attempt(isString, "Not a String")(3);
-const mappedValue = mapFailed<string>(state => state.error.includes("404") ? fail("Not Found") : state)(value)
-if(isSuccess(mappedValue)){
- console.log(mappedValue.data)
-} else if (isFailed(mappedValue)){
- console.error(mappedValue.error)
+const mappedValue = mapFailed<string>((state) =>
+  state.error.includes("404") ? fail("Not Found") : state,
+)(value);
+if (isSuccess(mappedValue)) {
+  console.log(mappedValue.data);
+} else if (isFailed(mappedValue)) {
+  console.error(mappedValue.error);
 }
 ```
 
-***
+---
 
 ### mapSuccess()
 
@@ -516,7 +518,7 @@ The mapper function is only called if the given fetch state is Success.
 
 [`FetchState`](#fetchstate)\<`T` \| `T2`\>
 
-***
+---
 
 ### mapSuccessData()
 
@@ -557,7 +559,7 @@ Does nothing if the FetchState is not Success.
 
 [`FetchState`](#fetchstate)\<`T2`\>
 
-***
+---
 
 ### none()
 
@@ -571,7 +573,7 @@ Creates a fetch state of type None
 
 [`None`](#none)
 
-***
+---
 
 ### succeed()
 

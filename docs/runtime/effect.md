@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](../README.md)
 
-***
+---
 
 [@kaumlaut/pure](../README.md) / runtime/effect
 
@@ -18,13 +18,13 @@ Defined in: [runtime/effect/index.ts:4](https://github.com/maxkaemmerer/pure/blo
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Returns
 
 `Promise`\<`T`\>
 
-***
+---
 
 ### AsyncNullEffect()
 
@@ -36,7 +36,7 @@ Defined in: [runtime/effect/index.ts:7](https://github.com/maxkaemmerer/pure/blo
 
 `Promise`\<`null`\>
 
-***
+---
 
 ### Effect\<T\>
 
@@ -48,7 +48,7 @@ Defined in: [runtime/effect/index.ts:13](https://github.com/maxkaemmerer/pure/bl
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Properties
 
@@ -70,7 +70,7 @@ Defined in: [runtime/effect/index.ts:16](https://github.com/maxkaemmerer/pure/bl
 
 Defined in: [runtime/effect/index.ts:15](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/runtime/effect/index.ts#L15)
 
-***
+---
 
 ### EffectType\<T\>
 
@@ -82,9 +82,9 @@ Defined in: [runtime/effect/index.ts:8](https://github.com/maxkaemmerer/pure/blo
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
-***
+---
 
 ### NullEffect()
 
@@ -96,7 +96,7 @@ Defined in: [runtime/effect/index.ts:6](https://github.com/maxkaemmerer/pure/blo
 
 `null`
 
-***
+---
 
 ### ReceiveEffectResult()\<T, E, R\>
 
@@ -128,7 +128,7 @@ Defined in: [runtime/effect/index.ts:31](https://github.com/maxkaemmerer/pure/bl
 
 `R`
 
-***
+---
 
 ### SyncEffect()\<T\>
 
@@ -140,7 +140,7 @@ Defined in: [runtime/effect/index.ts:5](https://github.com/maxkaemmerer/pure/blo
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Returns
 
@@ -158,7 +158,7 @@ Defined in: [runtime/effect/index.ts:19](https://github.com/maxkaemmerer/pure/bl
 
 ##### T
 
-`T` *extends* [`Message`](../runtime.md#message)
+`T` _extends_ [`Message`](../runtime.md#message)
 
 #### Parameters
 

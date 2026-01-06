@@ -312,6 +312,16 @@ describe("guard", () => {
         );
       });
     });
+    describe("isEmptyList", () => {
+      it("should check correctly", () => {
+        expect(Guard.isEmptyList([])).toEqual(true);
+        expect(Guard.isEmptyList([1])).toEqual(false);
+        expect(Guard.isEmptyList(undefined)).toEqual(false);
+        expect(Guard.isEmptyList({})).toEqual(false);
+        expect(Guard.isEmptyList(1)).toEqual(false);
+        expect(Guard.isEmptyList("abc")).toEqual(false);
+      });
+    });
     describe("isUndefined", () => {
       it("should check for undefined", () => {
         expect(Guard.isUndefined(3)).toEqual(false);

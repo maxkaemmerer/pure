@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / clone
 
@@ -32,7 +32,7 @@ Recursively clones values to prevent changing of the original value.
 
 ##### T
 
-`T` *extends* [`Cloneable`](#cloneable)
+`T` _extends_ [`Cloneable`](#cloneable)
 
 #### Parameters
 

@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / result
 
@@ -36,7 +36,7 @@ Defined in: [result/index.ts:16](https://github.com/maxkaemmerer/pure/blob/f7529
 
 Defined in: [result/index.ts:15](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/result/index.ts#L15)
 
-***
+---
 
 ### Ok\<T\>
 
@@ -66,7 +66,7 @@ Defined in: [result/index.ts:7](https://github.com/maxkaemmerer/pure/blob/f75295
 
 Defined in: [result/index.ts:8](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/result/index.ts#L8)
 
-***
+---
 
 ### Result\<T, E\>
 
@@ -142,7 +142,7 @@ Otherwise a single Result<T> is returned directly
 
 [`Result`](#result)\<`T`, `E`\>
 
-***
+---
 
 ### err()
 
@@ -168,7 +168,7 @@ Creates a Result of type Err containg the given error.
 
 [`Err`](#err)\<`E`\>
 
-***
+---
 
 ### isErr()
 
@@ -198,7 +198,7 @@ A Guard conforming that the given Result is of type Err.
 
 `result is Err<E>`
 
-***
+---
 
 ### isOk()
 
@@ -228,7 +228,7 @@ A Guard conforming that the given Result is of type Ok.
 
 `result is Ok<T>`
 
-***
+---
 
 ### map()
 
@@ -273,7 +273,7 @@ When Result is Err: Returns the given Result.
 
 [`Result`](#result)\<`R`, `E`\>
 
-***
+---
 
 ### mapErr()
 
@@ -318,7 +318,7 @@ When Result is Err: Applies the func function to the contained error and wraps i
 
 [`Result`](#result)\<`T`, `R`\>
 
-***
+---
 
 ### ok()
 
@@ -344,7 +344,7 @@ Creates a Result of type Ok containg the given value.
 
 [`Ok`](#ok)\<`T`\>
 
-***
+---
 
 ### toMaybe()
 
@@ -376,7 +376,7 @@ When Result is Err: Returns a Nothing.
 
 [`Maybe`](maybe.md#maybe)\<`T`\>
 
-***
+---
 
 ### withDefault()
 

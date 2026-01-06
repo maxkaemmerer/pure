@@ -14,8 +14,11 @@ import {
   tryMap,
   withDefault,
   concat,
+  preferLeft,
+  preferRight,
 } from "@kaumlaut/pure/maybe";
 import * as Guard from "@kaumlaut/pure/guard";
+import { put } from "@kaumlaut/pure/pipe";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
 
 describe("maybe", () => {
@@ -138,6 +141,37 @@ describe("maybe", () => {
       expect(concat<number>((a, b) => a + b)(nothing())(nothing())).toEqual({
         type: "maybe-nothing",
       });
+    });
+  });
+
+  describe("preferLeft", () => {
+    it("should return left value if Just", () => {
+      expect(preferLeft(just(3))(just(2))).toEqual(just(3));
+      expect(preferLeft(just(3))(nothing())).toEqual(just(3));
+      expect(preferLeft(nothing())(just(2))).toEqual(just(2));
+      expect(preferLeft(nothing())(nothing())).toEqual(nothing());
+    });
+  });
+
+  describe("preferRight", () => {
+    it("should return right value if Just", () => {
+      expect(preferRight(just(3))(just(2))).toEqual(just(2));
+      expect(preferRight(just(3))(nothing())).toEqual(just(3));
+      expect(preferRight(nothing())(just(2))).toEqual(just(2));
+      expect(preferRight(nothing())(nothing())).toEqual(nothing());
+    });
+  });
+
+  describe("complex proof of concept", () => {
+    it("should return first value if filter passes otherwise return second value", () => {
+      const tour = just({
+        tourNumber: "WKS321123",
+        contents: [{ seasonPeriod: 2026 }, { seasonPeriod: 2025 }],
+      });
+
+      const result = put(tour)
+        .into(map((it) => it.contents))
+        .into(filter((it) => it.contents));
     });
   });
 });

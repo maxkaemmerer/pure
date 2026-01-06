@@ -593,6 +593,17 @@ describe("error-aware-guard", () => {
         expect(resultC.errors).toEqual(undefined);
       });
     });
+
+    describe("isEmptyList", () => {
+      it("should check correctly", () => {
+        expect(ErrorAwareGuard.isEmptyList([]).success).toEqual(true);
+        expect(ErrorAwareGuard.isEmptyList([1]).success).toEqual(false);
+        expect(ErrorAwareGuard.isEmptyList(undefined).success).toEqual(false);
+        expect(ErrorAwareGuard.isEmptyList({}).success).toEqual(false);
+        expect(ErrorAwareGuard.isEmptyList(1).success).toEqual(false);
+        expect(ErrorAwareGuard.isEmptyList("abc").success).toEqual(false);
+      });
+    });
     describe("isUndefined", () => {
       it("should check for undefined", () => {
         const resultA = ErrorAwareGuard.isUndefined(3);

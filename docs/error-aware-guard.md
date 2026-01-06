@@ -1,6 +1,6 @@
 [**@kaumlaut/pure**](README.md)
 
-***
+---
 
 [@kaumlaut/pure](README.md) / error-aware-guard
 
@@ -34,7 +34,7 @@ Represents a function that returns a wrapped value on success or a wrapped error
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### ErrorResult
 
@@ -58,7 +58,7 @@ Defined in: [error-aware-guard/index.ts:18](https://github.com/maxkaemmerer/pure
 
 Defined in: [error-aware-guard/index.ts:17](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/error-aware-guard/index.ts#L17)
 
-***
+---
 
 ### SuccessResult\<T\>
 
@@ -88,7 +88,7 @@ Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure
 
 Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/f75295f0fbf2665c21c67a4bc28ba8a26ab0cde7/src/error-aware-guard/index.ts#L11)
 
-***
+---
 
 ### ValidationResult\<T\>
 
@@ -114,7 +114,7 @@ Defined in: [error-aware-guard/index.ts:357](https://github.com/maxkaemmerer/pur
 
 Always passes.
 
-***
+---
 
 ### isBool
 
@@ -124,7 +124,7 @@ Defined in: [error-aware-guard/index.ts:323](https://github.com/maxkaemmerer/pur
 
 Confirms that the value is a boolean.
 
-***
+---
 
 ### isFalse
 
@@ -134,7 +134,7 @@ Defined in: [error-aware-guard/index.ts:589](https://github.com/maxkaemmerer/pur
 
 Confirms a value is false
 
-***
+---
 
 ### isFloat
 
@@ -144,7 +144,7 @@ Defined in: [error-aware-guard/index.ts:328](https://github.com/maxkaemmerer/pur
 
 Confirms that the value is a float.
 
-***
+---
 
 ### isInt
 
@@ -154,7 +154,7 @@ Defined in: [error-aware-guard/index.ts:335](https://github.com/maxkaemmerer/pur
 
 Confirms that the value is an interger.
 
-***
+---
 
 ### isNever
 
@@ -164,7 +164,7 @@ Defined in: [error-aware-guard/index.ts:362](https://github.com/maxkaemmerer/pur
 
 Never passes.
 
-***
+---
 
 ### isNonEmptyString
 
@@ -174,7 +174,7 @@ Defined in: [error-aware-guard/index.ts:367](https://github.com/maxkaemmerer/pur
 
 Confirms that the value is a non-empty string.
 
-***
+---
 
 ### isNull
 
@@ -184,7 +184,7 @@ Defined in: [error-aware-guard/index.ts:340](https://github.com/maxkaemmerer/pur
 
 Confirms that the value is null.
 
-***
+---
 
 ### isNumber
 
@@ -194,7 +194,7 @@ Defined in: [error-aware-guard/index.ts:304](https://github.com/maxkaemmerer/pur
 
 Confirms that the value is a number.
 
-***
+---
 
 ### isObject
 
@@ -204,7 +204,7 @@ Defined in: [error-aware-guard/index.ts:352](https://github.com/maxkaemmerer/pur
 
 Confirms that the value is an object.
 
-***
+---
 
 ### isTrue
 
@@ -214,7 +214,7 @@ Defined in: [error-aware-guard/index.ts:582](https://github.com/maxkaemmerer/pur
 
 Confirms a value is true
 
-***
+---
 
 ### isUndefined
 
@@ -254,7 +254,7 @@ Evaluates an ErrorAwareGuard<T> for given value
 
 `value is T`
 
-***
+---
 
 ### combineResultsAll()
 
@@ -281,7 +281,7 @@ or returns an ErrorResult with combined errors if any of them are ErrorResult.
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### combineResultsOneOf()
 
@@ -308,7 +308,7 @@ or returns an ErrorResult with combined errors if all are an ErrorResult.
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### combineTwoResultsAnd()
 
@@ -343,7 +343,7 @@ or returns an ErrorResult with combined errors if one is an ErrorResult.
 
 [`ValidationResult`](#validationresult)\<`T1` & `T2`\>
 
-***
+---
 
 ### combineTwoResultsOneOf()
 
@@ -378,7 +378,7 @@ or returns an ErrorResult with combined errors if both are an ErrorResult.
 
 [`ValidationResult`](#validationresult)\<`T1` \| `T2`\>
 
-***
+---
 
 ### errorByGuard()
 
@@ -394,7 +394,7 @@ If multiple guards pass, the first error will be returned.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -424,18 +424,18 @@ If multiple guards pass, the first error will be returned.
 
 ```ts
 errorByGuard(
-   {
-       "Some validation error": isSomeValidationError,
-       "Some Io Error": isIoError,
-   },
-   "Default Error",
-   // returns "Some validation error" if the given error passes the isSomeValidationError Guard
-   // returns "Some Io Error" if the given error passes the isIoError Guard
-   // returns "Default Error" if none of the Guards pass
-)(error)
+  {
+    "Some validation error": isSomeValidationError,
+    "Some Io Error": isIoError,
+  },
+  "Default Error",
+  // returns "Some validation error" if the given error passes the isSomeValidationError Guard
+  // returns "Some Io Error" if the given error passes the isIoError Guard
+  // returns "Default Error" if none of the Guards pass
+)(error);
 ```
 
-***
+---
 
 ### fail()
 
@@ -455,7 +455,7 @@ Creates an ErrorResult with the given errors
 
 [`ErrorResult`](#errorresult)
 
-***
+---
 
 ### fromGuard()
 
@@ -485,7 +485,7 @@ Converts a Guard<T> to an ErrorAwareGuard<T> with provided error factory functio
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isAll()
 
@@ -511,7 +511,7 @@ Confirms that the given value passes all guards.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isBoth()
 
@@ -545,7 +545,7 @@ Confirms that the given value passes both guards.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T1` & `T2`\>
 
-***
+---
 
 ### isExactString()
 
@@ -559,7 +559,7 @@ Confirms that the value is an exact string.
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -571,7 +571,7 @@ Confirms that the value is an exact string.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isListOf()
 
@@ -597,7 +597,7 @@ Confirms the value is a list of items that all pass the given guard.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`I`[]\>
 
-***
+---
 
 ### isNonEmptyListOf()
 
@@ -623,7 +623,7 @@ Confirms the value is a list with atleast one item and all items match the given
 
 [`ErrorAwareGuard`](#errorawareguard)\<`I`[]\>
 
-***
+---
 
 ### isNullOr()
 
@@ -649,7 +649,7 @@ Confirms the value is either null or passes the given Guard.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isNumberBetweenInclusive()
 
@@ -674,7 +674,7 @@ Meaning if the value equals min or max the guard passes.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-***
+---
 
 ### isObjectWithAllKeysMatchingGuard()
 
@@ -688,7 +688,7 @@ Confirms the value is an object where every value matches the given guard.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -700,7 +700,7 @@ Confirms the value is an object where every value matches the given guard.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKey()
 
@@ -714,7 +714,7 @@ Confirms that the value is an object containing the specified key.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -726,7 +726,7 @@ keyof `T`
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKeyMatchingGuard()
 
@@ -740,7 +740,7 @@ Confirms that the value is an object containing the specified key the value matc
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -756,7 +756,7 @@ keyof `T`
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKeys()
 
@@ -770,7 +770,7 @@ Confirms that the value is an object containing the specified keys.
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -782,7 +782,7 @@ keyof `T`[]
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isObjectWithKeysMatchingGuard()
 
@@ -796,7 +796,7 @@ Confirms that the value is an object whose key value pairs match the correspondi
 
 ##### T
 
-`T` *extends* `object`
+`T` _extends_ `object`
 
 #### Parameters
 
@@ -808,7 +808,7 @@ Confirms that the value is an object whose key value pairs match the correspondi
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isOneOf()
 
@@ -842,7 +842,7 @@ Confirms the value passes at least one of the given Guards.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T1` \| `T2`\>
 
-***
+---
 
 ### isOneStringOf()
 
@@ -854,7 +854,7 @@ Defined in: [error-aware-guard/index.ts:421](https://github.com/maxkaemmerer/pur
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -866,7 +866,7 @@ Defined in: [error-aware-guard/index.ts:421](https://github.com/maxkaemmerer/pur
 
 [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-***
+---
 
 ### isString()
 
@@ -880,7 +880,7 @@ Confirms that the value is a string.
 
 ##### T
 
-`T` *extends* `string`
+`T` _extends_ `string`
 
 #### Parameters
 
@@ -892,7 +892,7 @@ Confirms that the value is a string.
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### isStringOfLength()
 
@@ -912,7 +912,7 @@ Confirms that the value is a string with specified length.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-***
+---
 
 ### isStringWithPattern()
 
@@ -932,7 +932,7 @@ Confirms the value is a string and matches the given regular expression.
 
 [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-***
+---
 
 ### mapWithDefault()
 
@@ -971,7 +971,7 @@ Otherwise will return defaultValue
 
 `T2`
 
-***
+---
 
 ### pass()
 
@@ -997,7 +997,7 @@ Creates an SuccessResult<T> with the given value
 
 [`SuccessResult`](#successresult)\<`T`\>
 
-***
+---
 
 ### peek()
 
@@ -1027,7 +1027,7 @@ Will execute the function if ValidationResult is successful
 
 `void`
 
-***
+---
 
 ### prefixErrors()
 
@@ -1057,7 +1057,7 @@ Takes a ValidationResult<T> and if it is an ErrorResult, prefixes every error wi
 
 [`ValidationResult`](#validationresult)\<`T`\>
 
-***
+---
 
 ### toGuard()
 
@@ -1083,7 +1083,7 @@ Converts an ErrorAwareGuard<T> to a Guard<T>
 
 [`Guard`](guard.md#guard)\<`T`\>
 
-***
+---
 
 ### toMaybe()
 
@@ -1109,7 +1109,7 @@ Converts a successful ValidationResult<T> to Just<T> and failed ones to Nothing.
 
 [`Maybe`](maybe.md#maybe)\<`T`\>
 
-***
+---
 
 ### tryGuardIf()
 
