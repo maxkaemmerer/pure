@@ -12,7 +12,7 @@
 
 > **field**\<`T`\>(`key`): (`value`) => `T`\[keyof `T`\]
 
-Defined in: [util/index.ts:40](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/util/index.ts#L40)
+Defined in: [util/index.ts:40](https://github.com/maxkaemmerer/pure/blob/3c4fa09f0f86ecd38bd58f0709ba22d89c241d7c/src/util/index.ts#L40)
 
 Utility function that returns the value for the matching objects key
 
@@ -55,7 +55,7 @@ field("name")({name: "Peter"})
 
 > **id**\<`T`\>(`value`): `T`
 
-Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/util/index.ts#L4)
+Defined in: [util/index.ts:4](https://github.com/maxkaemmerer/pure/blob/3c4fa09f0f86ecd38bd58f0709ba22d89c241d7c/src/util/index.ts#L4)
 
 Returns the given value.
 
@@ -81,7 +81,7 @@ Returns the given value.
 
 > **includes**(`searchString`): (`value`) => `boolean`
 
-Defined in: [util/index.ts:30](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/util/index.ts#L30)
+Defined in: [util/index.ts:30](https://github.com/maxkaemmerer/pure/blob/3c4fa09f0f86ecd38bd58f0709ba22d89c241d7c/src/util/index.ts#L30)
 
 Checks if the given searchString is included in the value.
 Easier to use for composition purposes than value.includes(x).
@@ -112,7 +112,7 @@ Easier to use for composition purposes than value.includes(x).
 
 > **left**\<`L`, `R`\>(`left`): (`right`) => `L` \| `R`
 
-Defined in: [util/index.ts:11](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/util/index.ts#L11)
+Defined in: [util/index.ts:11](https://github.com/maxkaemmerer/pure/blob/3c4fa09f0f86ecd38bd58f0709ba22d89c241d7c/src/util/index.ts#L11)
 
 Returns the first (left) value passed
 
@@ -152,7 +152,7 @@ Returns the first (left) value passed
 
 > **right**\<`L`, `R`\>(`left`): (`right`) => `L` \| `R`
 
-Defined in: [util/index.ts:19](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/util/index.ts#L19)
+Defined in: [util/index.ts:19](https://github.com/maxkaemmerer/pure/blob/3c4fa09f0f86ecd38bd58f0709ba22d89c241d7c/src/util/index.ts#L19)
 
 Returns the second (right) value passed
 
