@@ -5,6 +5,7 @@
 import { err, ok, Result } from "@kaumlaut/pure/result";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
 import * as Guard from "@kaumlaut/pure/guard";
+import { Tuple } from "../tuple";
 
 /**
  * Represents a Maybe containing a value.
@@ -249,15 +250,19 @@ export function concat<T>(combine: (aValue: T, bValue: T) => T) {
 }
 
 /**
- * Returns the first (left) value if it is Just or otherwise returns the second (right) value.
+ * Returns the left value of a Tuple<Maybe<L>, Maybe<R>> if it a Just<L>, otherwise returns the right value.
  */
-export function preferLeft<T>(left: Maybe<T>): (right: Maybe<T>) => Maybe<T> {
-  return (right: Maybe<T>) => (isJust(left) ? left : right);
+export function preferLeft<L, R>(
+  value: Tuple<Maybe<L>, Maybe<R>>,
+): Maybe<L> | Maybe<R> {
+  return isJust(value.left) ? value.left : value.right;
 }
 
 /**
- * Returns the second (right) value if it is Just or otherwise returns the first (left) value.
+ * Returns the right value of a Tuple<Maybe<L>, Maybe<R>> if it a Just<R>, otherwise returns the left value.
  */
-export function preferRight<T>(left: Maybe<T>): (right: Maybe<T>) => Maybe<T> {
-  return (right: Maybe<T>) => (isJust(right) ? right : left);
+export function preferRight<L, R>(
+  value: Tuple<Maybe<L>, Maybe<R>>,
+): Maybe<L> | Maybe<R> {
+  return isJust(value.right) ? value.right : value.left;
 }

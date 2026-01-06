@@ -16,10 +16,12 @@ import {
   concat,
   preferLeft,
   preferRight,
+  Maybe,
 } from "@kaumlaut/pure/maybe";
 import * as Guard from "@kaumlaut/pure/guard";
 import { put } from "@kaumlaut/pure/pipe";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
+import { mapLeft, mapRight, same, tuple } from "@kaumlaut/pure/tuple";
 
 describe("maybe", () => {
   describe("nothing", () => {
@@ -146,32 +148,72 @@ describe("maybe", () => {
 
   describe("preferLeft", () => {
     it("should return left value if Just", () => {
-      expect(preferLeft(just(3))(just(2))).toEqual(just(3));
-      expect(preferLeft(just(3))(nothing())).toEqual(just(3));
-      expect(preferLeft(nothing())(just(2))).toEqual(just(2));
-      expect(preferLeft(nothing())(nothing())).toEqual(nothing());
+      expect(preferLeft(tuple(just(3))(just(2)))).toEqual(just(3));
+      expect(preferLeft(tuple(just(3))(nothing()))).toEqual(just(3));
+      expect(preferLeft(tuple(nothing())(just(2)))).toEqual(just(2));
+      expect(preferLeft(tuple(nothing())(nothing()))).toEqual(nothing());
     });
   });
 
   describe("preferRight", () => {
     it("should return right value if Just", () => {
-      expect(preferRight(just(3))(just(2))).toEqual(just(2));
-      expect(preferRight(just(3))(nothing())).toEqual(just(3));
-      expect(preferRight(nothing())(just(2))).toEqual(just(2));
-      expect(preferRight(nothing())(nothing())).toEqual(nothing());
+      expect(preferRight(tuple(just(3))(just(2)))).toEqual(just(2));
+      expect(preferRight(tuple(just(3))(nothing()))).toEqual(just(3));
+      expect(preferRight(tuple(nothing())(just(2)))).toEqual(just(2));
+      expect(preferRight(tuple(nothing())(nothing()))).toEqual(nothing());
     });
   });
 
   describe("complex proof of concept", () => {
     it("should return first value if filter passes otherwise return second value", () => {
-      const tour = just({
+      type Content = {
+        season: {
+          start: number;
+          end: number;
+        };
+      };
+      type Tour = {
+        tourNumber: string;
+        contents: Content[];
+      };
+      const tour: Maybe<Tour> = just({
         tourNumber: "WKS321123",
-        contents: [{ seasonPeriod: 2026 }, { seasonPeriod: 2025 }],
+        contents: [
+          { season: { start: 20250101, end: 20251231 } },
+          { season: { start: 20260101, end: 20261231 } },
+        ],
       });
 
-      const result = put(tour)
+      const date = 20250723;
+
+      const result: Maybe<Content[]> = put(tour)
         .into(map((it) => it.contents))
-        .into(filter((it) => it.contents));
+        .into(same)
+        .into(
+          mapLeft(
+            map((it) =>
+              it.filter(
+                (content) =>
+                  content.season.start <= date && content.season.end >= date,
+              ),
+            ),
+          ),
+        )
+        .into(
+          mapLeft(
+            filter<Content[]>(Guard.isNonEmptyListOf(Guard.isAlways<Content>)),
+          ),
+        )
+        .into(
+          mapRight(
+            filter<Content[]>(Guard.isNonEmptyListOf(Guard.isAlways<Content>)),
+          ),
+        )
+        .into(preferLeft)
+        .out();
+      expect(result).toEqual(
+        just([{ season: { start: 20250101, end: 20251231 } }]),
+      );
     });
   });
 });
