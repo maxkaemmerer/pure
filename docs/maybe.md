@@ -14,7 +14,7 @@ Provides types representing the Maybe concept as well as functions to work with 
 
 > **Just**\<`T`\> = `object`
 
-Defined in: [maybe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L20)
+Defined in: [maybe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L20)
 
 Represents a Maybe containing a value.
 
@@ -39,13 +39,13 @@ if (isJust(maybe)) {
 
 > **type**: `"maybe-just"`
 
-Defined in: [maybe/index.ts:21](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L21)
+Defined in: [maybe/index.ts:21](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L21)
 
 ##### value
 
 > **value**: `T`
 
-Defined in: [maybe/index.ts:22](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L22)
+Defined in: [maybe/index.ts:22](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L22)
 
 ***
 
@@ -53,7 +53,7 @@ Defined in: [maybe/index.ts:22](https://github.com/maxkaemmerer/pure/blob/0f04f2
 
 > **Maybe**\<`T`\> = [`Just`](#just)\<`T`\> \| [`Nothing`](#nothing)
 
-Defined in: [maybe/index.ts:40](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L40)
+Defined in: [maybe/index.ts:40](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L40)
 
 Represents the Maybe type.
 
@@ -69,7 +69,7 @@ Represents the Maybe type.
 
 > **Nothing** = `object`
 
-Defined in: [maybe/index.ts:33](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L33)
+Defined in: [maybe/index.ts:33](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L33)
 
 Represents a Maybe not containing a value.
 
@@ -88,7 +88,7 @@ if (isNothing(maybe)) {
 
 > **type**: `"maybe-nothing"`
 
-Defined in: [maybe/index.ts:34](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L34)
+Defined in: [maybe/index.ts:34](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L34)
 
 ## Functions
 
@@ -96,7 +96,7 @@ Defined in: [maybe/index.ts:34](https://github.com/maxkaemmerer/pure/blob/0f04f2
 
 > **bothNothing**\<`T`\>(`a`, `b`): `boolean`
 
-Defined in: [maybe/index.ts:226](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L226)
+Defined in: [maybe/index.ts:226](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L226)
 
 Returns true if both values are Nothing
 
@@ -126,7 +126,7 @@ Returns true if both values are Nothing
 
 > **concat**\<`T`\>(`combine`): (`a`) => (`b`) => [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:242](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L242)
+Defined in: [maybe/index.ts:242](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L242)
 
 Combines two Maybe<T>. If both are Just<T> the combine function is used
 Otherwise Either a single Just is returned directly
@@ -174,7 +174,7 @@ Or Nothing is retured if both are Nothing
 
 > **eqBy**\<`T`, `T2`\>(`by`): (`a`, `b`) => `boolean`
 
-Defined in: [maybe/index.ts:211](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L211)
+Defined in: [maybe/index.ts:211](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L211)
 
 Returns true if both values are either Just with matching predicate return values
 Or if both values are Nothing
@@ -219,7 +219,7 @@ Or if both values are Nothing
 
 > **filter**\<`T`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:103](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L103)
+Defined in: [maybe/index.ts:103](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L103)
 
 Converts the given Maybe into a Nothing if it is Just but does not pass the given function.
 
@@ -255,7 +255,7 @@ Converts the given Maybe into a Nothing if it is Just but does not pass the give
 
 > **fromListAndIndex**\<`T`\>(`index`, `list`): [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:233](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L233)
+Defined in: [maybe/index.ts:233](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L233)
 
 Creates a Maybe<T> from a list and an index. Just if the key exists, Nothing if it doesn't
 
@@ -285,7 +285,7 @@ Creates a Maybe<T> from a list and an index. Just if the key exists, Nothing if 
 
 > **isJust**\<`T`\>(`maybe`): `maybe is Just<T>`
 
-Defined in: [maybe/index.ts:71](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L71)
+Defined in: [maybe/index.ts:71](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L71)
 
 A Guard confirming that the given maybe value is a Just.
 
@@ -311,7 +311,7 @@ A Guard confirming that the given maybe value is a Just.
 
 > **isMaybe**\<`T`\>(`value`): `value is Maybe<T>`
 
-Defined in: [maybe/index.ts:78](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L78)
+Defined in: [maybe/index.ts:78](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L78)
 
 A Guard confirming that the given value is a Maybe.
 
@@ -337,7 +337,7 @@ A Guard confirming that the given value is a Maybe.
 
 > **isNothing**\<`T`\>(`maybe`): `maybe is Nothing`
 
-Defined in: [maybe/index.ts:64](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L64)
+Defined in: [maybe/index.ts:64](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L64)
 
 A Guard confirming that the given maybe value is a Nothing.
 
@@ -363,7 +363,7 @@ A Guard confirming that the given maybe value is a Nothing.
 
 > **just**\<`T`\>(`value`): [`Just`](#just)\<`T`\>
 
-Defined in: [maybe/index.ts:54](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L54)
+Defined in: [maybe/index.ts:54](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L54)
 
 Creates a maybe containing a value. (Just)
 
@@ -389,7 +389,7 @@ Creates a maybe containing a value. (Just)
 
 > **map**\<`T`, `R`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`R`\>
 
-Defined in: [maybe/index.ts:88](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L88)
+Defined in: [maybe/index.ts:88](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L88)
 
 Applies the func function to the value if the given Maybe is a Just and returns it wrapped in a Just. Otherwise returns the given Maybe.
 
@@ -429,7 +429,7 @@ Applies the func function to the value if the given Maybe is a Just and returns 
 
 > **mapToMaybe**\<`T`, `R`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`R`\>
 
-Defined in: [maybe/index.ts:173](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L173)
+Defined in: [maybe/index.ts:173](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L173)
 
 Maps the a value contained within a Just using the given function without wrapping it in another Just.
 Returns the given Maybe if it is a Nothing.
@@ -470,7 +470,7 @@ Returns the given Maybe if it is a Nothing.
 
 > **maybeByErrorAwareGuard**\<`T`\>(`guard`): (`value`) => [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:155](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L155)
+Defined in: [maybe/index.ts:155](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L155)
 
 Creates a Just if the ErrorAwareGuard passes for the given value. Otherwise Creates a Nothing.
 
@@ -506,7 +506,7 @@ Creates a Just if the ErrorAwareGuard passes for the given value. Otherwise Crea
 
 > **maybeByGuard**\<`T`\>(`guard`): (`value`) => [`Maybe`](#maybe)\<`T`\>
 
-Defined in: [maybe/index.ts:144](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L144)
+Defined in: [maybe/index.ts:144](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L144)
 
 Creates a Just if the Guard passes for the given value. Otherwise Creates a Nothing.
 
@@ -542,7 +542,7 @@ Creates a Just if the Guard passes for the given value. Otherwise Creates a Noth
 
 > **nothing**(): [`Nothing`](#nothing)
 
-Defined in: [maybe/index.ts:45](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L45)
+Defined in: [maybe/index.ts:45](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L45)
 
 Creates a maybe not containing a value. (Nothing)
 
@@ -556,7 +556,7 @@ Creates a maybe not containing a value. (Nothing)
 
 > **preferLeft**\<`L`, `R`\>(`value`): [`Nothing`](#nothing) \| [`Just`](#just)\<`L`\> \| [`Just`](#just)\<`R`\>
 
-Defined in: [maybe/index.ts:255](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L255)
+Defined in: [maybe/index.ts:255](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L255)
 
 Returns the left value of a Tuple<Maybe<L>, Maybe<R>> if it a Just<L>, otherwise returns the right value.
 
@@ -586,7 +586,7 @@ Returns the left value of a Tuple<Maybe<L>, Maybe<R>> if it a Just<L>, otherwise
 
 > **preferRight**\<`L`, `R`\>(`value`): [`Nothing`](#nothing) \| [`Just`](#just)\<`L`\> \| [`Just`](#just)\<`R`\>
 
-Defined in: [maybe/index.ts:264](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L264)
+Defined in: [maybe/index.ts:264](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L264)
 
 Returns the right value of a Tuple<Maybe<L>, Maybe<R>> if it a Just<R>, otherwise returns the left value.
 
@@ -616,7 +616,7 @@ Returns the right value of a Tuple<Maybe<L>, Maybe<R>> if it a Just<R>, otherwis
 
 > **toResult**\<`T`, `E`\>(`error`): (`maybe`) => [`Result`](result.md#result)\<`T`, `E`\>
 
-Defined in: [maybe/index.ts:137](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L137)
+Defined in: [maybe/index.ts:137](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L137)
 
 Converts the given Maybe to a Result.
 A Nothing becomes an Err with the given error.
@@ -658,7 +658,7 @@ A Just becomes an Ok with the contained value.
 
 > **tryMap**\<`T`, `R`\>(`func`): (`maybe`) => [`Maybe`](#maybe)\<`R`\>
 
-Defined in: [maybe/index.ts:190](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L190)
+Defined in: [maybe/index.ts:190](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L190)
 
 Runs the given function with the contained value if maybe is Just<T>
 If an error occurs it returns Nothing.
@@ -700,7 +700,7 @@ Otherwise it returns the mapped value inside a Just<R>.
 
 > **withDefault**\<`T`\>(`defaultValue`): (`maybe`) => `T`
 
-Defined in: [maybe/index.ts:122](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/maybe/index.ts#L122)
+Defined in: [maybe/index.ts:122](https://github.com/maxkaemmerer/pure/blob/bd2e843e4a90c0beaed20f628839052ac1d18dbc/src/maybe/index.ts#L122)
 
 Unwraps a Maybe, returning the value if it is a Just or the default value if it is a Nothing.
 
