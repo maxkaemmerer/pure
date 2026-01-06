@@ -14,7 +14,7 @@ Provides value cloning capabilities
 
 > **Cloneable** = `string` \| `number` \| `boolean` \| `null` \| [`Cloneable`](#cloneable)[] \| \{\[`key`: `string`\]: [`Cloneable`](#cloneable); \}
 
-Defined in: [clone/index.ts:9](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/clone/index.ts#L9)
+Defined in: [clone/index.ts:9](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/clone/index.ts#L9)
 
 Defines the Cloneable type
 
@@ -24,7 +24,7 @@ Defines the Cloneable type
 
 > **clone**\<`T`\>(`value`): `T`
 
-Defined in: [clone/index.ts:20](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/clone/index.ts#L20)
+Defined in: [clone/index.ts:20](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/clone/index.ts#L20)
 
 Recursively clones values to prevent changing of the original value.
 

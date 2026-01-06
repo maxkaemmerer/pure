@@ -12,7 +12,7 @@
 
 > **Persistence**\<`Model`, `CustomMessage`\> = `object`
 
-Defined in: [runtime/persistence/index.ts:6](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/runtime/persistence/index.ts#L6)
+Defined in: [runtime/persistence/index.ts:6](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/runtime/persistence/index.ts#L6)
 
 #### Type Parameters
 
@@ -30,7 +30,7 @@ Defined in: [runtime/persistence/index.ts:6](https://github.com/maxkaemmerer/pur
 
 > **persist**(`model`): `void`
 
-Defined in: [runtime/persistence/index.ts:10](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/runtime/persistence/index.ts#L10)
+Defined in: [runtime/persistence/index.ts:10](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/runtime/persistence/index.ts#L10)
 
 ###### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [runtime/persistence/index.ts:10](https://github.com/maxkaemmerer/pu
 
 > **read**(`guard`, `init`): [`Result`](../result.md#result)\<`Model`, `string`\>
 
-Defined in: [runtime/persistence/index.ts:11](https://github.com/maxkaemmerer/pure/blob/2f4dca6d9662ea84dd97f260210e875967f703e6/src/runtime/persistence/index.ts#L11)
+Defined in: [runtime/persistence/index.ts:11](https://github.com/maxkaemmerer/pure/blob/0f04f2b5051f5f9b30a1a5966844c5fde22bffa4/src/runtime/persistence/index.ts#L11)
 
 ###### Parameters
 
