@@ -12,7 +12,7 @@
 
 > **none**(): [`Effect`](../effect.md#effect)\<`any`\>
 
-Defined in: [runtime/effect/none/index.ts:4](https://github.com/maxkaemmerer/pure/blob/a0b52e4af3c0189ac18161de06d284732e6b30eb/src/runtime/effect/none/index.ts#L4)
+Defined in: [runtime/effect/none/index.ts:4](https://github.com/maxkaemmerer/pure/blob/129e7e589e6c0cdbd2c591943248a886dfcf26d6/src/runtime/effect/none/index.ts#L4)
 
 #### Returns
 

@@ -1,5 +1,12 @@
 import { describe, expect, test, it } from "vitest";
-import { coerceOptionalFieldsAsMaybe, coerceOptionalFieldsAsMaybeByGuard, field, id, left, right } from "@kaumlaut/pure/util";
+import {
+  coerceOptionalFieldsAsMaybe,
+  coerceOptionalFieldsAsMaybeByGuard,
+  field,
+  id,
+  left,
+  right,
+} from "@kaumlaut/pure/util";
 import { just, nothing } from "../../dist/maybe";
 import { isNumber, isString } from "../../dist/error-aware-guard";
 
@@ -49,27 +56,42 @@ describe("util", () => {
   it("should return right", () => {
     expect(right(1)(2)).toEqual(2);
     expect(right(2)(1)).toEqual(1);
-    it("make optional fields maybe", () => {
-      type MyTestType = {
-        a: number,
-        b: string
-      }
-      expect(coerceOptionalFieldsAsMaybe<MyTestType>({}, ["a", "b"])).to.deep.equal({
-        a: nothing(),
-        b: nothing(),
-      })
-      expect(coerceOptionalFieldsAsMaybe<MyTestType>({ a: 3 }, ["a", "b"])).to.deep.equal({
-        a: just(3),
-        b: nothing(),
-      })
-      expect(coerceOptionalFieldsAsMaybeByGuard<MyTestType>({ a: 1 }, { a: isNumber, b: isString })).to.deep.equal({
-        a: just(1),
-        b: nothing(),
-      })
-      expect(coerceOptionalFieldsAsMaybeByGuard<MyTestType>({ a: "" }, { a: isNumber, b: isString })).to.deep.equal({
-        a: nothing(),
-        b: nothing(),
-      })
+  });
+
+  it("make optional fields maybe", () => {
+    type MyTestType = {
+      a: number;
+      b: string;
+    };
+    expect(
+      coerceOptionalFieldsAsMaybe<MyTestType>({}, ["a", "b"]),
+    ).to.deep.equal({
+      a: nothing(),
+      b: nothing(),
+    });
+    expect(
+      coerceOptionalFieldsAsMaybe<MyTestType>({ a: 3 }, ["a", "b"]),
+    ).to.deep.equal({
+      a: just(3),
+      b: nothing(),
+    });
+    expect(
+      coerceOptionalFieldsAsMaybeByGuard<MyTestType>(
+        { a: 1 },
+        { a: isNumber, b: isString },
+      ),
+    ).to.deep.equal({
+      a: just(1),
+      b: nothing(),
+    });
+    expect(
+      coerceOptionalFieldsAsMaybeByGuard<MyTestType>(
+        { a: "" },
+        { a: isNumber, b: isString },
+      ),
+    ).to.deep.equal({
+      a: nothing(),
+      b: nothing(),
     });
   });
 });

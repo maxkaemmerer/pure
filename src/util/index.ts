@@ -50,22 +50,38 @@ export function field<T extends object>(
  * Takes an object with partial keys of type T and a list of keys for the wanted object type T.
  * Returns a new object with all keys of T present. The values are Just if the key was present and includes the value, or nothing if the key was not present.
  */
-export function coerceOptionalFieldsAsMaybe<T extends object>(value: Partial<T>, keys: (keyof T)[]): { [Property in keyof T]: Maybe<T[keyof T]> } {
-  return keys.reduce((object, key: keyof T) => {
-    object[key] = key in value ? just(value[key]) : nothing();
-    return object;
-  }, {} as { [Property in keyof T]: Maybe<T[keyof T]> })
+export function coerceOptionalFieldsAsMaybe<T extends object>(
+  value: Partial<T>,
+  keys: (keyof T)[],
+): { [Property in keyof T]: Maybe<T[keyof T]> } {
+  return keys.reduce(
+    (object, key: keyof T) => {
+      object[key] = key in value ? just(value[key]) : nothing();
+      return object;
+    },
+    {} as { [Property in keyof T]: Maybe<T[keyof T]> },
+  );
 }
 
 /**
  * Takes an object with partial keys of type T and an object of ErrorAwareGuards used to validate T.
  * Returns a new object with all keys of T present. The values are Just with the value if the key was present and the value passed the corresponding ErrorAwareGuard or nothing if the key was not present.
  */
-export function coerceOptionalFieldsAsMaybeByGuard<T extends object>(value: Partial<T>, guards: {
-  [K in keyof T]: ErrorAwareGuard<T[K]>;
-}): { [Property in keyof T]: Maybe<T[keyof T]> } {
-  return Object.entries(guards).reduce((object, [key, guard]) => {
-    object[key] = (key in value) && (guard as ErrorAwareGuard<T[keyof T]>)(value[key]).success ? just(value[key]) : nothing();
-    return object;
-  }, {} as { [Property in keyof T]: Maybe<T[keyof T]> })
+export function coerceOptionalFieldsAsMaybeByGuard<T extends object>(
+  value: Partial<T>,
+  guards: {
+    [K in keyof T]: ErrorAwareGuard<T[K]>;
+  },
+): { [Property in keyof T]: Maybe<T[keyof T]> } {
+  return Object.entries(guards).reduce(
+    (object, [key, guard]) => {
+      object[key] =
+        key in value &&
+        (guard as ErrorAwareGuard<T[keyof T]>)(value[key]).success
+          ? just(value[key])
+          : nothing();
+      return object;
+    },
+    {} as { [Property in keyof T]: Maybe<T[keyof T]> },
+  );
 }
