@@ -12,7 +12,7 @@
 
 > **asFloat**(`value`): [`Result`](result.md#result)\<`number`, `string`\>
 
-Defined in: [parse/index.ts:19](https://github.com/maxkaemmerer/pure/blob/33437c9712cebf878cd23cdb804c3d248185b29c/src/parse/index.ts#L19)
+Defined in: [parse/index.ts:19](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/parse/index.ts#L19)
 
 Attempts to parse a string as an float. Returning ok if successful or err if not.
 
@@ -32,7 +32,7 @@ Attempts to parse a string as an float. Returning ok if successful or err if not
 
 > **asInt**(`value`): [`Result`](result.md#result)\<`number`, `string`\>
 
-Defined in: [parse/index.ts:6](https://github.com/maxkaemmerer/pure/blob/33437c9712cebf878cd23cdb804c3d248185b29c/src/parse/index.ts#L6)
+Defined in: [parse/index.ts:6](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/parse/index.ts#L6)
 
 Attempts to parse a string as an interger. Returning ok if successful or err if not.
 
