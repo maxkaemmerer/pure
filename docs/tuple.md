@@ -12,7 +12,7 @@
 
 > **Tuple**\<`L`, `R`\> = `object`
 
-Defined in: [tuple/index.ts:1](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L1)
+Defined in: [tuple/index.ts:1](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L1)
 
 #### Type Parameters
 
@@ -30,13 +30,13 @@ Defined in: [tuple/index.ts:1](https://github.com/maxkaemmerer/pure/blob/fcd4865
 
 > **left**: `L`
 
-Defined in: [tuple/index.ts:2](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L2)
+Defined in: [tuple/index.ts:2](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L2)
 
 ##### right
 
 > **right**: `R`
 
-Defined in: [tuple/index.ts:3](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L3)
+Defined in: [tuple/index.ts:3](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L3)
 
 ## Functions
 
@@ -44,7 +44,7 @@ Defined in: [tuple/index.ts:3](https://github.com/maxkaemmerer/pure/blob/fcd4865
 
 > **left**\<`L`, `R`\>(`value`): `L`
 
-Defined in: [tuple/index.ts:38](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L38)
+Defined in: [tuple/index.ts:38](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L38)
 
 Returns the left value
 
@@ -74,7 +74,7 @@ Returns the left value
 
 > **mapLeft**\<`L`, `R`, `T`\>(`func`): (`value`) => [`Tuple`](#tuple)\<`T`, `R`\>
 
-Defined in: [tuple/index.ts:29](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L29)
+Defined in: [tuple/index.ts:29](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L29)
 
 Map the left value from type L to T using the given function
 
@@ -118,7 +118,7 @@ Map the left value from type L to T using the given function
 
 > **mapRight**\<`L`, `R`, `T`\>(`func`): (`tuple`) => [`Tuple`](#tuple)\<`L`, `T`\>
 
-Defined in: [tuple/index.ts:45](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L45)
+Defined in: [tuple/index.ts:45](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L45)
 
 Map the right value from type R to T using the given function
 
@@ -162,7 +162,7 @@ Map the right value from type R to T using the given function
 
 > **right**\<`L`, `R`\>(`value`): `R`
 
-Defined in: [tuple/index.ts:54](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L54)
+Defined in: [tuple/index.ts:54](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L54)
 
 Returns the right value
 
@@ -192,7 +192,7 @@ Returns the right value
 
 > **same**\<`T`\>(`value`): [`Tuple`](#tuple)\<`T`, `T`\>
 
-Defined in: [tuple/index.ts:19](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L19)
+Defined in: [tuple/index.ts:19](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L19)
 
 Creates a Tuple with the same type and value for both left and right
 
@@ -218,7 +218,7 @@ Creates a Tuple with the same type and value for both left and right
 
 > **tuple**\<`L`, `R`\>(`left`): (`right`) => [`Tuple`](#tuple)\<`L`, `R`\>
 
-Defined in: [tuple/index.ts:9](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/tuple/index.ts#L9)
+Defined in: [tuple/index.ts:9](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/tuple/index.ts#L9)
 
 Creates a Tuple with the given left and right values and types
 

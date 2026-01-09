@@ -12,7 +12,7 @@
 
 > **Pipe**\<`IT`\> = `object`
 
-Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/pipe/index.ts#L4)
+Defined in: [pipe/index.ts:4](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/pipe/index.ts#L4)
 
 Represents a function pipeline
 
@@ -28,7 +28,7 @@ Represents a function pipeline
 
 > **into**: \<`RT`\>(`func`) => [`Pipe`](#pipe)\<`RT`\>
 
-Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/pipe/index.ts#L5)
+Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/pipe/index.ts#L5)
 
 ###### Type Parameters
 
@@ -50,7 +50,7 @@ Defined in: [pipe/index.ts:5](https://github.com/maxkaemmerer/pure/blob/fcd48652
 
 > **out**: () => `IT`
 
-Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/pipe/index.ts#L6)
+Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/pipe/index.ts#L6)
 
 ###### Returns
 
@@ -62,7 +62,7 @@ Defined in: [pipe/index.ts:6](https://github.com/maxkaemmerer/pure/blob/fcd48652
 
 > **compose**\<`T1`, `T2`, `R`\>(`f1`, `f2`): (`value`) => `R`
 
-Defined in: [pipe/index.ts:32](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/pipe/index.ts#L32)
+Defined in: [pipe/index.ts:32](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/pipe/index.ts#L32)
 
 Combines two single argument functions to create a new one. Passing the output of f1 to f2 as input.
 
@@ -110,7 +110,7 @@ Combines two single argument functions to create a new one. Passing the output o
 
 > **put**\<`IT`\>(`data`): [`Pipe`](#pipe)\<`IT`\>
 
-Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/pipe/index.ts#L20)
+Defined in: [pipe/index.ts:20](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/pipe/index.ts#L20)
 
 Creates a Pipe that allows you to chain multiple functions using into.
 Is meant to make larger functions more readable.

@@ -12,7 +12,7 @@
 
 > **noPersistence**\<`Model`, `CustomMessage`\>(): [`Persistence`](../persistence.md#persistence)\<`Model`, `CustomMessage`\>
 
-Defined in: [runtime/persistence/none/index.ts:8](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/persistence/none/index.ts#L8)
+Defined in: [runtime/persistence/none/index.ts:8](https://github.com/maxkaemmerer/pure/blob/5573cdfa8e39b5abf8a9bc9aa538a82b89699e24/src/runtime/persistence/none/index.ts#L8)
 
 #### Type Parameters
 
