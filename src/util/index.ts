@@ -1,5 +1,5 @@
-import { ErrorAwareGuard } from "../error-aware-guard";
-import { just, Maybe, nothing } from "../maybe";
+import { ErrorAwareGuard } from "@kaumlaut/pure/error-aware-guard";
+import { just, Maybe, nothing } from "@kaumlaut/pure/maybe";
 
 /**
  * Returns the given value.
@@ -78,7 +78,7 @@ export function coerceOptionalFieldsAsMaybeByGuard<T extends object>(
     (object, [key, guard]) => {
       object[key] =
         key in value &&
-        (guard as ErrorAwareGuard<T[keyof T]>)(value[key]).success
+          (guard as ErrorAwareGuard<T[keyof T]>)(value[key]).success
           ? just(value[key])
           : nothing();
       return object;

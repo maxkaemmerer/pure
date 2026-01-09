@@ -5,7 +5,7 @@
 import { err, ok, Result } from "@kaumlaut/pure/result";
 import * as ErrorAwareGuard from "@kaumlaut/pure/error-aware-guard";
 import * as Guard from "@kaumlaut/pure/guard";
-import { Tuple } from "../tuple";
+import { Tuple } from "@kaumlaut/pure/tuple";
 
 /**
  * Represents a Maybe containing a value.
