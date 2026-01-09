@@ -12,7 +12,7 @@
 
 > **coerceOptionalFieldsAsMaybe**\<`T`\>(`value`, `keys`): \{ \[Property in string \| number \| symbol\]: Maybe\<T\[keyof T\]\> \}
 
-Defined in: [util/index.ts:53](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/util/index.ts#L53)
+Defined in: [util/index.ts:53](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/util/index.ts#L53)
 
 Takes an object with partial keys of type T and a list of keys for the wanted object type T.
 Returns a new object with all keys of T present. The values are Just if the key was present and includes the value, or nothing if the key was not present.
@@ -43,7 +43,7 @@ keyof `T`[]
 
 > **coerceOptionalFieldsAsMaybeByGuard**\<`T`\>(`value`, `guards`): \{ \[Property in string \| number \| symbol\]: Maybe\<T\[keyof T\]\> \}
 
-Defined in: [util/index.ts:70](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/util/index.ts#L70)
+Defined in: [util/index.ts:71](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/util/index.ts#L71)
 
 Takes an object with partial keys of type T and an object of ErrorAwareGuards used to validate T.
 Returns a new object with all keys of T present. The values are Just with the value if the key was present and the value passed the corresponding ErrorAwareGuard or nothing if the key was not present.
@@ -74,7 +74,7 @@ Returns a new object with all keys of T present. The values are Just with the va
 
 > **field**\<`T`\>(`key`): (`value`) => `T`\[keyof `T`\]
 
-Defined in: [util/index.ts:43](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/util/index.ts#L43)
+Defined in: [util/index.ts:43](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/util/index.ts#L43)
 
 Utility function that returns the value for the matching objects key
 
@@ -117,7 +117,7 @@ field("name")({name: "Peter"})
 
 > **id**\<`T`\>(`value`): `T`
 
-Defined in: [util/index.ts:7](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/util/index.ts#L7)
+Defined in: [util/index.ts:7](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/util/index.ts#L7)
 
 Returns the given value.
 
@@ -143,7 +143,7 @@ Returns the given value.
 
 > **includes**(`searchString`): (`value`) => `boolean`
 
-Defined in: [util/index.ts:33](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/util/index.ts#L33)
+Defined in: [util/index.ts:33](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/util/index.ts#L33)
 
 Checks if the given searchString is included in the value.
 Easier to use for composition purposes than value.includes(x).
@@ -174,7 +174,7 @@ Easier to use for composition purposes than value.includes(x).
 
 > **left**\<`L`, `R`\>(`left`): (`right`) => `L` \| `R`
 
-Defined in: [util/index.ts:14](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/util/index.ts#L14)
+Defined in: [util/index.ts:14](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/util/index.ts#L14)
 
 Returns the first (left) value passed
 
@@ -214,7 +214,7 @@ Returns the first (left) value passed
 
 > **right**\<`L`, `R`\>(`left`): (`right`) => `L` \| `R`
 
-Defined in: [util/index.ts:22](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/util/index.ts#L22)
+Defined in: [util/index.ts:22](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/util/index.ts#L22)
 
 Returns the second (right) value passed
 
