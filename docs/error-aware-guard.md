@@ -14,7 +14,7 @@ Provides easily composable generic type guards that track errors
 
 > **ErrorAwareGuard**\<`T`\> = (`value`) => [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:29](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L29)
+Defined in: [error-aware-guard/index.ts:29](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L29)
 
 Represents a function that returns a wrapped value on success or a wrapped error on failure
 
@@ -40,7 +40,7 @@ Represents a function that returns a wrapped value on success or a wrapped error
 
 > **ErrorResult** = `object`
 
-Defined in: [error-aware-guard/index.ts:16](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L16)
+Defined in: [error-aware-guard/index.ts:16](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L16)
 
 Represents a failed ErrorAwareGuard, containing errors
 
@@ -50,13 +50,13 @@ Represents a failed ErrorAwareGuard, containing errors
 
 > `readonly` **errors**: `string`[]
 
-Defined in: [error-aware-guard/index.ts:18](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L18)
+Defined in: [error-aware-guard/index.ts:18](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L18)
 
 ##### success
 
 > `readonly` **success**: `false`
 
-Defined in: [error-aware-guard/index.ts:17](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L17)
+Defined in: [error-aware-guard/index.ts:17](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L17)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [error-aware-guard/index.ts:17](https://github.com/maxkaemmerer/pure
 
 > **SuccessResult**\<`T`\> = `object`
 
-Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L11)
+Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L11)
 
 Represents a successful ErrorAwareGuard, containing the value
 
@@ -80,13 +80,13 @@ Represents a successful ErrorAwareGuard, containing the value
 
 > `readonly` **success**: `true`
 
-Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L11)
+Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L11)
 
 ##### value
 
 > `readonly` **value**: `T`
 
-Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L11)
+Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L11)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: [error-aware-guard/index.ts:11](https://github.com/maxkaemmerer/pure
 
 > **ValidationResult**\<`T`\> = [`SuccessResult`](#successresult)\<`T`\> \| [`ErrorResult`](#errorresult)
 
-Defined in: [error-aware-guard/index.ts:24](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L24)
+Defined in: [error-aware-guard/index.ts:24](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L24)
 
 Represents the result of a ErrorAwareGuard
 
@@ -110,7 +110,7 @@ Represents the result of a ErrorAwareGuard
 
 > `const` **isAlways**: [`ErrorAwareGuard`](#errorawareguard)\<`unknown`\>
 
-Defined in: [error-aware-guard/index.ts:357](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L357)
+Defined in: [error-aware-guard/index.ts:357](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L357)
 
 Always passes.
 
@@ -120,7 +120,7 @@ Always passes.
 
 > `const` **isBool**: [`ErrorAwareGuard`](#errorawareguard)\<`boolean`\>
 
-Defined in: [error-aware-guard/index.ts:323](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L323)
+Defined in: [error-aware-guard/index.ts:323](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L323)
 
 Confirms that the value is a boolean.
 
@@ -130,7 +130,7 @@ Confirms that the value is a boolean.
 
 > `const` **isFalse**: [`ErrorAwareGuard`](#errorawareguard)\<`false`\>
 
-Defined in: [error-aware-guard/index.ts:595](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L595)
+Defined in: [error-aware-guard/index.ts:595](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L595)
 
 Confirms a value is false
 
@@ -140,7 +140,7 @@ Confirms a value is false
 
 > `const` **isFloat**: [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [error-aware-guard/index.ts:328](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L328)
+Defined in: [error-aware-guard/index.ts:328](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L328)
 
 Confirms that the value is a float.
 
@@ -150,7 +150,7 @@ Confirms that the value is a float.
 
 > `const` **isInt**: [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [error-aware-guard/index.ts:335](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L335)
+Defined in: [error-aware-guard/index.ts:335](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L335)
 
 Confirms that the value is an interger.
 
@@ -160,7 +160,7 @@ Confirms that the value is an interger.
 
 > `const` **isNever**: [`ErrorAwareGuard`](#errorawareguard)\<`unknown`\>
 
-Defined in: [error-aware-guard/index.ts:362](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L362)
+Defined in: [error-aware-guard/index.ts:362](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L362)
 
 Never passes.
 
@@ -170,7 +170,7 @@ Never passes.
 
 > `const` **isNonEmptyString**: [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-Defined in: [error-aware-guard/index.ts:367](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L367)
+Defined in: [error-aware-guard/index.ts:367](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L367)
 
 Confirms that the value is a non-empty string.
 
@@ -180,7 +180,7 @@ Confirms that the value is a non-empty string.
 
 > `const` **isNull**: [`ErrorAwareGuard`](#errorawareguard)\<`null`\>
 
-Defined in: [error-aware-guard/index.ts:340](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L340)
+Defined in: [error-aware-guard/index.ts:340](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L340)
 
 Confirms that the value is null.
 
@@ -190,7 +190,7 @@ Confirms that the value is null.
 
 > `const` **isNumber**: [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [error-aware-guard/index.ts:304](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L304)
+Defined in: [error-aware-guard/index.ts:304](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L304)
 
 Confirms that the value is a number.
 
@@ -200,7 +200,7 @@ Confirms that the value is a number.
 
 > `const` **isObject**: [`ErrorAwareGuard`](#errorawareguard)\<`object`\>
 
-Defined in: [error-aware-guard/index.ts:352](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L352)
+Defined in: [error-aware-guard/index.ts:352](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L352)
 
 Confirms that the value is an object.
 
@@ -210,7 +210,7 @@ Confirms that the value is an object.
 
 > `const` **isTrue**: [`ErrorAwareGuard`](#errorawareguard)\<`true`\>
 
-Defined in: [error-aware-guard/index.ts:588](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L588)
+Defined in: [error-aware-guard/index.ts:588](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L588)
 
 Confirms a value is true
 
@@ -220,7 +220,7 @@ Confirms a value is true
 
 > `const` **isUndefined**: [`ErrorAwareGuard`](#errorawareguard)\<`undefined`\>
 
-Defined in: [error-aware-guard/index.ts:345](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L345)
+Defined in: [error-aware-guard/index.ts:345](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L345)
 
 Confirms that the value is undefined.
 
@@ -230,7 +230,7 @@ Confirms that the value is undefined.
 
 > **check**\<`T`\>(`value`, `guard`): `value is T`
 
-Defined in: [error-aware-guard/index.ts:78](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L78)
+Defined in: [error-aware-guard/index.ts:78](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L78)
 
 Evaluates an ErrorAwareGuard<T> for given value
 
@@ -260,7 +260,7 @@ Evaluates an ErrorAwareGuard<T> for given value
 
 > **combineResultsAll**\<`T`\>(...`results`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:89](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L89)
+Defined in: [error-aware-guard/index.ts:89](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L89)
 
 Combines a list of results. Returning a SuccessResult<T> if all of them are SucessResult<T>
 or returns an ErrorResult with combined errors if any of them are ErrorResult.
@@ -287,7 +287,7 @@ or returns an ErrorResult with combined errors if any of them are ErrorResult.
 
 > **combineResultsOneOf**\<`T`\>(...`results`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:165](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L165)
+Defined in: [error-aware-guard/index.ts:165](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L165)
 
 Combines a list of results. Returning a SuccessResult<T> if either of them are SucessResult<T>
 or returns an ErrorResult with combined errors if all are an ErrorResult.
@@ -314,7 +314,7 @@ or returns an ErrorResult with combined errors if all are an ErrorResult.
 
 > **combineTwoResultsAnd**\<`T1`, `T2`\>(`a`, `b`): [`ValidationResult`](#validationresult)\<`T1` & `T2`\>
 
-Defined in: [error-aware-guard/index.ts:118](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L118)
+Defined in: [error-aware-guard/index.ts:118](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L118)
 
 Combines two results. Returning a SuccessResult<T> if both of them are SucessResult<T>
 or returns an ErrorResult with combined errors if one is an ErrorResult.
@@ -349,7 +349,7 @@ or returns an ErrorResult with combined errors if one is an ErrorResult.
 
 > **combineTwoResultsOneOf**\<`T1`, `T2`\>(`a`, `b`): [`ValidationResult`](#validationresult)\<`T1` \| `T2`\>
 
-Defined in: [error-aware-guard/index.ts:138](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L138)
+Defined in: [error-aware-guard/index.ts:138](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L138)
 
 Combines two results. Returning a SuccessResult<T> if either of them are SucessResult<T>
 or returns an ErrorResult with combined errors if both are an ErrorResult.
@@ -384,7 +384,7 @@ or returns an ErrorResult with combined errors if both are an ErrorResult.
 
 > **errorByGuard**\<`T`\>(`guards`, `defaultError`): (`value`) => `string` \| keyof `T`
 
-Defined in: [error-aware-guard/index.ts:531](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L531)
+Defined in: [error-aware-guard/index.ts:531](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L531)
 
 Given an object of error to Guard pairs, maps the given value to a key if the matching Guard passes.
 If no guard passes the default error is returned.
@@ -441,7 +441,7 @@ errorByGuard(
 
 > **fail**(...`errors`): [`ErrorResult`](#errorresult)
 
-Defined in: [error-aware-guard/index.ts:34](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L34)
+Defined in: [error-aware-guard/index.ts:34](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L34)
 
 Creates an ErrorResult with the given errors
 
@@ -461,7 +461,7 @@ Creates an ErrorResult with the given errors
 
 > **fromGuard**\<`T`\>(`guard`, `createErrors`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:189](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L189)
+Defined in: [error-aware-guard/index.ts:189](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L189)
 
 Converts a Guard<T> to an ErrorAwareGuard<T> with provided error factory function
 
@@ -491,7 +491,7 @@ Converts a Guard<T> to an ErrorAwareGuard<T> with provided error factory functio
 
 > **isAll**\<`T`\>(`guards`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:247](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L247)
+Defined in: [error-aware-guard/index.ts:247](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L247)
 
 Confirms that the given value passes all guards.
 
@@ -517,7 +517,7 @@ Confirms that the given value passes all guards.
 
 > **isBoth**\<`T1`, `T2`\>(`a`, `b`): [`ErrorAwareGuard`](#errorawareguard)\<`T1` & `T2`\>
 
-Defined in: [error-aware-guard/index.ts:233](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L233)
+Defined in: [error-aware-guard/index.ts:233](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L233)
 
 Confirms that the given value passes both guards.
 
@@ -551,7 +551,7 @@ Confirms that the given value passes both guards.
 
 > **isEmptyList**\<`I`\>(`value`): [`ValidationResult`](#validationresult)\<`I`[]\>
 
-Defined in: [error-aware-guard/index.ts:408](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L408)
+Defined in: [error-aware-guard/index.ts:408](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L408)
 
 Confirms the value is a list with zero items.
 
@@ -577,7 +577,7 @@ Confirms the value is a list with zero items.
 
 > **isExactString**\<`T`\>(`expectedString`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:315](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L315)
+Defined in: [error-aware-guard/index.ts:315](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L315)
 
 Confirms that the value is an exact string.
 
@@ -603,7 +603,7 @@ Confirms that the value is an exact string.
 
 > **isListOf**\<`I`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`I`[]\>
 
-Defined in: [error-aware-guard/index.ts:276](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L276)
+Defined in: [error-aware-guard/index.ts:276](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L276)
 
 Confirms the value is a list of items that all pass the given guard.
 
@@ -629,7 +629,7 @@ Confirms the value is a list of items that all pass the given guard.
 
 > **isNonEmptyListOf**\<`I`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`I`[]\>
 
-Defined in: [error-aware-guard/index.ts:398](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L398)
+Defined in: [error-aware-guard/index.ts:398](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L398)
 
 Confirms the value is a list with atleast one item and all items match the given guard.
 
@@ -655,7 +655,7 @@ Confirms the value is a list with atleast one item and all items match the given
 
 > **isNullOr**\<`T`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:425](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L425)
+Defined in: [error-aware-guard/index.ts:425](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L425)
 
 Confirms the value is either null or passes the given Guard.
 
@@ -681,7 +681,7 @@ Confirms the value is either null or passes the given Guard.
 
 > **isNumberBetweenInclusive**(`min`, `max`): [`ErrorAwareGuard`](#errorawareguard)\<`number`\>
 
-Defined in: [error-aware-guard/index.ts:415](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L415)
+Defined in: [error-aware-guard/index.ts:415](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L415)
 
 Confirms the value is number between min and max inclusive.
 Meaning if the value equals min or max the guard passes.
@@ -706,7 +706,7 @@ Meaning if the value equals min or max the guard passes.
 
 > **isObjectWithAllKeysMatchingGuard**\<`T`\>(`guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:498](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L498)
+Defined in: [error-aware-guard/index.ts:498](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L498)
 
 Confirms the value is an object where every value matches the given guard.
 
@@ -732,7 +732,7 @@ Confirms the value is an object where every value matches the given guard.
 
 > **isObjectWithKey**\<`T`\>(`key`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:437](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L437)
+Defined in: [error-aware-guard/index.ts:437](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L437)
 
 Confirms that the value is an object containing the specified key.
 
@@ -758,7 +758,7 @@ keyof `T`
 
 > **isObjectWithKeyMatchingGuard**\<`T`\>(`key`, `guard`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:450](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L450)
+Defined in: [error-aware-guard/index.ts:450](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L450)
 
 Confirms that the value is an object containing the specified key the value matching the given guard.
 
@@ -788,7 +788,7 @@ keyof `T`
 
 > **isObjectWithKeys**\<`T`\>(`keys`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:473](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L473)
+Defined in: [error-aware-guard/index.ts:473](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L473)
 
 Confirms that the value is an object containing the specified keys.
 
@@ -814,7 +814,7 @@ keyof `T`[]
 
 > **isObjectWithKeysMatchingGuard**\<`T`\>(`guards`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:482](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L482)
+Defined in: [error-aware-guard/index.ts:482](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L482)
 
 Confirms that the value is an object whose key value pairs match the corresponding type guards.
 
@@ -840,7 +840,7 @@ Confirms that the value is an object whose key value pairs match the correspondi
 
 > **isOneOf**\<`T1`, `T2`\>(`a`, `b`): [`ErrorAwareGuard`](#errorawareguard)\<`T1` \| `T2`\>
 
-Defined in: [error-aware-guard/index.ts:256](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L256)
+Defined in: [error-aware-guard/index.ts:256](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L256)
 
 Confirms the value passes at least one of the given Guards.
 
@@ -874,7 +874,7 @@ Confirms the value passes at least one of the given Guards.
 
 > **isOneStringOf**\<`T`\>(`validValues`): [`ErrorAwareGuard`](#errorawareguard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:427](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L427)
+Defined in: [error-aware-guard/index.ts:427](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L427)
 
 #### Type Parameters
 
@@ -898,7 +898,7 @@ Defined in: [error-aware-guard/index.ts:427](https://github.com/maxkaemmerer/pur
 
 > **isString**\<`T`\>(`value`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:309](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L309)
+Defined in: [error-aware-guard/index.ts:309](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L309)
 
 Confirms that the value is a string.
 
@@ -924,7 +924,7 @@ Confirms that the value is a string.
 
 > **isStringOfLength**(`length`): [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-Defined in: [error-aware-guard/index.ts:376](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L376)
+Defined in: [error-aware-guard/index.ts:376](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L376)
 
 Confirms that the value is a string with specified length.
 
@@ -944,7 +944,7 @@ Confirms that the value is a string with specified length.
 
 > **isStringWithPattern**(`pattern`): [`ErrorAwareGuard`](#errorawareguard)\<`string`\>
 
-Defined in: [error-aware-guard/index.ts:388](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L388)
+Defined in: [error-aware-guard/index.ts:388](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L388)
 
 Confirms the value is a string and matches the given regular expression.
 
@@ -964,7 +964,7 @@ Confirms the value is a string and matches the given regular expression.
 
 > **mapWithDefault**\<`T`, `T2`\>(`result`, `mapFunction`, `defaultValue`): `T2`
 
-Defined in: [error-aware-guard/index.ts:566](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L566)
+Defined in: [error-aware-guard/index.ts:566](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L566)
 
 Will return the result of the function if ValidationResult is success
 Otherwise will return defaultValue
@@ -1003,7 +1003,7 @@ Otherwise will return defaultValue
 
 > **pass**\<`T`\>(`value`): [`SuccessResult`](#successresult)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:44](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L44)
+Defined in: [error-aware-guard/index.ts:44](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L44)
 
 Creates an SuccessResult<T> with the given value
 
@@ -1029,7 +1029,7 @@ Creates an SuccessResult<T> with the given value
 
 > **peek**\<`T`\>(`result`, `applyFunction`): `void`
 
-Defined in: [error-aware-guard/index.ts:553](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L553)
+Defined in: [error-aware-guard/index.ts:553](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L553)
 
 Will execute the function if ValidationResult is successful
 
@@ -1059,7 +1059,7 @@ Will execute the function if ValidationResult is successful
 
 > **prefixErrors**\<`T`\>(`value`, `prefix`): [`ValidationResult`](#validationresult)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:54](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L54)
+Defined in: [error-aware-guard/index.ts:54](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L54)
 
 Takes a ValidationResult<T> and if it is an ErrorResult, prefixes every error with the given prefix.
 
@@ -1089,7 +1089,7 @@ Takes a ValidationResult<T> and if it is an ErrorResult, prefixes every error wi
 
 > **toGuard**\<`T`\>(`guard`): [`Guard`](guard.md#guard)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:71](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L71)
+Defined in: [error-aware-guard/index.ts:71](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L71)
 
 Converts an ErrorAwareGuard<T> to a Guard<T>
 
@@ -1115,7 +1115,7 @@ Converts an ErrorAwareGuard<T> to a Guard<T>
 
 > **toMaybe**\<`T`\>(`result`): [`Maybe`](maybe.md#maybe)\<`T`\>
 
-Defined in: [error-aware-guard/index.ts:581](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L581)
+Defined in: [error-aware-guard/index.ts:581](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L581)
 
 Converts a successful ValidationResult<T> to Just<T> and failed ones to Nothing.
 
@@ -1141,7 +1141,7 @@ Converts a successful ValidationResult<T> to Just<T> and failed ones to Nothing.
 
 > **tryGuardIf**\<`T`, `T2`\>(`predicateGuard`, `check`, `createErrors`): [`ErrorAwareGuard`](#errorawareguard)\<`T2`\>
 
-Defined in: [error-aware-guard/index.ts:213](https://github.com/maxkaemmerer/pure/blob/376d5be3cdefc3616ccf4ae11d00329536e15704/src/error-aware-guard/index.ts#L213)
+Defined in: [error-aware-guard/index.ts:213](https://github.com/maxkaemmerer/pure/blob/85896a7a61ba3bed4da52678aa949e76b6afb8ba/src/error-aware-guard/index.ts#L213)
 
 First applies the predicateGuard and if it is a SuccessResult<T> passes the value to check.
 If check returns true it creates SuccessResult<T>.
