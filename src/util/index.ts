@@ -56,7 +56,8 @@ export function coerceOptionalFieldsAsMaybe<T extends object>(
 ): { [Property in keyof T]: Maybe<T[keyof T]> } {
   return keys.reduce(
     (object, key: keyof T) => {
-      object[key] = key in value ? just(value[key]) : nothing();
+      object[key] =
+        key in value && value[key] !== undefined ? just(value[key]) : nothing();
       return object;
     },
     {} as { [Property in keyof T]: Maybe<T[keyof T]> },

@@ -12,7 +12,7 @@
 
 > **Change**\<`CustomMessage`, `Model`\> = \[`CustomMessage` \| `null`, `Model`, \{ `meta`: `object` \| `null`; `name`: `string`; \} \| `null`\]
 
-Defined in: [runtime/index.ts:20](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L20)
+Defined in: [runtime/index.ts:20](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L20)
 
 #### Type Parameters
 
@@ -30,7 +30,7 @@ Defined in: [runtime/index.ts:20](https://github.com/maxkaemmerer/pure/blob/b6b7
 
 > **Changes**\<`CustomMessage`, `Model`\> = [`Change`](#change)\<`CustomMessage`, `Model`\>[]
 
-Defined in: [runtime/index.ts:29](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L29)
+Defined in: [runtime/index.ts:29](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L29)
 
 #### Type Parameters
 
@@ -48,7 +48,7 @@ Defined in: [runtime/index.ts:29](https://github.com/maxkaemmerer/pure/blob/b6b7
 
 > **Init**\<`Model`, `CustomMessage`\> = (`persistedModel`) => \[`Model`, [`Effect`](runtime/effect.md#effect)\<`CustomMessage`\>\]
 
-Defined in: [runtime/index.ts:16](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L16)
+Defined in: [runtime/index.ts:16](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L16)
 
 #### Type Parameters
 
@@ -76,7 +76,7 @@ Defined in: [runtime/index.ts:16](https://github.com/maxkaemmerer/pure/blob/b6b7
 
 > **Message**\<`N`, `T`\> = `object`
 
-Defined in: [runtime/index.ts:6](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L6)
+Defined in: [runtime/index.ts:6](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L6)
 
 #### Type Parameters
 
@@ -94,13 +94,13 @@ Defined in: [runtime/index.ts:6](https://github.com/maxkaemmerer/pure/blob/b6b7b
 
 > **name**: `N`
 
-Defined in: [runtime/index.ts:8](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L8)
+Defined in: [runtime/index.ts:8](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L8)
 
 ##### value
 
 > **value**: `T`
 
-Defined in: [runtime/index.ts:7](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L7)
+Defined in: [runtime/index.ts:7](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L7)
 
 ***
 
@@ -108,7 +108,7 @@ Defined in: [runtime/index.ts:7](https://github.com/maxkaemmerer/pure/blob/b6b7b
 
 > **Update**\<`Model`, `CustomMessage`\> = (`model`, `msg`) => \[`Model`, [`Effect`](runtime/effect.md#effect)\<`CustomMessage`\>\]
 
-Defined in: [runtime/index.ts:11](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L11)
+Defined in: [runtime/index.ts:11](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L11)
 
 #### Type Parameters
 
@@ -140,7 +140,7 @@ Defined in: [runtime/index.ts:11](https://github.com/maxkaemmerer/pure/blob/b6b7
 
 > **is**\<`CustomMessage`, `A`\>(`name`, `message`): `message is CustomMessage`
 
-Defined in: [runtime/index.ts:34](https://github.com/maxkaemmerer/pure/blob/b6b7b12efe6b88e677922175bba3df520e5ef330/src/runtime/index.ts#L34)
+Defined in: [runtime/index.ts:34](https://github.com/maxkaemmerer/pure/blob/fcd48652511ad77af12f0ed1e5e2ef35fcca33fa/src/runtime/index.ts#L34)
 
 #### Type Parameters
 
