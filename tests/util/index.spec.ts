@@ -76,6 +76,12 @@ describe("util", () => {
       b: nothing(),
     });
     expect(
+      coerceOptionalFieldsAsMaybe<MyTestType>({ a: undefined }, ["a", "b"]),
+    ).to.deep.equal({
+      a: nothing(),
+      b: nothing(),
+    });
+    expect(
       coerceOptionalFieldsAsMaybeByGuard<MyTestType>(
         { a: 1 },
         { a: isNumber, b: isString },
